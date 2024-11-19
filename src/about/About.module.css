@@ -1,0 +1,98 @@
+/* 전체 페이지 스타일 */
+.about {
+    padding: 2rem;
+    background-color: #121212; /* 다크 배경 */
+    color: #e5e5e5;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* 헤더 스타일 */
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    color: #c2185b; /* 톤다운 핑크 */
+    letter-spacing: 5px;
+  }
+  
+  /* 소개 섹션 */
+  .introduction {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .introduction p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  /* 소셜 링크 */
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .socialLinks a {
+    color: #e5e5e5;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 아이콘과 텍스트 간격 */
+  }
+  
+  .socialLinks a i {
+    font-size: 1.5rem;
+  }
+  
+  .socialLinks a:hover {
+    color: #e91e63; /* 핑크 색상 */
+  }
+  
+  /* 메인 레이아웃 */
+  .layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  /* 왼쪽 섹션 */
+  .leftSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* 오른쪽 섹션 */
+  .rightSection {
+    flex: 2;
+  }
+  
+  .rightSection h2, .leftSection h2 {
+    font-size: 1.8rem;
+    color: #e91e63;
+    border-bottom: 2px solid #c2185b;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .layout {
+      flex-direction: column;
+    }
+  
+    .socialLinks {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  

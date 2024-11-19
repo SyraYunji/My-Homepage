@@ -2,13 +2,14 @@
 .home {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* 중앙 정렬 대신, 위쪽 정렬 */
     height: 100vh;
     background: linear-gradient(145deg, #121212, #1a1a1a); /* 다크 블랙 배경 */
     box-shadow: inset 0 0 50px #000000;
     color: #e5e5e5; /* 서브 텍스트 */
     text-align: center;
     padding: 1rem;
+    position: relative; /* 자식 요소 절대 위치 설정 가능 */
   }
   
   /* Hero 섹션 */
@@ -17,23 +18,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    margin-top: 50px; /* 섹션 전체를 아래로 이동 */
   }
   
   /* 프로필 이미지 */
   .profileImage {
-    width: 150px;
-    height: 150px;
-    border: 3px solid #c2185b; /* 톤다운 핑크 테두리 */
+    width: 190px;
+    height: 180px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin-top: 40px;
+    margin-top: 50px; /* 추가 여백 */
   }
   
   /* 제목 */
   .title {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: -20px; /* Welcome 텍스트를 위로 올림 */
   }
   
   .highlight {
@@ -45,8 +47,9 @@
   /* 부제목 */
   .subtitle {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* 부제목 간격 조정 */
     color: #e5e5e5; /* 연한 회색 */
+    line-height: 1.6; /* 가독성 향상 */
   }
   
   /* 버튼 섹션 */
@@ -54,6 +57,7 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: 0.5rem; /* 버튼과 텍스트 사이 간격 조정 */
   }
   
   /* 기본 버튼 */

@@ -21,7 +21,7 @@ const Navbar = () => {
         <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-github"></i> {/* GitHub 아이콘 */}
         </a>
-        <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.youtube.com/@studyesme9286/videos" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-youtube"></i> {/* YouTube 아이콘 */}
         </a>
         <a href="https://yourblog.com/" target="_blank" rel="noopener noreferrer">
