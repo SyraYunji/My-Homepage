@@ -1,0 +1,116 @@
+/* 전체 홈 화면 */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(145deg, #121212, #1a1a1a); /* 다크 블랙 배경 */
+    box-shadow: inset 0 0 50px #000000;
+    color: #e5e5e5; /* 서브 텍스트 */
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Hero 섹션 */
+  .hero {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  /* 프로필 이미지 */
+  .profileImage {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #c2185b; /* 톤다운 핑크 테두리 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+  }
+  
+  /* 제목 */
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    background: linear-gradient(90deg, #c2185b, #e91e63); /* 톤다운 핑크 그라디언트 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* 텍스트에 그라디언트 적용 */
+  }
+  
+  /* 부제목 */
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #e5e5e5; /* 연한 회색 */
+  }
+  
+  /* 버튼 섹션 */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* 기본 버튼 */
+  .button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(90deg, #c2185b, #e91e63); /* 핑크 그라디언트 */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .button:hover {
+    background: linear-gradient(90deg, #e91e63, #c2185b); /* 반대 방향 그라디언트 */
+    transform: translateY(-3px);
+  }
+  
+  /* 테두리 있는 버튼 */
+  .buttonAlt {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #c2185b; /* 톤다운 핑크 */
+    border: 2px solid #c2185b;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .buttonAlt:hover {
+    background: #c2185b; /* 톤다운 핑크 */
+    color: white;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .hero {
+      text-align: center;
+    }
+  
+    .profileImage {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .title {
+      font-size: 2.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  

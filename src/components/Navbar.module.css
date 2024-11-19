@@ -1,0 +1,57 @@
+/* 네비게이션 바 스타일 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #121212; /* 다크 배경 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 로고 */
+  .logo a {
+    color: #c2185b; /* 톤다운 핑크 */
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* 네비게이션 링크 */
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-right: auto; /* 오른쪽으로 정렬 */
+  }
+  
+  .navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navLinks a:hover {
+    color: #c2185b; /* 핑크 호버 효과 */
+  }
+  
+  /* 외부 링크 */
+  .externalLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .externalLinks a {
+    color: white;
+    font-size: 1.5rem; /* 아이콘 크기 키움 */
+    transition: color 0.3s;
+  }
+  
+  .externalLinks a:hover {
+    color: #e91e63; /* 밝은 핑크 */
+  }
+  
