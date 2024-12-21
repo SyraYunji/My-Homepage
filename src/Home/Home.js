@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import styles from "./Home.module.css";
+import { Link } from "react-router-dom"; // React Router Link 추가
 
 const Home = () => {
   return (
@@ -44,9 +45,9 @@ const Home = () => {
 
         {/* 버튼 섹션 */}
         <div className={styles.buttons}>
-          <a href="#projects" className={styles.button}>
+          <Link to="/projects" className={styles.button}>
             View Projects
-          </a>
+          </Link>
           <a href="#contact" className={styles.buttonAlt}>
             Contact Me
           </a>

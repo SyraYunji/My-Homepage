@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // React Router Link 가져오기
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -6,29 +7,30 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       {/* 로고 */}
       <div className={styles.logo}>
-        <a href="#home">MyPortfolio</a>
+        <Link to="/">MyPortfolio</Link>
       </div>
 
-      {/* 네비게이션 링크 (오른쪽 정렬) */}
+      {/* 네비게이션 링크 */}
       <ul className={styles.navLinks}>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/projects">Projects</Link></li>
+        <li><Link to="/activities">Activities</Link></li> {/* Activities로 이동 */}
+        <li><Link to="/contact">Contact</Link></li>
       </ul>
 
-      {/* 외부 링크 (GitHub, YouTube, Blog, Instagram) */}
+      {/* 외부 링크 */}
       <div className={styles.externalLinks}>
         <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github"></i> {/* GitHub 아이콘 */}
+          <i className="fab fa-github"></i>
         </a>
         <a href="https://www.youtube.com/@studyesme9286/videos" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-youtube"></i> {/* YouTube 아이콘 */}
+          <i className="fab fa-youtube"></i>
         </a>
         <a href="https://yourblog.com/" target="_blank" rel="noopener noreferrer">
-          <i className="fas fa-blog"></i> {/* Blog 아이콘 */}
+          <i className="fas fa-blog"></i>
         </a>
         <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-instagram"></i> {/* Instagram 아이콘 */}
+          <i className="fab fa-instagram"></i>
         </a>
       </div>
     </nav>

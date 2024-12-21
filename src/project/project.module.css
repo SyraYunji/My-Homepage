@@ -1,0 +1,93 @@
+/* 전체 프로젝트 섹션 */
+.projects {
+    padding: 4rem 2rem; /* 상하 공간을 넉넉히 추가 */
+    text-align: center;
+    background: linear-gradient(145deg, #121212, #1a1a1a); /* 다크 그라디언트 배경 */
+    color: #e5e5e5; /* 연한 회색 텍스트 */
+    min-height: 100vh; /* 화면 전체 높이를 유지 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* 섹션 제목 */
+  .title {
+    font-size: 4rem; /* 크기를 더 키움 */
+    font-weight: bold;
+    margin-bottom: 3rem; /* 제목과 카드 사이 간격 추가 */
+    background: linear-gradient(90deg, #c2185b, #e91e63); /* 핑크 그라디언트 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase; /* 대문자로 변환 */
+  }
+  
+  /* 갤러리 */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 카드 크기 조정 */
+    gap: 2rem; /* 카드 간격 */
+    width: 100%; /* 갤러리의 전체 너비 */
+    max-width: 1200px; /* 중앙 정렬을 위한 최대 너비 */
+    justify-items: center; /* 카드 중앙 정렬 */
+  }
+  
+  /* 프로젝트 카드 */
+  .projectCard {
+    background: #1a1a1a; /* 카드 배경 */
+    border: 1px solid #333; /* 테두리 */
+    border-radius: 16px; /* 둥근 모서리 */
+    padding: 1.5rem;
+    width: 100%; /* 카드가 동일한 너비 유지 */
+    max-width: 300px; /* 카드 최대 너비 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* 그림자 */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-10px); /* 살짝 위로 이동 */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* 프로젝트 제목 */
+  .projectTitle {
+    font-size: 1.8rem; /* 제목 크기 조정 */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #e91e63; /* 강조된 핑크 색상 */
+  }
+  
+  /* 프로젝트 버튼 */
+  .projectLink {
+    margin-top: auto; /* 버튼이 카드 하단에 위치 */
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(90deg, #c2185b, #e91e63); /* 핑크 그라디언트 */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .projectLink:hover {
+    background: linear-gradient(90deg, #e91e63, #c2185b); /* 반대 방향 그라디언트 */
+    transform: translateY(-3px);
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: 1fr; /* 카드가 1열로 배치 */
+    }
+  
+    .title {
+      font-size: 3rem; /* 제목 크기 줄이기 */
+    }
+  
+    .projectCard {
+      max-width: 100%; /* 카드가 화면 너비에 맞도록 */
+    }
+  }
+  
