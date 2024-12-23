@@ -45,7 +45,7 @@ const Home = () => {
 
         {/* 버튼 섹션 */}
         <div className={styles.buttons}>
-          <Link to="/projects" className={styles.button}>
+          <Link to="/project" className={styles.button}>
             View Projects
           </Link>
           <a href="#contact" className={styles.buttonAlt}>

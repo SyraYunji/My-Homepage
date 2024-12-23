@@ -6,6 +6,8 @@ import About from "./about/About";
 import Projects from "./project/project";
 import Activities from "./activities/Activities";
 import AIESEC1 from "./activities/aiesec/aiesec1";
+import CoDeepDetail from "./project/co-deep/CoDeepDetail";
+
 
 function App() {
   return (
@@ -16,9 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/project" element={<Projects />} />
           <Route path="/activities" element={<Activities />} /> {/* 경로 수정 */}
           <Route path="/activities/aiesec" element={<AIESEC1 />} />
+          <Route path="/co-deep" element={<CoDeepDetail />} />
         </Routes>
       </div>
     </Router>

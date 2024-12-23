@@ -9,8 +9,8 @@ const Projects = () => {
       <h1 className={styles.title}>My Projects</h1>
       <div className={styles.gallery}>
         <div className={styles.projectCard}>
-          <h3 className={styles.projectTitle}>Project A</h3>
-          <Link to="/project-a" className={styles.projectLink}>
+        <h3 className={styles.projectTitle}>Co-deep project</h3>
+          <Link to="/co-deep" className={styles.projectLink}>
             View Details
           </Link>
         </div>
