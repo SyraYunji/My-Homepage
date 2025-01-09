@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #121212; /* 다크 배경 */
+    background: linear-gradient(145deg, #121212, #1a1a1a);
     position: fixed;
     top: 0;
     width: 100%;

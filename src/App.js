@@ -7,6 +7,7 @@ import Projects from "./project/project";
 import Activities from "./activities/Activities";
 import AIESEC1 from "./activities/aiesec/aiesec1";
 import CoDeepDetail from "./project/co-deep/CoDeepDetail";
+import Timi from "./project/timi/timi";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/activities" element={<Activities />} /> {/* 경로 수정 */}
           <Route path="/activities/aiesec" element={<AIESEC1 />} />
           <Route path="/co-deep" element={<CoDeepDetail />} />
+          <Route path="/timi" element={<Timi />} />
         </Routes>
       </div>
     </Router>

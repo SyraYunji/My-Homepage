@@ -1,133 +1,70 @@
-/* 전체 컨테이너 */
-.projectDetail, .container {
-  padding: 4rem 2rem;
-  text-align: center;
+.total {
   background: linear-gradient(145deg, #121212, #1a1a1a);
-  color: #e5e5e5;
-  min-height: 100vh;
+  min-height: 100vh; /* 화면 전체 높이 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.container {
-  background: linear-gradient(135deg, #1e1e2f, #232333);
-}
-
-/* 페이지 제목 */
-.title, .pageTitle, .subtitle {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
+.projects {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding: 2rem;
 }
 
 .title {
-  background: linear-gradient(90deg, #c2185b, #e91e63);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #c2185b;
+  margin-bottom: 1rem; /* 제목과 설명 간 간격 */
 }
 
-.pageTitle, .subtitle {
-  color: #e91e63;
-  text-shadow: 0 4px 10px rgba(233, 30, 99, 0.7);
-}
-
-.subtitle {
-  margin: 2rem 0 1rem;
-}
-
-/* 섹션 컨테이너 */
-.sections {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  width: 100%;
-  max-width: 1200px;
-}
-
-/* 개별 섹션 */
-.section {
-  flex: 1;
-  min-width: 300px;
-  padding: 2rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* 섹션 제목 */
-.sectionTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #f06292;
-  margin-bottom: 1.5rem;
-}
-
-/* 설명 텍스트 */
-.description {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  color: #ffffffb3;
-}
-
-/* 리스트 스타일 */
-.list {
-  list-style: none;
-  padding: 0;
-  font-size: 1.2rem;
-}
-
-.list li {
-  margin-bottom: 0.8rem;
-  position: relative;
-  padding-left: 1.5rem;
-  color: #b2ebf2;
-}
-
-.list li:before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #f06292;
-  font-size: 1.2rem;
-}
-
-/* 추가 설명 텍스트 */
-.note {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  color: #c5cae9;
-  font-style: italic;
-}
-
-/* 메인 이미지 */
-.image {
-  max-width: 90%;
-  margin: 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-/* 링크 버튼 */
-.link {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(90deg, #c2185b, #e91e63);
+.intro {
   color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.2s;
+  margin-bottom: 2rem; /* 설명과 카드 사이 간격 */
 }
 
-.link:hover {
-  background: linear-gradient(90deg, #e91e63, #c2185b);
-  transform: translateY(-3px);
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.projectCard {
+  background: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  color: #e5e5e5;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #00bcd4;
+}
+
+.cardContent {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.projectLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #e91e63;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.projectLink:hover {
+  color: #ff4081;
 }
