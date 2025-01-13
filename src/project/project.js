@@ -26,7 +26,7 @@ const Projects = () => {
           <p className={styles.cardContent}>
             팀의 생산성을 최적화하기 위한 시간 관리 도구. 실시간 환경에서의 팀 작업에 특화되어 있습니다.
           </p>
-          <Link to="/project-b" className={styles.projectLink}>
+          <Link to="/timi" className={styles.projectLink}>
             자세히 보기
           </Link>
         </div>

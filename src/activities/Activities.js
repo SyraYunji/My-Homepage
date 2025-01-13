@@ -37,6 +37,20 @@ const Activities = () => {
         </div>
       </div>
 
+            {/* 멋쟁이 사자처럼 */}
+            <div className={styles.section}>
+        <h2 className={styles.sectionTitle}>멋쟁이 사자처럼</h2>
+        <div className={styles.cardContainer}>
+          <div className={styles.card}>
+            <h3 className={styles.cardTitle}>프론트엔드 개발 및 팀 프로젝트</h3>
+            <p className={styles.cardContent}>
+              React와 Next.js를 학습하며 다양한 팀 프로젝트를 진행했습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
       {/* BDA 섹션 */}
       <div className={styles.section}>
         <h2 className={styles.sectionTitle}>BDA (빅데이터 학회)</h2>
@@ -63,18 +77,7 @@ const Activities = () => {
         </div>
       </div>
 
-      {/* 멋쟁이 사자처럼 */}
-      <div className={styles.section}>
-        <h2 className={styles.sectionTitle}>멋쟁이 사자처럼</h2>
-        <div className={styles.cardContainer}>
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>프론트엔드 개발 및 팀 프로젝트</h3>
-            <p className={styles.cardContent}>
-              React와 Next.js를 학습하며 다양한 팀 프로젝트를 진행했습니다.
-            </p>
-          </div>
-        </div>
-      </div>
+
     </div>
   );
 };

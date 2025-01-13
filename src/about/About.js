@@ -16,7 +16,7 @@ const About = () => {
           창의적 문제 해결과 소프트웨어 기술을 통해 가치를 만들어내는 개발자입니다.
         </p>
         <div className={styles.socialLinks}>
-          <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@studyesme9286/videos" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-youtube"></i> Youtube: MyChannel
           </a>
           <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
