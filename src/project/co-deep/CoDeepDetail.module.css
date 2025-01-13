@@ -1,173 +1,208 @@
-/* 전체 컨테이너 */
 .projectDetail {
-    padding: 4rem 2rem;
-    text-align: center;
-    background: linear-gradient(145deg, #121212, #1a1a1a);
-    color: #e5e5e5;
-    min-height: 100vh;
-  }
-  
-  /* 페이지 제목 */
-  .title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, #c2185b, #e91e63);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 2rem;
-  }
-  /* 전체 레이아웃 컨테이너 */
-.container {
-  padding: 2rem;
-  background: linear-gradient(135deg, #1e1e2f, #232333);
-  min-height: 100vh;
+  padding: 3rem 1.5rem; /* 여백 조정 */
+  text-align: center;
+  background: linear-gradient(145deg, #121212, #1a1a1a);
   color: #e5e5e5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
 }
 
-/* 페이지 제목 */
-.pageTitle {
-  font-size: 3.5rem;
+/* 제목 스타일 */
+.title {
+  font-size: 3rem;
   font-weight: bold;
-  color: #e91e63;
-  text-shadow: 0 4px 10px rgba(233, 30, 99, 0.7);
-  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #ff4081, #f06292);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem; /* 제목 아래 간격 추가 */
+  text-align: center;
 }
 
-/* 섹션 컨테이너 */
+/* 본문 스타일 */
+.subTitle {
+  font-size: 1.5rem;
+  line-height: 1.8; /* 줄 간격 추가 */
+  color: #b2ebf2;
+  margin-bottom: 1rem; /* 본문 아래 간격 추가 */
+  text-align: center;
+  max-width: 800px; /* 본문의 폭 제한 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 역할 강조 스타일 */
+.role {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff80ab;
+  margin-bottom: 1rem; /* 역할 설명 아래 간격 추가 */
+  text-align: center;
+}
+
+.roleDescription {
+  font-size: 1.2rem;
+  color: #e5e5e5;
+  margin-bottom: 2rem; /* 역할 설명 아래 간격 추가 */
+  text-align: center;
+}
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap; /* 여러 줄로 배치 */
+  justify-content: center; /* 콘텐츠를 중앙으로 */
+  gap: 2rem; /* 카드 간격 */
+  padding: 2rem; /* 전체 여백 */
+  max-width: 1200px; /* 중앙 정렬을 위한 최대 너비 */
+  margin: 0 auto; /* 부모 컨테이너를 화면 가운데 배치 */
+}
+.contentContainer {
+  text-align: center;
+}
+
 /* 섹션 컨테이너 */
 .sections {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* 가로 방향 중앙 정렬 */
   align-items: center; /* 세로 방향 중앙 정렬 */
-  gap: 2rem; /* 각 섹션 간 간격 */
+  gap: 1.5rem; /* 각 섹션 간 간격 */
   width: 100%;
-  max-width: 1200px; /* 중앙에 고정된 폭 */
-  margin: 0 auto; /* 페이지에서 수평 중앙 */
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-
 /* 개별 섹션 */
 .section {
   flex: 1;
-  min-width: 300px;
-  max-width: 400px;
-  min-height: 250px;
-  padding: 2rem;
-  border-radius: 12px;
+  min-width: 280px; /* 최소 너비 조정 */
+  max-width: 400px; /* 최대 너비 유지 */
+  padding: 1.5rem; /* 패딩 조정 */
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  height: 430px;
 }
-
 
 .section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
+
+.subtitle {
+  margin-top: 1.5rem; /* 제목과 간격 추가 */
+  margin-bottom: 1.5rem; /* 버튼과 간격 추가 */
+  font-size: 1.5rem; /* 적당한 본문 글씨 크기 */
+  line-height: 1.8; /* 줄 간격 추가 */
+  color: #e5e5e5; /* 본문 글씨 색상 */
+  text-align: center; /* 중앙 정렬 */
+}
+
+
+
 
 /* 섹션 제목 */
+/* 섹션 제목 */
 .sectionTitle {
-  font-size: 2rem;
+  font-size: 1.7rem; /* 제목 크기 증가 */
   font-weight: bold;
-  color: #f06292;
-  margin-bottom: 1.5rem;
+  color: #f06292; /* 밝고 눈에 띄는 색상 */
+  margin-bottom: 1.5rem; /* 제목과 본문 간격 조정 */
+  text-align: center; /* 중앙 정렬 */
 }
 
-/* 설명 텍스트 */
+/* 본문 텍스트 */
 .description {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  color: #ffffffb3;
+  font-size: 1.3rem; /* 본문 크기 증가 */
+  line-height: 1.8; /* 줄 간격 증가 */
+  color: #e5e5e5; /* 본문 색상 유지 */
+  margin-bottom: 2rem; /* 하단 여백 */
+  text-align: center; /* 본문 중앙 정렬 */
 }
 
 /* 리스트 스타일 */
-.list {
-  list-style: none;
-  padding: 0;
-  font-size: 1.2rem;
-}
-
 .list li {
-  margin-bottom: 0.8rem;
-  position: relative;
-  padding-left: 1.5rem;
-  color: #b2ebf2;
+  font-size: 1.2rem; /* 리스트 글씨 크기 */
+  color: #e5e5e5; /* 밝은 색상으로 강조 */
 }
 
-.list li:before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #f06292;
-  font-size: 1.2rem;
+.list {
+  word-break: keep-all;
+  text-align: center;
+  margin-right: 30px;
 }
 
-/* 추가 설명 텍스트 */
-.note {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  color: #c5cae9;
-  font-style: italic;
+/* 버튼 스타일 */
+.link {
+  display: inline-block;
+  margin-top: 1.5rem; /* 여백 조정 */
+  padding: 0.5rem 1.2rem; /* 크기 축소 */
+  background: linear-gradient(90deg, #c2185b, #e91e63);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
 }
 
-  /* 메인 이미지 */
-  .image {
-    max-width: 90%;
-    margin: 2rem auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* 설명 텍스트 */
-  .description {
-    font-size: 1.2rem;
-    margin: 2rem 0;
-    line-height: 1.8;
-  }
-  
-  /* 섹션 제목 */
-  .subtitle {
-    font-size: 2rem;
-    margin: 2rem 0 1rem;
-    color: #e91e63;
-    font-weight: bold;
-  }
-  
-  /* 리스트 스타일 */
-  .list {
-    list-style-type: none;
-    padding: 0;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-  }
-  
-  .list li {
-    margin: 1rem 0;
-    text-align: left;
-  }
-  
-  /* 링크 버튼 */
-  .link {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(90deg, #c2185b, #e91e63);
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
-  }
-  
-  .link:hover {
-    background: linear-gradient(90deg, #e91e63, #c2185b);
-    transform: translateY(-3px);
-  }
-  
+.link:hover {
+  background: linear-gradient(90deg, #e91e63, #c2185b);
+  transform: translateY(-3px);
+}
+
+.buttonContainer {
+  margin: 2rem auto; /* 상하 간격 추가 */
+  text-align: center;
+}
+
+.detailButton {
+  padding: 0.7rem 2.2rem; /* 버튼 크기 약간 증가 */
+  font-size: 1.5rem; /* 텍스트 크기 키우기 */
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff4081, #f06292); /* 기존 그라데이션 유지 */
+  color: white;
+  border: none;
+  border-radius: 50px; /* 버튼의 모서리를 더 둥글게 */
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s; /* 버튼 애니메이션 유지 */
+  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.6); /* 그림자 추가 */
+}
+
+.detailButton:hover {
+  transform: translateY(-3px) scale(1.05); /* 약간 더 도드라지게 확대 */
+  background: linear-gradient(90deg, #f06292, #ff80ab);
+}
+
+
+/* 버튼 스타일 */
+.detailButton {
+  display: inline-block;
+  padding: 1rem 2rem; /* 버튼 크기 증가 */
+  font-size: 1.4rem; /* 버튼 텍스트 크기 증가 */
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff4081, #f06292); /* 눈에 띄는 그라데이션 색상 */
+  color: white;
+  border: none;
+  border-radius: 10px; /* 둥근 모서리 */
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s; /* 애니메이션 */
+  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.6); /* 그림자 */
+}
+
+/* 호버 효과 */
+.detailButton:hover {
+  transform: scale(1.1); /* 버튼 확대 */
+  box-shadow: 0 6px 15px rgba(255, 64, 129, 0.8); /* 더 강한 그림자 */
+  background: linear-gradient(90deg, #f06292, #ff80ab); /* 색상 변화 */
+}
+
+.demoImage {
+  width: 300px;
+}
+
+.paragraph {
+  margin-bottom: 30px;
+}
+
+.graph{
+  word-break: keep-all;
+}

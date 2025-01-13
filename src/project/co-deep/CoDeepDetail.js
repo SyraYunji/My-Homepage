@@ -13,10 +13,10 @@ const CoDeepDetail = () => {
     >
       {/* 프로젝트 제목 및 설명 */}
       <h1 className={styles.title}>Co-Deep Learning Project: PoliTracker</h1>
-      <h2 className={styles.title}>
+      <p className={styles.introText}>
         Co-Deep Learning Project는 교수와 학생의 공동 프로젝트를 통해 교수-학생 간 소통의 기회를 확대하고, 
         심도 있는 협동 학습과 자기주도 학습을 지원하는 프로그램
-      </h2>
+      </p>
 
       {/* My Role */}
       <h3 className={styles.role}>My Role: Frontend Developer</h3>
@@ -31,29 +31,30 @@ const CoDeepDetail = () => {
         </Link>
       </div>
 
-      {/* 6가지 항목 */}
-      <div className={styles.sections}>
+      {/* 6가지 항목을 Flex 컨테이너로 감싸기 */}
+      <div className={styles.flexContainer}>
         {/* 01. 배경 및 필요성 */}
-        <motion.div 
-          className={styles.section} 
+        <motion.div
+          className={styles.section}
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
         >
           <h2 className={styles.sectionTitle}>01. 배경 및 필요성</h2>
-          <div className={styles.graphContainer}>
-            <div className={styles.graph}>
-              {/* 원형 다이어그램 예제 */}
-              <h3>문제 상황</h3>
-              <ul>
-                <li>청년층의 낮은 정치 참여율</li>
-                <li>체계적인 정치 플랫폼의 부재</li>
+          <div className={styles.contentContainer}>
+            <div className={styles.subSection}>
+              <h3 className={styles.subTitle}>문제 상황</h3>
+              <ul className={styles.list}>
+                <p>청년층의 낮은 정치 참여율</p>
+                <p>체계적인 정치 플랫폼의 부재</p>
               </ul>
-              <h3>타겟팅 대상</h3>
-              <ul>
-                <li>정치에 무관심한 국민</li>
-                <li>정치 정보를 찾기 어려워하는 국민</li>
-                <li>정치 전문가</li>
+            </div>
+            <div className={styles.subSection}>
+              <h3 className={styles.subTitle}>타겟팅 대상</h3>
+              <ul className={styles.list}>
+                <p>정치에 무관심한 국민</p>
+                <p>정치 정보를 찾기 어려워하는 국민</p>
+                <p>정치에 관심이 많은데 구체적이고 정확한 정보를 찾고 싶은 국민</p>
               </ul>
             </div>
           </div>
@@ -67,17 +68,20 @@ const CoDeepDetail = () => {
           transition={{ type: "spring", stiffness: 50 }}
         >
           <h2 className={styles.sectionTitle}>02. 기존 플랫폼의 한계</h2>
-          <div className={styles.graphContainer}>
-            {/* 카드 형태로 분리 */}
-            <div className={styles.card}>
-              <h3>1. 공약 이행 현황</h3>
+          <div className={styles.contentContainer}>
+            <div className={styles.subSection}>
+              <h3 className={styles.subTitle}>1. 공약 이행 현황</h3>
+              <ul className={styles.list}>
               <p>정보가 흩어져 있으며 접근성이 낮음</p>
               <p>효율적인 정보 제공 필요</p>
+              </ul>
             </div>
-            <div className={styles.card}>
-              <h3>2. 국회의원 활동 정보</h3>
+            <div className={styles.subSection}>
+              <h3 className={styles.subTitle}>2. 국회의원 활동 정보</h3>
+              <ul className={styles.list}>
               <p>단계별 접근으로 불편함 초래</p>
               <p>직관적인 플랫폼 요구</p>
+              </ul>
             </div>
           </div>
         </motion.div>
@@ -90,19 +94,21 @@ const CoDeepDetail = () => {
           transition={{ type: "spring", stiffness: 50 }}
         >
           <h2 className={styles.sectionTitle}>03. 주요 기능 및 UI/UX</h2>
-          <div className={styles.graphContainer}>
-            <div className={styles.featureList}>
-              <h3>주요 기능</h3>
-              <ul>
-                <li>정치성향테스트: 질문을 통해 성향 분석</li>
-                <li>지역 정치인 트래킹: 공약 이행률 시각화</li>
-                <li>정치 용어 및 뉴스: 최신 정보 제공</li>
+          <div className={styles.contentContainer}>
+            <div className={styles.subSection}>
+              <h3 className={styles.subTitle}>주요 기능</h3>
+              <ul className={styles.list}>
+                <p>정치성향테스트: 질문을 통해 성향 분석</p>
+                <p>지역 정치인 트래킹: 공약 이행률 시각화</p>
+                <p>정치 용어 및 뉴스: 최신 정보 제공</p>
               </ul>
             </div>
-            <div className={styles.uiSection}>
-              <h3>UI/UX</h3>
+            <div className={styles.subSection}>
+              <h3 className={styles.subTitle}>UI/UX</h3>
+              <ul className = {styles.list}>
               <p>시그니처 색상: 연보라색(#cfc2e9)</p>
               <p>사용자 친화적이고 직관적인 디자인 적용</p>
+              </ul>
             </div>
           </div>
         </motion.div>
@@ -114,20 +120,53 @@ const CoDeepDetail = () => {
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
         >
-          <h2 className={styles.sectionTitle}>04. 플랫폼 시연</h2>
-          <p>플랫폼 시연 섹션에서는 주요 기능이 동작하는 모습을 GIF 또는 이미지로 설명</p>
+          <h2 className={styles.sectionTitle}>04. 사용자 테스트 결과</h2>
+          
+          {/* 이미지 컨테이너 */}
+          <div className={styles.imageContainer}>
+            <img
+              src="/images/test1.png"
+              alt="사용자 테스트 결과 1"
+              className={styles.demoImage}
+            />
+            <img
+              src="/images/test2.png"
+              alt="사용자 테스트 결과 2"
+              className={styles.demoImage}
+            />
+          </div>
+          <p className = "paragraph">아래는 사용자가 테스트한 결과를 기반으로 한 데이터를 시각화한 이미지입니다.</p>
         </motion.div>
 
         {/* 05. 플랫폼 의의 */}
         <motion.div
-          className={styles.section}
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 50 }}
-        >
-          <h2 className={styles.sectionTitle}>05. 플랫폼 의의</h2>
-          <p>정치적 무관심을 해결하고, 정치 참여율을 높이는 데 기여</p>
-        </motion.div>
+        className={styles.section}
+        initial={{ x: "-100vw" }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", stiffness: 50 }}>
+
+        <h2 className={styles.sectionTitle}>5.플랫폼 <span className={styles.highlight}>의의</span></h2>
+        <div className={styles.contentContainer}>
+          <div className={styles.subSection}>
+            <h3 className={styles.subTitle}>사용자 참여 유도</h3>
+            <ul className={styles.list}>
+              <p>정치적 관심을 유도하고 태도 변화에 긍정적인 영향</p>
+              <p>정치 참여를 쉽게 시작할 수 있는 계기 제공</p>
+            </ul>
+          </div>
+
+          <div className={styles.subSection}>
+            <h3 className={styles.subTitle}>사용자 친화적 접근</h3>
+            <ul className={styles.list}>
+              <p>맞춤형 정보 제공으로 실질적인 도움</p>
+              <p>사용자 친화적 UI/UX로 정보 접근성을 높임</p>
+            </ul>
+          </div>
+      
+      </div> 
+      </motion.div>
+      
+
 
         {/* 06. 한계점 및 후속 연구 */}
         <motion.div
@@ -136,22 +175,29 @@ const CoDeepDetail = () => {
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
         >
+
+        <div className={styles.subSection}>
           <h2 className={styles.sectionTitle}>06. 한계점 및 후속 연구</h2>
+          <div className={styles.contentContainer}>
+          <div className={styles.subSection}>
+          <h3 className={styles.subTitle}>사용자 친화적 접근</h3>
           <div className={styles.list}>
-            <h3>한계점</h3>
-            <ul>
-              <li>정치성향 분석의 과리 및 세부 데이터 부족</li>
-              <li>사용자 커뮤니티 기능 부족</li>
+          <ul className={styles.list}>
+              <p>정치성향 분석의 과리 및 세부 데이터 부족</p>
+              <p>사용자 커뮤니티 기능 부족</p>
             </ul>
-            <h3>후속 연구</h3>
+            <h3 className={styles.subTitle}>사용자 친화적 접근</h3>
             <ul>
-              <li>트래킹 기능 확장: 전국 단위 확대</li>
-              <li>뉴스 필터링 강화</li>
+              <p>트래킹 기능 확장: 전국 단위 확대</p>
+              <p>뉴스 필터링 강화</p>
             </ul>
           </div>
+          </div>
+          </div>
+          </div>
         </motion.div>
-      </div>
-
+     
+      
       {/* 결과 보고서 */}
       <div className={styles.reportSection}>
         <h2 className={styles.sectionTitle}>📄 결과 보고서</h2>
@@ -164,7 +210,8 @@ const CoDeepDetail = () => {
           결과 보고서 PDF 보기
         </a>
       </div>
-    </motion.div>
+      </div>
+      </motion.div>
   );
 };
 
