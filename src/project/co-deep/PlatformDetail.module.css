@@ -1,36 +1,43 @@
 .platformDetail {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 70px;
+    padding: 2rem;
+    background: linear-gradient(145deg, #121212, #1a1a1a);
+    color: #e5e5e5;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* 최소 높이를 화면 높이로 설정 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 콘텐츠가 위에서부터 시작하도록 설정 */
+    overflow-x: hidden; /* 좌우 잘림 방지 */
+    margin-top: 70px; /* 헤더 아래 공간 추가 */
   }
   
   .title {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 2.5rem;
+    color: #c2c2ff; /* 타이틀 강조 색상 */
+    margin-bottom: 2rem;
     text-align: center;
-    color: #333;
-    margin-bottom: 30px;
   }
   
   /* 섹션 간 여백 추가 */
   .section {
-    margin-bottom: 50px;
-    padding: 20px;
-    background: #f9f9f9;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: #1e1e1e; /* 섹션 배경 어둡게 */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* 섹션 그림자 */
+    width: 70%;
+    max-width: 1200px;
+    text-align: center; /* 섹션 중앙 정렬 */
   }
   
-  /* 대체 섹션 배경 */
-  .section:nth-child(even) {
-    background: #ffffff;
-  }
+  
+
   
   /* 섹션 제목 스타일 */
   .sectionTitle {
     font-size: 24px;
-    color: #423E59;
+    color:  #c2c2ff;
     margin-bottom: 20px;
   }
   
@@ -38,17 +45,23 @@
   .description {
     font-size: 16px;
     line-height: 1.6;
-    color: #555;
+    color: white;
     margin-top: 15px;
   }
   
   /* 이미지 스타일 */
   .image {
-    max-width: 100%;
+    max-width: 70%;
     border-radius: 10px;
     margin: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+  .image {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
   
   /* 버튼 컨테이너 */
   .buttonContainer {
@@ -60,8 +73,8 @@
   .backButton {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #423E59;
-    color: white;
+    background-color: #c2c2ff;
+    color: black;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -69,12 +82,26 @@
   }
   
   .backButton:hover {
-    background-color: #514d6b;
+    background-color: #78789e;
+    color: white;
   }
-  .image {
-    max-width: 80%; /* 이미지가 너무 크지 않도록 제한 */
-    height: auto;
+  /* 두 이미지 가로 배치 */
+.imageRow {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }  
+
+  .singleImage {
     display: block;
-    margin: 0 auto;
+    max-width: 80%;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   }
-  
+

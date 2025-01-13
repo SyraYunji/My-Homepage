@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./PlatformDetail.module.css";
 
 const PlatformDetail = () => {
+    const [modalImage, setModalImage] = useState(null); // 모달에 띄울 이미지 상태
+
+    const openModal = (imageSrc) => {
+        console.log("모달 열림, 이미지 경로:", imageSrc); // 디버깅
+        setModalImage(imageSrc);
+      };
+  
+    const closeModal = () => {
+      setModalImage(null);
+    };
+  
   return (
     <motion.div
       className={styles.platformDetail}
@@ -18,6 +29,7 @@ const PlatformDetail = () => {
           src="/images/main-page.png"
           alt="플랫폼 메인 화면"
           className={styles.image}
+          onClick={() => openModal("/images/main-page.png")}
         />
         <p className={styles.description}>
           PoliTracker는 사용자의 정치 참여를 돕기 위해 <strong>3가지 주요 기능</strong>을 제공합니다.
@@ -56,6 +68,7 @@ const PlatformDetail = () => {
       {/* 우리 지역 정치인 트래킹하기 */}
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>2. 우리 지역 정치인 트래킹하기</h2>
+        <div className={styles.imageGrid}>
         <img
           src="/images/district.png"
           alt="구 선택 화면"
@@ -88,6 +101,7 @@ const PlatformDetail = () => {
         <p className={styles.description}>
           국회의원 정보 화면에서는 국회의원 정보 뿐만 아니라 발의 법안과 의안 투표 현황이 실시간으로 조회 가능합니다.
         </p>
+        </div>
       </section>
 
       {/* 최신 뉴스와 챗봇 */}
