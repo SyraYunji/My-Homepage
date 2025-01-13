@@ -3,13 +3,13 @@
     background: linear-gradient(145deg, #121212, #1a1a1a);
     color: #e5e5e5;
     font-family: Arial, sans-serif;
-    min-height: 100vh; /* 최소 높이를 화면 높이로 설정 */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* 콘텐츠가 위에서부터 시작하도록 설정 */
-    overflow-x: hidden; /* 좌우 잘림 방지 */
-    margin-top: 70px; /* 헤더 아래 공간 추가 */
+    justify-content: flex-start;
+    overflow-x: hidden;
+    margin-top: 70px;
   }
   
   .title {
@@ -23,14 +23,13 @@
   .section {
     margin-bottom: 4rem;
     padding: 2rem;
-    background-color: #1e1e1e; /* 섹션 배경 어둡게 */
+    background-color: #1e1e1e;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* 섹션 그림자 */
-    width: 70%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 80%; /* 컨테이너 너비 확장 */
     max-width: 1200px;
-    text-align: center; /* 섹션 중앙 정렬 */
+    text-align: center;
   }
-  
   
 
   
@@ -93,9 +92,11 @@
   }
   .imageGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }  
+    grid-template-columns: repeat(2, 1fr); /* 2열로 설정 */
+    gap: 1.5rem; /* 이미지 간격 추가 */
+    width: 100%; /* 그리드가 컨테이너 전체를 차지 */
+    align-items: start; /* 이미지와 텍스트 수직 정렬 */
+  }
 
   .singleImage {
     display: block;
