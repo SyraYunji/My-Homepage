@@ -196,13 +196,18 @@
 }
 
 .demoImage {
-  width: 300px;
+  width: 250px;
 }
 
-.paragraph {
-  margin-bottom: 30px;
+.survey p{
+  word-break: keep-all;
 }
 
 .graph{
   word-break: keep-all;
+}
+
+.highlight {
+  color: #cfc2e9; /* 원하는 색상으로 변경 */
+  font-weight: bold; /* 필요하면 강조 */
 }

@@ -21,7 +21,7 @@ const CoDeepDetail = () => {
       {/* My Role */}
       <h3 className={styles.role}>My Role: Frontend Developer</h3>
       <p className={styles.roleDescription}>
-        정치성향테스트 부분 전체 제작 + 구청장 조회하기 페이지 전체 제작 + Chatbot 제작 + 전체 CSS 다듬기
+        정치성향테스트 부분 스토리 포함하여 전체 제작 + 구청장 조회하기 페이지 전체 제작 + Chatbot 제작 + 전체 CSS 다듬기
       </p>
 
       {/* '플랫폼 더 자세히 보기' 버튼 */}
@@ -98,9 +98,9 @@ const CoDeepDetail = () => {
             <div className={styles.subSection}>
               <h3 className={styles.subTitle}>주요 기능</h3>
               <ul className={styles.list}>
-                <p>정치성향테스트: 질문을 통해 성향 분석</p>
-                <p>지역 정치인 트래킹: 공약 이행률 시각화</p>
-                <p>정치 용어 및 뉴스: 최신 정보 제공</p>
+                <p>정치성향테스트 <br />: 질문을 통해 성향 분석</p>
+                <p>지역 정치인 트래킹 <br />: 공약 이행률 시각화</p>
+                <p>정치 용어 및 뉴스 : 최신 정보 제공</p>
               </ul>
             </div>
             <div className={styles.subSection}>
@@ -135,7 +135,15 @@ const CoDeepDetail = () => {
               className={styles.demoImage}
             />
           </div>
-          <p className = "paragraph">아래는 사용자가 테스트한 결과를 기반으로 한 데이터를 시각화한 이미지입니다.</p>
+          <div className = {styles.survey}>
+          <p className={styles.paragraph}>
+            <span className={styles.highlight}>67.9%</span> 가 정치에 대한 관심이 증가했다고 함
+            <br />
+            <span className={styles.highlight}>95.9%</span> 가 각 정치인의 활동을 직관적으로 알기 쉬웠다고 함
+            <br />
+            <span className={styles.highlight}>89%</span> 응답자가 지역 별 정치 관련 뉴스가 유익하다고 함
+          </p>
+          </div>
         </motion.div>
 
         {/* 05. 플랫폼 의의 */}
@@ -145,7 +153,7 @@ const CoDeepDetail = () => {
         animate={{ x: 0 }}
         transition={{ type: "spring", stiffness: 50 }}>
 
-        <h2 className={styles.sectionTitle}>5.플랫폼 <span className={styles.highlight}>의의</span></h2>
+        <h2 className={styles.sectionTitle}>5.플랫폼 의의</h2>
         <div className={styles.contentContainer}>
           <div className={styles.subSection}>
             <h3 className={styles.subTitle}>사용자 참여 유도</h3>

@@ -9,13 +9,14 @@ const Projects = () => {
       <h1 className={styles.title}>My Projects</h1>
       <p className={styles.intro}>
         아래는 제가 참여한 다양한 프로젝트들을 요약한 내용입니다. 각 항목을 클릭하면 자세한 내용을 확인할 수 있습니다.
+        <br />현재 서버비 문제로 사이트는 내려간 상태입니다.
       </p>
 
       <div className={styles.cardContainer}>
         <div className={styles.projectCard}>
           <h3 className={styles.projectTitle}>Co-Deep Project</h3>
           <p className={styles.cardContent}>
-            프론트엔드 개발과 팀 협업 플랫폼을 통한 실시간 통합 개발. React와 Next.js를 중점적으로 다룹니다.
+            React.js를 이용하여 정치 트래킹 플랫폼을 팀원들과 개발하였습니다.
           </p>
           <Link to="/co-deep" className={styles.projectLink}>
             자세히 보기
