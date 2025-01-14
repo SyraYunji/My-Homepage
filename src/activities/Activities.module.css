@@ -11,8 +11,12 @@
     font-size: 3rem;
     margin-bottom: 1.5rem;
     color: #ffffff;
+    letter-spacing: 5px;
   }
-  
+
+  .sectionDescription {
+    word-break: keep-all;
+  }
   /* 소개 텍스트 */
   .intro {
     font-size: 1.2rem;

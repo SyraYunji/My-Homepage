@@ -7,14 +7,19 @@ const Activities = () => {
 
   return (
     <div className={styles.activities}>
-      <h1 className={styles.title}>나의 활동</h1>
+      <h1 className={styles.title}>My Activities</h1>
       <p className={styles.intro}>
-        아래는 제가 참여한 다양한 활동들을 요약한 내용입니다. 각 항목을 클릭하면 자세한 내용을 확인할 수 있습니다.
+        아래는 제가 참여한 다양한 활동들을 요약한 내용입니다. <br />각 항목을 클릭하면 자세한 내용을 확인할 수 있습니다.
       </p>
 
       {/* AIESEC 섹션 */}
       <div className={styles.section}>
-        <h2 className={styles.sectionTitle}>AIESEC</h2>
+      <h2 className={styles.sectionTitle}>AIESEC</h2>
+        <p className={styles.sectionDescription}>
+          UN 경제사회이사회(ECOSOC)와 협의하는 비정부 기구이며, UN DPI 및 UN 사무총장 청소년 특사실의 독립 기관이자 
+          ICMYO 회원이며 유네스코의 인정을 받은 단체
+        </p>
+
         <div className={styles.cardContainer}>
           <div
             className={styles.card}
@@ -27,7 +32,7 @@ const Activities = () => {
           </div>
           <div
             className={styles.card}
-            onClick={() => navigate("/activities/nldc")}
+            onClick={() => navigate("/activities/aiesec2")}
           >
             <h3 className={styles.cardTitle}>National Leadership Development Conference</h3>
             <p className={styles.cardContent}>
@@ -50,32 +55,6 @@ const Activities = () => {
         </div>
       </div>
 
-      
-      {/* BDA 섹션 */}
-      <div className={styles.section}>
-        <h2 className={styles.sectionTitle}>BDA (빅데이터 학회)</h2>
-        <div className={styles.cardContainer}>
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>빅데이터 분석 및 머신러닝</h3>
-            <p className={styles.cardContent}>
-              데이터를 분석하고 머신러닝 모델을 학습하며 데이터 처리 능력을 향상시켰습니다.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* 해율 법무법인 서포터즈 */}
-      <div className={styles.section}>
-        <h2 className={styles.sectionTitle}>해율 법무법인 서포터즈</h2>
-        <div className={styles.cardContainer}>
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>법률 캠페인 지원 및 홍보</h3>
-            <p className={styles.cardContent}>
-              법률 캠페인을 기획 및 홍보하며, 대중과의 소통 능력을 강화했습니다.
-            </p>
-          </div>
-        </div>
-      </div>
 
 
     </div>

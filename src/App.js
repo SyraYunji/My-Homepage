@@ -9,6 +9,7 @@ import AIESEC1 from "./activities/aiesec/aiesec1";
 import CoDeepDetail from "./project/co-deep/CoDeepDetail";
 import Timi from "./project/timi/timi";
 import PlatformDetail from "./project/co-deep/platform-detail";
+import AIESEC2 from "./activities/aiesec/aiesec2";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/co-deep" element={<CoDeepDetail />} />
           <Route path="/timi" element={<Timi />} />
           <Route path = "/platform-detail" element = {<PlatformDetail />} />
+          <Route path = "/activities/aiesec2" element = {<AIESEC2 />} />
         </Routes>
       </div>
     </Router>

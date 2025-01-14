@@ -72,7 +72,18 @@ const AIESEC1 = () => {
         <h2 className={styles.sectionTitle}>사용자 맞춤형 트래킹 툴</h2>
         <div className={styles.toolContent}>
           <img
-            src="/images/tracking-tool-example.png"
+            src="/images/contact.png"
+            alt="엑셀 관리 툴"
+            className={styles.toolImage}
+          />
+          <p>
+            참여자 데이터와 요구사항을 체계적으로 관리하고, 진행 상황을 가시화한 맞춤형 트래킹 툴. 
+            이를 통해 문제 상황을 사전에 파악하고, 모든 참여자가 만족할 수 있는 솔루션 제공.
+          </p>
+        </div>
+        <div className={styles.toolContent}>
+          <img
+            src="/images/contact2.png"
             alt="엑셀 관리 툴"
             className={styles.toolImage}
           />
