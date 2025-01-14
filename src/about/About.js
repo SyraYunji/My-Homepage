@@ -21,12 +21,6 @@ const About = () => {
           <a href="https://www.youtube.com/@studyesme9286/videos" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-youtube"></i> Youtube: MyChannel
           </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i> Instagram: @myprofile
-          </a>
-          <a href="https://myblog.com/" target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-blog"></i> Blog: myblog.com
-          </a>
         </div>
       </section>
 

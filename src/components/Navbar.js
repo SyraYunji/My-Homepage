@@ -5,6 +5,7 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
+
       {/* 로고 */}
       <div className={styles.logo}>
         <Link to="/">MyPortfolio</Link>
@@ -15,6 +16,7 @@ const Navbar = () => {
         <li><Link to="/about">About</Link></li>
         <li><Link to="/project">Projects</Link></li>
         <li><Link to="/activities">Activities</Link></li> {/* Activities로 이동 */}
+     
       </ul>
 
       {/* 외부 링크 */}

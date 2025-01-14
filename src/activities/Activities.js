@@ -71,7 +71,18 @@ const Activities = () => {
             </p>
           </div>
           
-          
+          <div className={styles.card}>
+            <h3 className={styles.cardTitle}>운영진</h3>
+            <p className={styles.cardContent}>
+              React와 Next.js를 학습하며 다양한 팀 프로젝트를 진행했습니다.
+            </p>
+            <p
+              className={styles.cardLink}
+              onClick={() => navigate("/activities/likelion")}
+            >
+              자세히 보기
+            </p>
+          </div>
 
         </div>
       </div>
