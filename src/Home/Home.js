@@ -48,9 +48,6 @@ const Home = () => {
           <Link to="/project" className={styles.button}>
             View Projects
           </Link>
-          <a href="#contact" className={styles.buttonAlt}>
-            Contact Me
-          </a>
         </div>
       </section>
     </div>
