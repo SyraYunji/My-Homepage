@@ -16,7 +16,7 @@ const Projects = () => {
         <div className={styles.projectCard}>
           <h3 className={styles.projectTitle}>Co-Deep Project</h3>
           <p className={styles.cardContent}>
-            React.js를 이용하여 정치 트래킹 플랫폼을 팀원들과 개발하였습니다.
+            정치적 무관심이 심화되는 문제를 해결하기 위해 React.js를 이용하여 맞춤형 정치 정보를 제공하는 정치 트래킹 플랫폼, PoliTracker을 개발하였습니다.
           </p>
           <Link to="/co-deep" className={styles.projectLink}>
             자세히 보기
@@ -25,7 +25,7 @@ const Projects = () => {
         <div className={styles.projectCard}>
           <h3 className={styles.projectTitle}>Timi Project</h3>
           <p className={styles.cardContent}>
-            팀의 생산성을 최적화하기 위한 시간 관리 도구. 실시간 환경에서의 팀 작업에 특화되어 있습니다.
+            회의 시간이나 약속 시간을 잡을 시, 편하게 정할 수 있도록 시간 조율 서비스 플랫폼을 개발
           </p>
           <Link to="/timi" className={styles.projectLink}>
             자세히 보기
