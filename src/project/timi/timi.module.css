@@ -11,6 +11,10 @@
     justify-content: flex-start; /* 콘텐츠가 위에서부터 시작하도록 설정 */
     overflow-x: hidden; /* 좌우 잘림 방지 */
   }
+
+  .detail p{
+    word-break: keep-all;
+  }
   
   /* 프로젝트 소개 섹션 */
   .intro {
@@ -146,4 +150,17 @@
       grid-template-columns: 1fr; /* 작은 화면에서 1열로 표시 */
     }
   }
-  
+  /* My Role 섹션 */
+.myRole {
+  margin-bottom: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.myRole p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #e5e5e5;
+}
