@@ -61,18 +61,25 @@
   
   /* 카드 컨테이너 */
   .cardContainer {
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
     justify-items: center;
   }
   
+  .cardContainer {
+    display: flex; /* flex로 변경 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 (필요 시) */
+    gap: 2rem; /* 카드 간격 */
+    flex-wrap: wrap; /* 여러 줄 카드 정렬 */
+  }
   /* 카드 스타일 */
   .card {
     background: #1a1a1a;
     padding: 1.5rem;
     border-radius: 12px;
-    max-width: 350px;
+    width: 350px;
+    height: 170px;
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -96,4 +103,18 @@
     color: #cccccc;
     line-height: 1.6;
   }
-  
+  /* 카드 링크 스타일 */
+.cardLink {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e91e63; /* 포인트 색상 */
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: left; /* 왼쪽 정렬 */
+  transition: color 0.3s;
+}
+
+.cardLink:hover {
+  color: #ff4081; /* 호버 시 색상 */
+  text-decoration: underline;
+}
