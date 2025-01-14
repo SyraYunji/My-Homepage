@@ -32,6 +32,31 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   }
+
+  /* GitHub 섹션 */
+.githubSection {
+  text-align: center;
+}
+
+.githubDescription {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #d6d6d6;
+}
+
+.githubLink {
+  font-size: 1.2rem;
+  color: #61dafb;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.githubLink:hover {
+  color: #21a1f1;
+  text-decoration: underline;
+}
+
   
   /* User Research 섹션 */
   .userResearch,

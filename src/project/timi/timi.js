@@ -117,6 +117,23 @@ const Timi = () => {
           효율성을 극대화합니다.
         </p>
       </section>
+
+      {/* GitHub Repository */}
+      <section className={styles.githubSection}>
+        <h2 className={styles.sectionTitle}>GitHub Repository</h2>
+        <p className={styles.githubDescription}>
+          프로젝트의 코드는 GitHub에서 확인할 수 있습니다. 아래 링크를 클릭하세요:
+        </p>
+        <a
+          href="https://github.com/4LineThon/Frontend.git" // 여기에 실제 깃허브 주소 입력
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.githubLink}
+        >
+          GitHub Repository 바로가기
+        </a>
+      </section>
+
     </div>
   );
 };

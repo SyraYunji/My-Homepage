@@ -9,7 +9,7 @@ const Home = () => {
     <div className={styles.home}>
       <section className={styles.hero}>
         {/* 1번 사진 추가 */}
-        <img src="/profile.jpg" alt="Profile" className={styles.profileImage} />
+        <img src="/Profile.jpg" alt="Profile" className={styles.profileImage} />
 
         {/* 메인 텍스트 */}
         <motion.div

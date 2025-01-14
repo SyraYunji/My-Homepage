@@ -206,19 +206,34 @@ const CoDeepDetail = () => {
         </motion.div>
      
       
-      {/* 결과 보고서 */}
-      <div className={styles.reportSection}>
-        <h2 className={styles.sectionTitle}>📄 결과 보고서</h2>
+          {/* 결과 보고서 */}
+          <div className={styles.reportSection}>
+            <h2 className={styles.sectionTitle}>📄 결과 보고서</h2>
+            <a 
+              href="/files/report.pdf" 
+              download 
+              className={styles.reportLink}
+            >
+              결과 보고서 다운로드
+            </a>
+          </div>
+
+      
+      </div>
+      <section className={styles.githubSection}>
+        <h2 className={styles.sectionTitle}>GitHub Repository</h2>
+        <p className={styles.githubDescription}>
+          프로젝트의 코드는 GitHub에서 확인할 수 있습니다. 아래 링크를 클릭하세요:
+        </p>
         <a
-          href="https://drive.google.com/your-report-link"
+          href="https://github.com/Co-Deep-Project/Backend.git" // 여기에 실제 깃허브 주소 입력
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.reportLink}
+          className={styles.githubLink}
         >
-          결과 보고서 PDF 보기
+          GitHub Repository 바로가기
         </a>
-      </div>
-      </div>
+      </section>
       </motion.div>
   );
 };

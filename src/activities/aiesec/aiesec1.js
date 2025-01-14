@@ -41,11 +41,11 @@ const AIESEC1 = () => {
         </div>
         <div className={styles.timelineItem}>
           <div className={styles.timelineDot}></div>
-          <p>이틀간 오픈 부스 개최를 통해 학생 참여 독려</p>
+          <p>이틀간 오픈 부스 개최를 통해 프로그램 희망 참여자 모집</p>
         </div>
         <div className={styles.timelineItem}>
           <div className={styles.timelineDot}></div>
-          <p>해외 지부와 상시 미팅을 통해 프로그램 중계</p>
+          <p>해외 지부와 상시 미팅(IR Call)을 통해 프로그램 모색 및 정리본에 정리하여 팀에게 보고</p>
         </div>
       </section>
 

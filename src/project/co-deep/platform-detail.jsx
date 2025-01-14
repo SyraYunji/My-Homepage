@@ -151,12 +151,7 @@ const PlatformDetail = () => {
         </div>
       )}
 
-      {/* 돌아가기 버튼 */}
-      <div className={styles.buttonContainer}>
-        <a href="/" className={styles.backButton}>
-          메인 페이지로 돌아가기
-        </a>
-      </div>
+      
     </motion.div>
   );
 };
