@@ -143,6 +143,24 @@
   border-radius: 8px;
   transition: background 0.3s, transform 0.2s;
 }
+.awardSection {
+  margin-top: 2rem; /* 여백 추가 */
+  background: rgba(255, 193, 7, 0.1); /* 금빛 배경 느낌 */
+  padding: 1.0rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.awardTitle {
+  font-size: 1.8rem;
+  color: #ffc107; /* 금빛 강조 */
+  margin-bottom: 0.8rem;
+}
+
+.awardDescription {
+  font-size: 1.2rem;
+  color: #e5e5e5;
+}
 
 .link:hover {
   background: linear-gradient(90deg, #e91e63, #c2185b);
@@ -152,6 +170,14 @@
 .buttonContainer {
   margin: 2rem auto; /* 상하 간격 추가 */
   text-align: center;
+}
+
+/* 버튼 컨테이너 */
+.buttonContainer {
+  display: flex; /* 가로 정렬 */
+  justify-content: center; /* 버튼 가운데 정렬 */
+  gap: 1.5rem; /* 버튼 간 간격 */
+  margin-top: 2rem;
 }
 
 .detailButton {
@@ -229,4 +255,25 @@
 .reportLink:hover {
   background-color: #61dafb;
   color: #ffffff;
+}
+
+/*URP */
+.urpButton {
+  padding: 0.7rem 2rem; /* 버튼 크기 */
+  font-size: 1.4rem; /* 텍스트 크기 */
+  font-weight: bold;
+  background: linear-gradient(90deg, #80deea, #4dd0e1); /* 시원한 파란색 그라데이션 */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(128, 222, 234, 0.5);
+  margin-top: 1rem;
+}
+
+.urpButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(90deg, #4dd0e1, #26c6da);
+  box-shadow: 0 6px 15px rgba(38, 198, 218, 0.8);
 }

@@ -23,11 +23,19 @@ const CoDeepDetail = () => {
       <p className={styles.roleDescription}>
         정치성향테스트 부분 스토리 포함하여 전체 제작 + 구청장 조회하기 페이지 전체 제작 + Chatbot 제작 + 전체 CSS 다듬기
       </p>
-
-      {/* '플랫폼 더 자세히 보기' 버튼 */}
+      {/* 수상 내역 */}
+      <div className={styles.awardSection}>
+        <h3 className={styles.awardTitle}>🏆 최우수상 수상</h3>
+        <p className={styles.awardDescription}>
+          Co-Deep Learning Project에서 뛰어난 기획 및 개발 성과를 인정받아 수상.
+        </p>
+      </div>
       <div className={styles.buttonContainer}>
         <Link to="/platform-detail" className={styles.detailButton}>
           플랫폼 더 자세히 보러가기
+        </Link>
+        <Link to="/urp" className={styles.detailButton}>
+          URP 프로젝트 더 알아보기
         </Link>
       </div>
 

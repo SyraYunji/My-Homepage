@@ -16,7 +16,7 @@ const Navbar = () => {
         <li><Link to="/about">About</Link></li>
         <li><Link to="/project">Projects</Link></li>
         <li><Link to="/activities">Activities</Link></li> {/* Activities로 이동 */}
-     
+        <li><Link to="/contact">Contact</Link></li>
       </ul>
 
       {/* 외부 링크 */}

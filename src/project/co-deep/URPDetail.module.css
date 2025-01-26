@@ -1,0 +1,57 @@
+.urpDetail {
+    padding: 2rem;
+    background: linear-gradient(145deg, #121212, #1a1a1a);
+    color: #e5e5e5;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    color: #c2c2ff; /* 파란색 강조 */
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .intro {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+    color: #c2c2ff;
+    margin-bottom: 1rem;
+  }
+  
+  .subTitle {
+    font-size: 1.4rem;
+    color: #c2c2ff;
+    margin-top: 1rem;
+  }
+  
+  .list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  
