@@ -62,18 +62,16 @@
     flex-wrap: nowrap; /* 링크를 한 줄에 배치 */
     gap: 1rem; /* 간격 줄이기 */
     justify-content: center; /* 중앙 정렬 */
+    margin-top: 10px;
 }
 
-  .externalLinks {
-      justify-content: center; /* 외부 링크 중앙 정렬 */
-      margin-top: 1rem;
-  }
 
   .navbar {
     flex-direction: column; /* 로고와 네비게이션을 수직 정렬 */
     padding: 0.5rem 1rem; /* 세로 패딩 축소 */
+    height: 80px;
 }
   .externalLinks{
-    visibility:hidden;
+    display: none;
   }
 }
