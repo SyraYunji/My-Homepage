@@ -16,11 +16,30 @@ const URPDetail = () => {
         학부연구생으로서, <strong>PoliTracker 플랫폼</strong>의 핵심 기능 구현과 비즈니스 모델 개발을 통해 프로젝트 발전에 기여했습니다.
       </p>
 
+{/* 이미지 예시 */}
+<div className={styles.imageGrid}>
+  <div className={styles.imageWrapper}>
+    <img
+      src="/images/finish.png"
+      alt="결과 화면 캡처 예시 1"
+      className={styles.image}
+    />
+  </div>
+  <div className={styles.imageWrapper}>
+    <img
+      src="/images/finish1.png"
+      alt="결과 화면 캡처 예시 2"
+      className={styles.image1}
+    />
+  </div>
+</div>
+
+
 {/* 문제와 해결: 테스트 결과 캡처 기능 */}
 <section className={styles.section}>
-  <h2 className={styles.sectionTitle}>📌 문제와 해결: 테스트 결과 캡처 기능</h2>
+  <h2 className={styles.sectionTitle}>📌 결과 화면 저장 기능, 공유 기능 추가</h2>
   <p className={styles.description}>
-    정치적 관심 증대를 목표로 하는 플랫폼의 상용화 초기 단계에서, 다음과 같은 문제들이 발생했습니다. 이를 해결하기 위해 <strong>테스트 결과 캡처 및 저장</strong> 기능을 설계하고 구현했습니다.
+    정치적 관심 증대를 목표로 하는 플랫폼의 상용화 초기 단계에서 추가로 보완해야할 부분들이 발견 되었고, <br />이를 해결하기 위해 <strong>테스트 결과 캡처 및 저장</strong> 기능을 설계하고 구현했습니다.
   </p>
 
   {/* 문제 분석 */}
@@ -30,7 +49,7 @@ const URPDetail = () => {
       <strong>정치적 무관심:</strong> 정치적 관심이 낮은 사용자들에게 결과 데이터를 보관하거나 공유할 동기를 제공하기 어려움.
     </li>
     <li>
-      <strong>기술적 제약:</strong> DOM 요소를 안정적으로 이미지로 변환하기 위해 크로스 플랫폼 호환성과 CORS(교차 출처 리소스) 문제 해결 필요.
+      <strong>기술적 제약:</strong> DOM 요소를 안정적으로 이미지로 변환하기 위해 크로스 플랫폼 호환성과 CORS 문제 해결 필요.
     </li>
     <li>
       <strong>차별성 부족:</strong> 기존 뉴스 플랫폼과 비교해 부가가치를 명확히 전달하지 못함.
@@ -41,10 +60,10 @@ const URPDetail = () => {
   <h3 className={styles.subTitle}>해결 방안</h3>
   <ul className={styles.list}>
     <li>
-      사용자 테스트 결과를 이미지로 캡처하고 저장할 수 있는 기능을 도입하여 사용자 경험(UX) 개선.
+      사용자 테스트 결과를 이미지로 캡처하고 저장할 수 있는 기능을 도입하여 UX 개선.
     </li>
     <li>
-      html2canvas 라이브러리를 활용해 DOM 요소를 캔버스(canvas)로 렌더링 후 이미지로 변환.
+      html2canvas 라이브러리를 활용해 DOM 요소를 canvas로 렌더링 후 이미지로 변환.
     </li>
     <li>
       Cross-Platform 환경을 지원하며, 모바일과 데스크톱 모두에서 안정적인 성능 제공.
@@ -101,17 +120,7 @@ const URPDetail = () => {
     <li>캔버스 기반 렌더링 성능을 최적화하여 UI 왜곡 문제를 해결.</li>
   </ul>
 
-  {/* 이미지 예시 */}
-  <div className={styles.imageGrid}>
-    <div>
-      <img
-        src="/images/capture-example.png"
-        alt="결과 화면 캡처 예시"
-        className={styles.image}
-      />
-      <p className={styles.description}>테스트 결과를 캡처한 화면 예시</p>
-    </div>
-  </div>
+
 </section>
 
 

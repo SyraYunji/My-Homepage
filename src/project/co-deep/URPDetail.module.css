@@ -7,7 +7,7 @@
 }
 .intro {
   font-size: 20px;
-  align-items: center;
+  margin-left: 250px;
 }
 
 .title {
@@ -15,7 +15,7 @@
   color: #c2c2ff; /* 파란색 강조 */
   margin-bottom: 2rem;
   text-align: center;
-  margin-top: 4rem; /* 제목 상단 여백 */
+  margin-top: 5rem; /* 제목 상단 여백 */
 }
 
 .section {
@@ -24,6 +24,7 @@
   background-color: #1e1e1e;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  
 }
 
 .sectionTitle {
@@ -46,8 +47,108 @@
   margin-bottom: 1rem;
 }
 
+
+
+
+.imageGrid {
+  display: flex; /* 이미지를 가로로 정렬 */
+  justify-content: space-between; /* 이미지 사이의 공간 균등 분배 */
+  align-items: flex-start; /* 상단 정렬 */
+  gap: 20px; /* 이미지 간격 */
+  margin: 20px 0; /* 상하 여백 */
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column; /* 이미지와 설명을 세로로 정렬 */
+  align-items: center; /* 이미지와 텍스트 가운데 정렬 */
+  flex: 1; /* 각 이미지의 크기를 동일하게 분배 */
+}
+
 .image {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-top: 1rem;
+  max-width: 100%; /* 이미지 크기가 부모 요소를 넘지 않도록 설정 */
+  height: auto; /* 이미지 비율 유지 */
+  border-radius: 8px; /* 모서리에 곡선 추가 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
+.image1 {
+  max-width: 100%; /* 이미지 크기가 부모 요소를 넘지 않도록 설정 */
+  height: auto; /* 이미지 비율 유지 */
+  border-radius: 8px; /* 모서리에 곡선 추가 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  margin-top: 120px;
+}
+
+
+.description {
+  margin-top: 8px; /* 이미지와 텍스트 간격 */
+  font-size: 20px; /* 텍스트 크기 */
+  color: white; /* 부드러운 색상 */
+  text-align: center;
+  word-break: keep-all;
+}
+
+@media (max-width: 768px) {
+  .imageGrid {
+    flex-direction: column; /* 작은 화면에서는 이미지를 세로로 정렬 */
+    align-items: center; /* 모든 이미지를 가운데 정렬 */
+  }
+}
+@media (max-width: 768px) {
+  /* 이미지 그리드 */
+  .imageGrid {
+    flex-direction: column; /* 이미지를 세로로 정렬 */
+    align-items: center; /* 이미지와 텍스트를 가운데 정렬 */
+    gap: 30px; /* 이미지 간 간격 */
+  }
+
+  /* 이미지 정렬 */
+  .image {
+    max-width: 90%; /* 이미지 크기를 화면에 맞게 조정 */
+    margin-top: 10px; /* 상단 여백 */
+  }
+
+  .image1 {
+    max-width: 90%; /* 두 번째 이미지 크기 동일하게 설정 */
+    margin-top: 30px; /* 더 큰 여백으로 강조 */
+  }
+
+  /* 제목 및 텍스트 스타일 */
+  .title {
+    font-size: 2rem; /* 제목 크기 줄임 */
+    margin-top: 6rem; /* 상단 여백 */
+  }
+
+  .intro {
+    font-size: 18px; /* 소개 텍스트 크기 줄임 */
+    margin-left: 0; /* 모바일에서 중앙 정렬 */
+    text-align: center;
+  }
+
+  /* 섹션 스타일 */
+  .section {
+    padding: 1.5rem; /* 모바일에서 패딩 감소 */
+    margin-bottom: 2rem; /* 아래 여백 감소 */
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem; /* 섹션 제목 크기 감소 */
+  }
+
+  .subTitle {
+    font-size: 1.3rem; /* 소제목 크기 조정 */
+  }
+
+  .list {
+    font-size: 1rem; /* 목록 텍스트 크기 감소 */
+    line-height: 1.5; /* 텍스트 간격 늘림 */
+  }
+
+  /* 설명 텍스트 스타일 */
+  .description {
+    font-size: 16px; /* 텍스트 크기 줄임 */
+    text-align: center; /* 모바일에서 중앙 정렬 */
+    word-break: keep-all; /* 줄바꿈 방지 */
+  }
 }
