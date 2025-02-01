@@ -14,7 +14,7 @@ const Projects = () => {
 
       <div className={styles.cardContainer}>
         <div className={styles.projectCard}>
-          <h3 className={styles.projectTitle}>Co-Deep Project</h3>
+          <h3 className={styles.projectTitle}>Co-Deep Project(최우수상 수상)</h3>
           <p className={styles.cardContent}>
             정치적 무관심 문제를 해결하기 위해 React.js를 이용하여 맞춤형 정치 정보를 제공하는 정치 트래킹 플랫폼 개발
           </p>
