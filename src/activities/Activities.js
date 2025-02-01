@@ -78,7 +78,7 @@ const Activities = () => {
             </p>
             <p
               className={styles.cardLink}
-              onClick={() => navigate("/activities/likelion")}
+              onClick={() => navigate("/coming-soon")}
             >
               자세히 보기
             </p>

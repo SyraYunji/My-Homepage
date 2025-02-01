@@ -11,6 +11,8 @@ import Timi from "./project/timi/timi";
 import PlatformDetail from "./project/co-deep/platform-detail";
 import AIESEC2 from "./activities/aiesec/aiesec2";
 import URPDetail from "./project/co-deep/URP Detail";
+import Contact from "./contact/contact";
+import ComingSoon from "./coming soon/ComingSoon";
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
           <Route path = "/platform-detail" element = {<PlatformDetail />} />
           <Route path = "/activities/aiesec2" element = {<AIESEC2 />} />
           <Route path = "/urp" element = {<URPDetail />} />
+          <Route path = "/contact" element = {<Contact />}/>
+          <Route path = "/coming-soon" element = {<ComingSoon />}/>
         </Routes>
       </div>
     </Router>

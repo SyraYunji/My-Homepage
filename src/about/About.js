@@ -13,8 +13,9 @@ const About = () => {
       <section className={styles.introduction}>
         <div className = {styles.aboutIntro}>
         <p>
-          안녕하세요! 저는 <strong>융합형 인재</strong>로, 문과와 이과의 경계를 넘나들며  
-          창의적 문제 해결과 소프트웨어 기술을 통해 가치를 만들어내는 개발자입니다.
+        안녕하세요! 저는 <strong>사용자의 니즈를 깊이 이해하고, 이를 기술로 실현하는 개발자</strong>입니다.<br />
+<strong>경영학적 통찰력</strong>으로 데이터 기반 의사 결정을 내리고,<strong> 소프트웨어 기술력</strong>으로 이를 현실화하여 <strong>혁신적인 가치를 창출</strong>합니다.
+
         </p>
         </div>
         <div className={styles.socialLinks}>
@@ -94,14 +95,26 @@ const About = () => {
               <li><strong>AIESEC 국외교류부서 부서장</strong> - 해외 인턴십 및 봉사 프로그램을 한국 학생들에게 중계</li>
               <li><strong>AIESEC 컨퍼런스 전체 회장</strong> - National Leadership Development Conference 전체 회장(129명 참여)</li>
               <li><strong>멋쟁이 사자처럼 학회원</strong> - React.js, Next.js를 공부하며 프로젝트에 참여</li>
-              <li><strong>AI 교육캠프 및 경진대회 장려상</strong> 인공지능혁신융합대학사업단에서 주최한 교육 캠프 및 경진대회에서 장려상 수상</li>
-              <li><strong>BDA 학회(빅데이터 분석 학회)</strong> 머신러닝반과 데이터 전처리(판다스)반에서 조장으로 활동 </li>
-              <li><strong>Co-Deep Project</strong> 교수-학생 협동 프로젝트인 Co-Deep Project에서 정치 트래킹 플랫폼 개발</li>
+              <li><strong>AI 교육캠프 및 경진대회 장려상</strong> - 인공지능혁신융합대학사업단에서 주최한 교육 캠프 및 경진대회에서 장려상 수상</li>
+              <li><strong>BDA 학회(빅데이터 분석 학회)</strong> - 머신러닝반과 데이터 전처리(판다스)반에서 조장으로 활동 </li>
+              <li><strong>Co-Deep Project</strong> - 교수-학생 협동 프로젝트인 Co-Deep Project에서 정치 트래킹 플랫폼 개발</li>
+              <li><strong>멋쟁이 사자처럼 운영진</strong> - ㄴㄴㄴㄴ</li>
+            </ul>
+          </section>
+
+        
+          {/* Awards (수상 내역) */}
+          <section className={styles.awards}>
+            <h2>Awards</h2>
+            <ul className={styles.awardList}>
+              <li>🏆 <strong>AI 교육캠프 및 경진대회 장려상</strong> - 인공지능혁신융합대학사업단 주최</li>
+              <li>🏆 <strong>Co-Deep Project 최우수상</strong> - 성균관대학교 대학혁신과공유센터 주최</li>
             </ul>
           </section>
         </div>
       </div>
-    </div>
+      </div>
+    
   );
 };
 

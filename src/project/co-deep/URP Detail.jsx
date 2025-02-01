@@ -19,7 +19,7 @@ const URPDetail = () => {
       {/* 페이지 제목 */}
       <h1 className={styles.title}>URP 학부연구생 프로젝트 - My Role</h1>
       <p className={styles.intro}>
-        학부연구생으로서, <strong>PoliTracker 플랫폼</strong>의 핵심 기능 구현과 비즈니스 모델 개발을 통해 프로젝트 발전에 기여했습니다.
+        학부연구생으로 활동하며 <strong>PoliTracker 플랫폼</strong> 기능을 추가하고, 비즈니스 모델 개발을 통해 프로젝트 발전에 기여했습니다.
       </p>
 
 {/* 이미지 예시 */}

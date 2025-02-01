@@ -1,0 +1,74 @@
+/* 📌 전체 배경 스타일 */
+.comingSoonContainer {
+    background: linear-gradient(145deg, #121212, #1a1a1a);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  /* 📌 제목 스타일 */
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4081;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 15px rgba(255, 64, 129, 0.7);
+    animation: blink 1.5s infinite alternate;
+  }
+  
+  /* 📌 서브타이틀 */
+  .subtitle {
+    font-size: 1.5rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  /* 📌 푸터 메시지 */
+  .footer {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+  }
+  
+  /* 📌 애니메이션 */
+  @keyframes blink {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.6;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* 📌 반응형 스타일 */
+  @media (max-width: 600px) {
+    .title {
+      font-size: 2.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .footer {
+      font-size: 1rem;
+    }
+  }
+  

@@ -35,7 +35,7 @@ const CoDeepDetail = () => {
           플랫폼 더 자세히 보러가기
         </Link>
         <Link to="/urp" className={styles.detailButton}>
-          URP 프로젝트 더 알아보기
+          URP 프로젝트 바로가기
         </Link>
       </div>
 
