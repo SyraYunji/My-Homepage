@@ -160,6 +160,25 @@
     line-height: 1.8;
     color: #e5e5e5;
   }
+
+  .githubLink {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #61dafb; /* GitHub의 블루 컬러 */
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border: 2px solid #61dafb;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .githubLink:hover {
+    background-color: #61dafb;
+    color: #121212; /* 배경색과 대비되는 텍스트 색상 */
+  }
   
   /* 반응형 디자인 */
   @media (max-width: 768px) {
@@ -188,4 +207,94 @@
   line-height: 1.8;
   margin-bottom: 1.5rem;
   color: #e5e5e5;
+}
+@media (max-width: 767px) {
+  .timiContainer {
+    padding: 1.5rem 1rem; /* 양쪽 패딩 줄이기 */
+    margin-top: 50px; /* 상단 여백 조정 */
+    padding-bottom: 0px;
+  }
+
+  .title {
+    font-size: 4rem; /* 제목 크기 조정 */
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  /* 섹션 스타일 */
+  .intro,
+  .myRole,
+  .userResearch,
+  .services,
+  .conclusion {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+
+  .intro {
+    margin-bottom: 0px;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    margin-top: 20px;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* 이미지 크기 조정 */
+  .mainImage,
+  .researchImage,
+  .serviceImage {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 1rem auto;
+  }
+
+  /* 이미지 컨테이너 (가로 → 세로 정렬) */
+  .imageContainer {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    gap: 1rem; /* 이미지 간 간격 */
+    align-items: center;
+  }
+
+  /* 서비스 카드 정렬 */
+  .services {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    gap: 1.5rem;
+  }
+
+  .serviceCard {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* GitHub 섹션 */
+  .githubSection {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .githubLink {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
 }
