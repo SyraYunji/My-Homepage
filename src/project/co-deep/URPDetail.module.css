@@ -66,6 +66,9 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 1rem auto; /* 위아래 여백 추가 & 좌우 자동 정렬 (가운데 배치) */
+  text-align: center; 
+  display: block;
 }
 
 .toggleButton:hover {
