@@ -240,21 +240,41 @@
 
 
 .reportLink {
+  display: inline-block;
   font-size: 1.2rem;
+  font-weight: bold;
   color: #61dafb;
   text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.5rem;
   border: 2px solid #61dafb;
   border-radius: 8px;
-  display: inline-block;
-  margin-top: 1rem;
   transition: all 0.3s ease;
+  text-align: center;
+  margin-top: 1rem;
+  
 }
 
 .reportLink:hover {
   background-color: #61dafb;
   color: #ffffff;
+}
+.githubLink {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #61dafb; /* GitHub의 블루 컬러 */
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #61dafb;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.githubLink:hover {
+  background-color: #61dafb;
+  color: #121212; /* 배경색과 대비되는 텍스트 색상 */
 }
 
 /*URP */
@@ -277,3 +297,120 @@
   background: linear-gradient(90deg, #4dd0e1, #26c6da);
   box-shadow: 0 6px 15px rgba(38, 198, 218, 0.8);
 }
+/* 768px 이하 (태블릿 & 모바일) */
+@media (max-width: 768px) {
+  .projectDetail {
+    padding: 2rem 1rem; /* 패딩 줄이기 */
+  }
+
+  .contentContainer {
+    margin-right: 0px;
+  }
+
+  .title {
+    font-size: 2.2rem; /* 제목 크기 조정 */
+    margin-top: 70px;
+  }
+
+  .introText {
+    font-size: 1rem; /* 본문 폰트 크기 줄이기 */
+    line-height: 1.6;
+  }
+
+  .list {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+  .list br {
+    display: none;
+  }
+  .role {
+    font-size: 1.5rem;
+  }
+
+  .roleDescription {
+    font-size: 1rem;
+  }
+
+  .awardTitle {
+    font-size: 1.5rem;
+  }
+
+  .awardDescription {
+    font-size: 1rem;
+  }
+
+  .buttonContainer {
+    flex-direction: column; /* 버튼을 세로로 정렬 */
+    gap: 1rem;
+  }
+
+  .detailButton {
+    font-size: 1.2rem; /* 버튼 텍스트 크기 줄이기 */
+    padding: 0.7rem 1.5rem;
+  }
+
+  .flexContainer {
+    flex-direction: column; /* 모바일에서는 섹션을 세로로 정렬 */
+    gap: 1rem;
+    margin-right: 32px;
+  }
+
+
+  .section {
+    min-width: 100%; /* 모바일에서는 전체 너비 사용 */
+    max-width: 100%;
+    padding: 1.2rem;
+    height: auto; /* 높이 자동 조정 */
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .subTitle {
+    font-size: 1.2rem;
+  }
+
+  .list p {
+    font-size: 0.73rem; /* 리스트 항목 크기 조정 */
+  }
+
+  .imageContainer {
+    display: flex;
+    flex-direction: column; /* 이미지를 세로로 정렬 */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .demoImage {
+    width: 90%; /* 이미지 크기 줄이기 */
+  }
+
+  .survey p {
+    font-size: 1rem;
+  }
+
+  .reportSection {
+    padding: 1rem;
+  }
+
+  .reportLink {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .githubSection {
+    padding: 1rem;
+  }
+
+  .githubDescription {
+    font-size: 1rem;
+  }
+
+  .githubLink {
+    font-size: 1rem;
+  }
+}
+

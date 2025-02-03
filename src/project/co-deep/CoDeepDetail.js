@@ -15,7 +15,7 @@ const CoDeepDetail = () => {
       <h1 className={styles.title}>Co-Deep Learning Project: PoliTracker</h1>
       <p className={styles.introText}>
         Co-Deep Learning Project는 교수와 학생의 공동 프로젝트를 통해 교수-학생 간 소통의 기회를 확대하고, 
-        심도 있는 협동 학습과 자기주도 학습을 지원하는 프로그램
+        심도 있는 협동 학습과 자기주도 학습을 지원하는 프로그램입니다
       </p>
 
       {/* My Role */}
@@ -106,9 +106,9 @@ const CoDeepDetail = () => {
             <div className={styles.subSection}>
               <h3 className={styles.subTitle}>주요 기능</h3>
               <ul className={styles.list}>
-                <p>정치성향테스트 <br />: 질문을 통해 성향 분석</p>
-                <p>지역 정치인 트래킹 <br />: 공약 이행률 시각화</p>
-                <p>정치 용어 및 뉴스 : 최신 정보 제공</p>
+                <p>- 정치성향테스트 <br />: 질문을 통해 성향 분석</p>
+                <p>- 지역 정치인 트래킹 <br />: 공약 이행률 시각화</p>
+                <p>- 정치 용어 및 뉴스 : 최신 정보 제공</p>
               </ul>
             </div>
             <div className={styles.subSection}>
