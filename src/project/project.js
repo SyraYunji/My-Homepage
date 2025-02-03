@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./project.module.css";
 
 const Projects = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+
   return (
     <div className={styles.total}>
       <div className={styles.projects}>

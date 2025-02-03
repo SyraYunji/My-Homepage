@@ -101,3 +101,67 @@
 .projectLink:hover {
   color: #ff4081;
 }
+/* 480px 이하 (스마트폰) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+    margin-top: 70px;
+  }
+
+  .h3{
+    margin-top: 0px;
+  }
+  
+  .intro {
+    font-size: 0.9rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .cardContainer {
+    display: flex; /* 플렉스 박스 사용 */
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 카드 중앙 정렬 */
+    justify-content: center; /* 카드 정렬 보완 */
+    gap: 1rem; /* 카드 간 간격 */
+    padding: 1rem;
+    width: 100%;
+    
+  }
+  
+  .projectCard {
+    width: auto; /* 내용에 맞게 크기 자동 조정 */
+    max-width: 90%; /* 너무 길어지지 않게 */
+    padding: 1.5rem;
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #e5e5e5;
+    text-align: left;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 카드 중앙 정렬 */
+    justify-content: center; /* 카드 정렬 보완 */
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-right: 30px;
+  }
+  
+  .projectTitle {
+    font-size: 0.97rem;
+    
+   }
+
+   
+
+  .cardContent {
+    font-size: 0.85rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .projectLink {
+    font-size: 0.85rem;
+  }
+}
