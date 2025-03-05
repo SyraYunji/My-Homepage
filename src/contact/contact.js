@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./contact.module.css";
-import { FaEnvelope, FaPhone, FaGithub, FaYoutube, FaInstagram } from "react-icons/fa"; 
+import { FaEnvelope, FaPhone, FaGithub, FaYoutube, FaBlog } from "react-icons/fa"; 
 
 const Contact = () => {
   return (
@@ -17,23 +17,23 @@ const Contact = () => {
         <p><FaPhone className={styles.icon} /> <strong>Phone:</strong> +82 10-3423-0041</p>
         <p>
           <FaGithub className={styles.icon} /> 
-          <strong>GitHub:</strong> 
-          <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
-            github.com/your-github
+          <strong>GitHub: </strong> 
+          <a href="https://github.com/SyraYunji" target="_blank" rel="noopener noreferrer">
+          Click here
           </a>
         </p>
         <p>
           <FaYoutube className={styles.icon} /> 
-          <strong>YouTube:</strong> 
-          <a href="https://youtube.com/your-channel" target="_blank" rel="noopener noreferrer">
-            youtube.com/your-channel
+          <strong>YouTube: </strong> 
+          <a href="https://www.youtube.com/@studyesme9286/videos" target="_blank" rel="noopener noreferrer">
+             Click here
           </a>
         </p>
         <p>
-          <FaInstagram className={styles.icon} /> 
-          <strong>Instagram:</strong> 
-          <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
-            @your-profile
+          <FaBlog className={styles.icon} /> 
+          <strong>Blog: </strong> 
+          <a href="https://blog.naver.com/syralee1004" target="_blank" rel="noopener noreferrer">
+          Click here
           </a>
         </p>
       </div>
