@@ -95,7 +95,7 @@ const About = () => {
               <li><strong>AI 교육캠프 및 경진대회 장려상</strong> - 인공지능혁신융합대학사업단에서 주최한 교육 캠프 및 경진대회에서 장려상 수상</li>
               <li><strong>BDA 학회(빅데이터 분석 학회)</strong> - 머신러닝반과 데이터 전처리(판다스)반에서 조장으로 활동 </li>
               <li><strong>Co-Deep Project</strong> - 교수-학생 협동 프로젝트인 Co-Deep Project에서 정치 트래킹 플랫폼 개발</li>
-              <li><strong>멋쟁이 사자처럼 운영진</strong> - ㄴㄴㄴㄴ</li>
+              <li><strong>멋쟁이 사자처럼 운영진</strong> - 교육운영부에서 임원으로 활동하며 스터디와 세션자료를 제작하였고, 총무로 활동하였습니다.</li>
             </ul>
           </section>
 
