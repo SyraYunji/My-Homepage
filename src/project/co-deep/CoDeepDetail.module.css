@@ -277,6 +277,10 @@
   color: #121212; /* 배경색과 대비되는 텍스트 색상 */
 }
 
+.githubSection {
+  margin-bottom: 40px;
+}
+
 /*URP */
 .urpButton {
   padding: 0.7rem 2rem; /* 버튼 크기 */

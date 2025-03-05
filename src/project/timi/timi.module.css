@@ -36,6 +36,7 @@
   /* GitHub 섹션 */
 .githubSection {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .githubDescription {
@@ -208,7 +209,7 @@
   margin-bottom: 1.5rem;
   color: #e5e5e5;
 }
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .timiContainer {
     padding: 1.5rem 1rem; /* 양쪽 패딩 줄이기 */
     margin-top: 50px; /* 상단 여백 조정 */
