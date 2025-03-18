@@ -104,8 +104,11 @@ const About = () => {
           <section className={styles.awards}>
             <h2>Awards</h2>
             <ul className={styles.awardList}>
+              <li>🏆 <strong> outgoing Global Volunteer Excellence Award</strong> - AIESEC in Korea 주최</li>
               <li>🏆 <strong>AI 교육캠프 및 경진대회 장려상</strong> - 인공지능혁신융합대학사업단 주최</li>
               <li>🏆 <strong>Co-Deep Project 최우수상</strong> - 성균관대학교 대학혁신과공유센터 주최</li>
+              <li>🏆 <strong>BDA 최종 과제 우수상</strong></li>
+
             </ul>
           </section>
         </div>
