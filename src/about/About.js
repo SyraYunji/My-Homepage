@@ -75,8 +75,8 @@ const About = () => {
             <h2>Skills</h2>
             <ul>
               <li><strong>OA 도구:</strong> Excel (上), PowerPoint (上)</li>
-              <li><strong>프로그래밍 언어:</strong> Python (中), R (上), <br />JavaScript (上)</li>
-              <li><strong>프론트엔드 기술:</strong> React.js (上), Next.js (中)</li>
+              <li><strong>프로그래밍 언어:</strong> Python (中), R (上), C(中) <br />JavaScript (上)</li>
+              <li><strong>프론트엔드 기술:</strong> React.js (上), Next.js (中), flutter(中)</li>
               <li><strong>데이터 분석:</strong> Brightics(上), Tableau (上)</li>
               
             </ul>
@@ -95,6 +95,7 @@ const About = () => {
               <li><strong>멋쟁이 사자처럼 학회원</strong> - React.js, Next.js를 공부하며 프로젝트에 참여</li>
               <li><strong>AI 교육캠프 및 경진대회 장려상</strong> - 인공지능혁신융합대학사업단에서 주최한 교육 캠프 및 경진대회에서 장려상 수상</li>
               <li><strong>BDA 학회(빅데이터 분석 학회)</strong> - 머신러닝반과 데이터 전처리(판다스)반에서 조장으로 활동 </li>
+              <li><strong>성균튜터링(튜터)</strong>경영통계 수업에서 튜터로 활동</li>
               <li><strong>Co-Deep Project</strong> - 교수-학생 협동 프로젝트인 Co-Deep Project에서 정치 트래킹 플랫폼 개발</li>
               <li><strong>멋쟁이 사자처럼 운영진</strong> - 교육운영부에서 임원으로 활동하며 스터디와 세션자료를 제작하였고, 총무로 활동하였습니다.</li>
             </ul>
