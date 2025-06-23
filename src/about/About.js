@@ -40,9 +40,9 @@ const About = () => {
                 <div className={styles.languageSection}>
                   <h3>어학</h3>
                   <ul>
-                    <li>TOEIC 975 / 990</li>
+                    <li>TOEIC 990 / 990</li>
                     <li>TOEFL 109 / 120</li>
-                    <li>OPIC IH</li>
+                    <li>OPIC AL</li>
                   </ul>
                 </div>
             
@@ -54,6 +54,7 @@ const About = () => {
                     <li>회계관리 2급</li>
                     <li>한국사 능력 검정시험 1급</li>
                     <li>ADsP (데이터분석 준전문가)</li>
+                    <li>SQLD</li>
                   </ul>
                 </div>
           </section>

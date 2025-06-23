@@ -5,7 +5,6 @@ import styles from "./project.module.css";
 const Projects = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-
   return (
     <div className={styles.total}>
       <div className={styles.projects}>
@@ -15,8 +14,7 @@ const Projects = () => {
           <br />현재 서버비 문제로 사이트는 내려간 상태입니다.
         </p>
 
-        {/* 📌 프론트엔드 프로젝트 섹션 */}
-        <h2 className={styles.sectionTitle}>📌 프론트엔드 프로젝트</h2>
+        {/* 🔧 모든 프로젝트 섹션 */}
         <div className={styles.cardContainer}>
           <div className={styles.projectCard}>
             <h3 className={styles.projectTitle}>Co-Deep Project (최우수상 수상)</h3>
@@ -36,25 +34,18 @@ const Projects = () => {
               자세히 보기
             </Link>
           </div>
-        </div>
-
-        {/* 📌 백엔드 프로젝트 섹션 */}
-        <h2 className={styles.sectionTitle}>🛠 백엔드 프로젝트</h2>
-        <div className={styles.cardContainer}>
           <div className={styles.projectCard}>
-            <h3 className={styles.projectTitle}>coming soon</h3>
+            <h3 className={styles.projectTitle}>한이음 드림업</h3>
             <p className={styles.cardContent}>
-             
+            AI 기반 개인 맞춤형 수면 유도 사운드 추천 플랫폼 및 수면 로봇 개발
             </p>
-            <Link to="/coming-soon" className={styles.projectLink}>
+            <Link to="/hanium" className={styles.projectLink}>
               자세히 보기
             </Link>
           </div>
           <div className={styles.projectCard}>
-            <h3 className={styles.projectTitle}>coming soon</h3>
-            <p className={styles.cardContent}>
-             
-            </p>
+            <h3 className={styles.projectTitle}>Coming Soon</h3>
+            <p className={styles.cardContent}></p>
             <Link to="/coming-soon" className={styles.projectLink}>
               자세히 보기
             </Link>

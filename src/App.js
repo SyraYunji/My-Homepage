@@ -13,6 +13,7 @@ import AIESEC2 from "./activities/aiesec/aiesec2";
 import URPDetail from "./project/co-deep/URP Detail";
 import Contact from "./contact/contact";
 import ComingSoon from "./coming soon/ComingSoon";
+import Hanium from "./project/hanium/hanium";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path = "/urp" element = {<URPDetail />} />
           <Route path = "/contact" element = {<Contact />}/>
           <Route path = "/coming-soon" element = {<ComingSoon />}/>
+          <Route path = "/hanium" element = {<Hanium />}/>
         </Routes>
       </div>
     </Router>
