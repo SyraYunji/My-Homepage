@@ -98,6 +98,8 @@ const About = () => {
               <li><strong>성균튜터링(튜터)</strong>경영통계 수업에서 튜터로 활동</li>
               <li><strong>Co-Deep Project</strong> - 교수-학생 협동 프로젝트인 Co-Deep Project에서 정치 트래킹 플랫폼 개발</li>
               <li><strong>멋쟁이 사자처럼 운영진</strong> - 교육운영부에서 임원으로 활동하며 스터디와 세션자료를 제작하였고, 총무로 활동하였습니다.</li>
+              <li><strong>한이음 공모전</strong> AI 기반 개인 맞춤형 수면 유도 사운드 추천 플랫폼 및 수면 로봇 개발</li>
+              <li><strong>성균관대 창업팀 '라추'</strong>소개팅/미팅 플랫폼 창업</li>
             </ul>
           </section>
 
