@@ -1,103 +1,600 @@
 /* 전체 페이지 스타일 */
 .about {
-    padding: 2rem;
-    background-color: #121212; /* 다크 배경 */
-    color: #e5e5e5;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  /* 헤더 스타일 */
-  .header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 6rem 0 4rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.heroStats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #667eea;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Profile Card */
+.profileCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profileImage {
+  margin-bottom: 1.5rem;
+}
+
+.imagePlaceholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.profileInfo h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.profileInfo p {
+  color: #667eea;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialLink {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #667eea;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.socialLink:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Section Styles */
+.aboutSection,
+.skillsSection,
+.experienceSection,
+.educationSection,
+.awardsSection {
+  padding: 5rem 0;
+  background: white;
+}
+
+.aboutSection {
+  background: #f8f9fa;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1a1a1a;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+/* About Content */
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.aboutText p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.aboutHighlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.highlightItem:hover {
+  transform: translateY(-2px);
+}
+
+.highlightIcon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.highlightText h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.highlightText p {
+  color: #666;
+  margin: 0;
+}
+
+/* Skills Section */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.skillCategory {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skillCategory:hover {
+  transform: translateY(-5px);
+}
+
+.categoryTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.categoryTitle i {
+  color: #667eea;
+  font-size: 1.2rem;
+}
+
+.skillItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skillName {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.skillBar {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skillProgress {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+/* Experience Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 60px;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 4px solid #667eea;
+  z-index: 1;
+}
+
+.timelineContent {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.timelineContent:hover {
+  transform: translateX(5px);
+}
+
+.timelineContent h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.timelinePeriod {
+  color: #667eea;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.timelineContent p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techStack span {
+  background: #f8f9fa;
+  color: #667eea;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+/* Education & Certifications */
+.educationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.educationCard,
+.certificationCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.cardTitle i {
+  color: #667eea;
+}
+
+.educationItem {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.educationItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.educationItem h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.educationItem p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.period,
+.gpa {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+.certificationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.certificationItem h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.certificationItem ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certificationItem li {
+  padding: 0.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.certificationItem li:last-child {
+  border-bottom: none;
+}
+
+/* Awards Section */
+.awardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.awardCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.awardCard:hover {
+  transform: translateY(-5px);
+}
+
+.awardIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.awardCard h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.awardCard p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
     text-align: center;
-    margin-top: 3rem;
   }
-  
-  .header h1 {
-    font-size: 3rem;
-    color: #c2185b; /* 톤다운 핑크 */
-    letter-spacing: 5px;
+
+  .heroTitle {
+    font-size: 2.5rem;
   }
-  
-  /* 소개 섹션 */
-  .introduction {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .introduction p {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-  }
-  
-  /* 소셜 링크 */
-  .socialLinks {
-    display: flex;
+
+  .heroStats {
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
   }
-  
-  .socialLinks a {
-    color: #e5e5e5;
-    font-size: 1.2rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* 아이콘과 텍스트 간격 */
+
+  .aboutContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .aboutIntro {
-    word-break: keep-all;
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
   }
-  .experienceDetail {
-    word-break: keep-all;
+
+  .educationGrid {
+    grid-template-columns: 1fr;
   }
-  .socialLinks a i {
+
+  .certificationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .awardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timelineItem {
+    padding-left: 50px;
+  }
+
+  .timelineDot {
+    left: 6px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 0 2rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .profileCard {
+    padding: 1.5rem;
+  }
+
+  .imagePlaceholder {
+    width: 100px;
+    height: 100px;
     font-size: 1.5rem;
   }
-  
-  .socialLinks a:hover {
-    color: #e91e63; /* 핑크 색상 */
-  }
-  
-  /* 메인 레이아웃 */
-  .layout {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-  
-  /* 왼쪽 섹션 */
-  .leftSection {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  /* 오른쪽 섹션 */
-  .rightSection {
-    flex: 2;
-  }
-  
-  .rightSection h2, .leftSection h2 {
-    font-size: 1.8rem;
-    color: #e91e63;
-    border-bottom: 2px solid #c2185b;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* 반응형 디자인 */
-  @media (max-width: 768px) {
-    .layout {
-      flex-direction: column;
-    }
-  
-    .socialLinks {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-  }
+}
   

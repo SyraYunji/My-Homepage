@@ -1,135 +1,461 @@
-/* 전체 홈 화면 */
+/* Home Page Styles */
 .home {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* 중앙 정렬 대신, 위쪽 정렬 */
-    height: 180vh;
-    background: linear-gradient(145deg, #121212, #1a1a1a); /* 다크 블랙 배경 */
-    box-shadow: inset 0 0 50px #000000;
-    color: #e5e5e5; /* 서브 텍스트 */
-    text-align: center;
-    padding: 1rem;
-    position: relative; /* 자식 요소 절대 위치 설정 가능 */
-    flex-wrap: wrap;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  width: 100%;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  border: 4px solid #667eea;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+.subtitle strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.achievementBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #8b6914;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.achievementBadge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  border-color: #ffed4e;
+}
+
+.achievement {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 237, 78, 0.1));
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.achievement:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.achievementIcon {
+  font-size: 3rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.achievementContent {
+  text-align: left;
+}
+
+.achievementTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #8b6914;
+  margin-bottom: 0.5rem;
+  margin: 0;
+}
+
+.achievementDescription {
+  font-size: 1rem;
+  color: #8b6914;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.achievementDescription strong {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+/* Main Sections - Compact Grid Layout */
+.mainSections {
+  padding: 2rem 0;
+}
+
+.sectionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.sectionContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #1a1a1a;
+}
+
+.sectionSubtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Projects Grid */
+.projectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.projectCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+}
+
+.projectCard:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.projectLink {
+  display: block;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  height: 100%;
+}
+
+.projectTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #1a1a1a;
+}
+
+.projectDescription {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.projectArrow {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 1.2rem;
+  color: #667eea;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover .projectArrow {
+  transform: translateX(3px);
+  color: #764ba2;
+}
+
+/* Section Specific Styles */
+.planningSection {
+  border-top: 4px solid #667eea;
+}
+
+.frontendSection {
+  border-top: 4px solid #764ba2;
+}
+
+.backendSection {
+  border-top: 4px solid #4facfe;
+}
+
+.hardwareSection {
+  border-top: 4px solid #f093fb;
+}
+
+/* Call to Action */
+.cta {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton,
+.ctaButtonAlt {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  color: white;
+}
+
+.ctaButtonAlt {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.ctaButtonAlt:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .sectionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
-  
-  /* Hero 섹션 */
+}
+
+@media (max-width: 768px) {
   .hero {
-    max-width: 800px;
-    display: flex;
+    padding: 3rem 1rem;
+    min-height: 50vh;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .achievementBadge {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    margin-top: 1.5rem;
+  }
+
+  .achievement {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .achievementContent {
+    text-align: center;
+  }
+
+  .achievementTitle {
+    font-size: 1.2rem;
+  }
+
+  .achievementDescription {
+    font-size: 0.9rem;
+  }
+
+  .achievementIcon {
+    font-size: 2.5rem;
+  }
+
+  .mainSections {
+    padding: 3rem 1rem;
+  }
+
+  .sectionsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .cta {
+    padding: 4rem 1rem;
+  }
+
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+
+  .ctaContent p {
+    font-size: 1rem;
+  }
+
+  .ctaButtons {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    margin-top: 50px; /* 섹션 전체를 아래로 이동 */
-  }
-  
-  /* 프로필 이미지 */
-  .profileImage {
-    width: 190px;
-    height: 180px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin-top: 50px; /* 추가 여백 */
-  }
-  
-  /* 제목 */
-  .title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    margin-top: -20px; /* Welcome 텍스트를 위로 올림 */
-  }
-  
-  .highlight {
-    background: linear-gradient(90deg, #c2185b, #e91e63); /* 톤다운 핑크 그라디언트 */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* 텍스트에 그라디언트 적용 */
-  }
-  
-  /* 부제목 */
-  .subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 1rem; /* 부제목 간격 조정 */
-    color: #e5e5e5; /* 연한 회색 */
-    line-height: 1.6; /* 가독성 향상 */
-  }
-  
-  /* 버튼 섹션 */
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 0.5rem; /* 버튼과 텍스트 사이 간격 조정 */
-  }
-  
-  /* 기본 버튼 */
-  .button {
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(90deg, #c2185b, #e91e63); /* 핑크 그라디언트 */
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
-  }
-  
-  .button:hover {
-    background: linear-gradient(90deg, #e91e63, #c2185b); /* 반대 방향 그라디언트 */
-    transform: translateY(-3px);
-  }
-  
-  /* 테두리 있는 버튼 */
-  .buttonAlt {
-    padding: 0.75rem 1.5rem;
-    background-color: transparent;
-    color: #c2185b; /* 톤다운 핑크 */
-    border: 2px solid #c2185b;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-  
-  .buttonAlt:hover {
-    background: #c2185b; /* 톤다운 핑크 */
-    color: white;
-  }
-  
-  /* 반응형 디자인 */
-  /* 600px 이하 (스마트폰) */
-@media (max-width: 600px) {
-  .hero {
-    max-width: 90%;
-    margin-top: 30px;
   }
 
-  .profileImage {
-    width: 100px;
-    height: 100px;
-    margin-top: 60px;
+  .ctaButton,
+  .ctaButtonAlt {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
   }
+}
 
+@media (max-width: 480px) {
   .title {
-    font-size: 1.3rem;
-    margin-bottom: 0.1rem;
-    margin-top: 3px;
+    font-size: 2rem;
   }
 
   .subtitle {
+    font-size: 1rem;
+  }
+
+  .achievementBadge {
     font-size: 0.8rem;
-    line-height: 1.8;
-    padding: 0 10px;
-    word-break: keep-all;
+    padding: 8px 16px;
+    margin-top: 1rem;
   }
 
-  .buttons {
-    flex-direction: column;
-    gap: 0.5rem;
+  .achievement {
+    padding: 1rem;
   }
-  
 
-  .button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
+  .achievementTitle {
+    font-size: 1.1rem;
+  }
+
+  .achievementDescription {
+    font-size: 0.85rem;
+  }
+
+  .achievementIcon {
+    font-size: 2rem;
   }
 }
 

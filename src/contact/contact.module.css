@@ -1,65 +1,379 @@
-/* 📌 전체 컨테이너 */
-.contactContainer {
-    background: linear-gradient(145deg, #121212, #1a1a1a);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 3rem;
+/* Contact Page */
+.contactPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 4rem 2rem;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contactSection {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Contact Form */
+.contactForm {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Contact Info */
+.contactInfo {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.infoTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.infoSubtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contactMethods {
+  margin-bottom: 3rem;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contactMethod:hover {
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.methodIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.methodContent h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #1a1a1a;
+}
+
+.methodContent a,
+.methodContent p {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0;
+}
+
+.methodContent a:hover {
+  color: #764ba2;
+}
+
+/* Social Section */
+.socialSection {
+  border-top: 1px solid #e9ecef;
+  padding-top: 2rem;
+}
+
+.socialTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.socialLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.socialLink span {
+  font-size: 0.9rem;
+}
+
+/* Call to Action */
+.cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: white;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  color: #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 40vh;
   }
-  
-  /* 📌 제목 */
-  .title {
+
+  .heroTitle {
     font-size: 2.5rem;
-    font-weight: bold;
-    color: #ff4081;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 10px rgba(255, 64, 129, 0.5);
   }
-  
-  /* 📌 설명 */
-  .subtitle {
-    font-size: 1.2rem;
-    color: #ddd;
-    margin-bottom: 2rem;
+
+  .heroSubtitle {
+    font-size: 1.1rem;
   }
-  
-  /* 📌 내 정보 스타일 */
+
+  .contactSection {
+    padding: 4rem 0;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contactForm,
   .contactInfo {
-    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+  }
+
+  .formTitle,
+  .infoTitle {
+    font-size: 1.8rem;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+
+  .ctaContent p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .contactForm,
+  .contactInfo {
     padding: 1.5rem;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    text-align: left;
-    line-height: 1.8;
   }
-  
-  /* 📌 아이콘 스타일 */
-  .contactInfo p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .contactInfo .icon {
-    margin-right: 10px;
-    color: #ff80ab;
+
+  .formTitle,
+  .infoTitle {
     font-size: 1.5rem;
   }
-  
-  /* 📌 링크 스타일 */
-  .contactInfo a {
-    color: #00bcd4;
-    text-decoration: none;
-    font-weight: bold;
+
+  .contactMethod {
+    padding: 1rem;
   }
-  
-  .contactInfo a:hover {
-    text-decoration: underline;
+
+  .methodIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
+
+  .socialLink {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .ctaContent h2 {
+    font-size: 1.8rem;
+  }
+}
   

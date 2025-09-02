@@ -1,248 +1,327 @@
 import React from "react";
-import { motion } from "framer-motion"; // 애니메이션 라이브러리
-import { Link } from "react-router-dom"; // React Router 사용
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FaGithub, FaDownload, FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
 import styles from "./CoDeepDetail.module.css";
 
 const CoDeepDetail = () => {
+  const projectInfo = {
+    title: "Co-Deep Learning Project: PoliTracker",
+    subtitle: "정치 트래킹 플랫폼",
+    category: "Frontend Development",
+    period: "2024",
+    award: "최우수상",
+    tech: ["React.js", "Next.js", "JavaScript", "CSS", "HTML"],
+    role: "Frontend Developer",
+    team: "4명 (교수-학생 협동 프로젝트)",
+    github: "https://github.com/Co-Deep-Project/Backend.git",
+    demo: "/files/report.pdf"
+  };
+
+  const features = [
+    {
+      title: "정치성향테스트",
+      description: "질문을 통해 사용자의 정치 성향을 분석하고 맞춤형 정보 제공",
+      icon: "🎯"
+    },
+    {
+      title: "지역 정치인 트래킹",
+      description: "공약 이행률을 시각화하여 정치인의 활동을 직관적으로 확인",
+      icon: "📊"
+    },
+    {
+      title: "정치 용어 및 뉴스",
+      description: "최신 정치 정보와 용어 설명을 제공하여 이해도 향상",
+      icon: "📰"
+    }
+  ];
+
+  const challenges = [
+    "청년층의 낮은 정치 참여율",
+    "체계적인 정치 플랫폼의 부재",
+    "정치 정보 접근성 문제"
+  ];
+
+  const solutions = [
+    "사용자 친화적 UI/UX 디자인",
+    "맞춤형 정보 제공 시스템",
+    "직관적인 데이터 시각화"
+  ];
+
+  const results = [
+    { metric: "67.9%", label: "정치 관심도 증가" },
+    { metric: "95.9%", label: "직관적 이해도" },
+    { metric: "89%", label: "뉴스 유익성 인정" }
+  ];
+
   return (
-    <motion.div
-      className={styles.projectDetail}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      {/* 프로젝트 제목 및 설명 */}
-      <h1 className={styles.title}>Co-Deep Learning Project: PoliTracker</h1>
-      <p className={styles.introText}>
-        Co-Deep Learning Project는 교수와 학생의 공동 프로젝트를 통해 교수-학생 간 소통의 기회를 확대하고, 
-        심도 있는 협동 학습과 자기주도 학습을 지원하는 프로그램입니다
-      </p>
-
-      {/* My Role */}
-      <h3 className={styles.role}>My Role: Frontend Developer</h3>
-      <p className={styles.roleDescription}>
-        정치성향테스트 부분 스토리 포함하여 전체 제작 + 구청장 조회하기 페이지 전체 제작 + Chatbot 제작 + 전체 CSS 다듬기
-      </p>
-      {/* 수상 내역 */}
-      <div className={styles.awardSection}>
-        <h3 className={styles.awardTitle}>🏆 최우수상 수상</h3>
-        <p className={styles.awardDescription}>
-          Co-Deep Learning Project에서 뛰어난 기획 및 개발 성과를 인정받아 수상.
-        </p>
-      </div>
-      <div className={styles.buttonContainer}>
-        <Link to="/platform-detail" className={styles.detailButton}>
-          플랫폼 더 자세히 보러가기
-        </Link>
-        <Link to="/urp" className={styles.detailButton}>
-          URP 프로젝트 바로가기
-        </Link>
-      </div>
-
-      {/* 6가지 항목을 Flex 컨테이너로 감싸기 */}
-      <div className={styles.flexContainer}>
-        {/* 01. 배경 및 필요성 */}
+    <div className={styles.projectDetailPage}>
+      {/* Hero Section */}
+      <section className={styles.hero}>
         <motion.div
-          className={styles.section}
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 50 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className={styles.heroContent}
         >
-          <h2 className={styles.sectionTitle}>01. 배경 및 필요성</h2>
-          <div className={styles.contentContainer}>
-            <div className={styles.subSection}>
-              <h3 className={styles.subTitle}>문제 상황</h3>
-              <ul className={styles.list}>
-                <p>청년층의 낮은 정치 참여율</p>
-                <p>체계적인 정치 플랫폼의 부재</p>
-              </ul>
+          <div className={styles.backButton}>
+            <Link to="/project" className={styles.backLink}>
+              <FaArrowLeft />
+              <span>Back to Projects</span>
+            </Link>
+          </div>
+
+          <div className={styles.projectHeader}>
+            <div className={styles.projectCategory}>{projectInfo.category}</div>
+            <div className={styles.awardBadge}>🏆 최우수상 수상</div>
+            <h1 className={styles.projectTitle}>{projectInfo.title}</h1>
+            <p className={styles.projectSubtitle}>{projectInfo.subtitle}</p>
+            
+            <div className={styles.projectMeta}>
+              <div className={styles.metaItem}>
+                <span className={styles.metaLabel}>Role:</span>
+                <span className={styles.metaValue}>{projectInfo.role}</span>
+              </div>
+              <div className={styles.metaItem}>
+                <span className={styles.metaLabel}>Team:</span>
+                <span className={styles.metaValue}>{projectInfo.team}</span>
+              </div>
+              <div className={styles.metaItem}>
+                <span className={styles.metaLabel}>Period:</span>
+                <span className={styles.metaValue}>{projectInfo.period}</span>
+              </div>
             </div>
-            <div className={styles.subSection}>
-              <h3 className={styles.subTitle}>타겟팅 대상</h3>
-              <ul className={styles.list}>
-                <p>정치에 무관심한 국민</p>
-                <p>정치 정보를 찾기 어려워하는 국민</p>
-                <p>정치에 관심이 많은데 구체적이고 정확한 정보를 찾고 싶은 국민</p>
-              </ul>
-            </div>
-          </div>
-        </motion.div>
 
-        {/* 02. 기존 플랫폼의 한계 */}
-        <motion.div
-          className={styles.section}
-          initial={{ x: "100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 50 }}
-        >
-          <h2 className={styles.sectionTitle}>02. 기존 플랫폼의 한계</h2>
-          <div className={styles.contentContainer}>
-            <div className={styles.subSection}>
-              <h3 className={styles.subTitle}>1. 공약 이행 현황</h3>
-              <ul className={styles.list}>
-              <p>정보가 흩어져 있으며 접근성이 낮음</p>
-              <p>효율적인 정보 제공 필요</p>
-              </ul>
-            </div>
-            <div className={styles.subSection}>
-              <h3 className={styles.subTitle}>2. 국회의원 활동 정보</h3>
-              <ul className={styles.list}>
-              <p>단계별 접근으로 불편함 초래</p>
-              <p>직관적인 플랫폼 요구</p>
-              </ul>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* 03. 주요 기능 및 UI/UX */}
-        <motion.div
-          className={styles.section}
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 50 }}
-        >
-          <h2 className={styles.sectionTitle}>03. 주요 기능 및 UI/UX</h2>
-          <div className={styles.contentContainer}>
-            <div className={styles.subSection}>
-              <h3 className={styles.subTitle}>주요 기능</h3>
-              <ul className={styles.list}>
-                <p>- 정치성향테스트 <br />: 질문을 통해 성향 분석</p>
-                <p>- 지역 정치인 트래킹 <br />: 공약 이행률 시각화</p>
-                <p>- 정치 용어 및 뉴스 : 최신 정보 제공</p>
-              </ul>
-            </div>
-            <div className={styles.subSection}>
-              <h3 className={styles.subTitle}>UI/UX</h3>
-              <ul className = {styles.list}>
-              <p>시그니처 색상: 연보라색(#cfc2e9)</p>
-              <p>사용자 친화적이고 직관적인 디자인 적용</p>
-              </ul>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* 04. 플랫폼 시연 */}
-        <motion.div
-          className={styles.section}
-          initial={{ x: "100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 50 }}
-        >
-          <h2 className={styles.sectionTitle}>04. 사용자 테스트 결과</h2>
-          
-          {/* 이미지 컨테이너 */}
-          <div className={styles.imageContainer}>
-            <img
-              src="/images/test1.png"
-              alt="사용자 테스트 결과 1"
-              className={styles.demoImage}
-            />
-            <img
-              src="/images/test2.png"
-              alt="사용자 테스트 결과 2"
-              className={styles.demoImage}
-            />
-          </div>
-          <div className = {styles.survey}>
-          <p className={styles.paragraph}>
-            <span className={styles.highlight}>67.9%</span> 가 정치에 대한 관심이 증가했다고 함
-            <br />
-            <span className={styles.highlight}>95.9%</span> 가 각 정치인의 활동을 직관적으로 알기 쉬웠다고 함
-            <br />
-            <span className={styles.highlight}>89%</span> 응답자가 지역 별 정치 관련 뉴스가 유익하다고 함
-          </p>
-          </div>
-        </motion.div>
-
-        {/* 05. 플랫폼 의의 */}
-        <motion.div
-        className={styles.section}
-        initial={{ x: "-100vw" }}
-        animate={{ x: 0 }}
-        transition={{ type: "spring", stiffness: 50 }}>
-
-        <h2 className={styles.sectionTitle}>5.플랫폼 의의</h2>
-        <div className={styles.contentContainer}>
-          <div className={styles.subSection}>
-            <h3 className={styles.subTitle}>사용자 참여 유도</h3>
-            <ul className={styles.list}>
-              <p>정치적 관심을 유도하고 태도 변화에 긍정적인 영향</p>
-              <p>정치 참여를 쉽게 시작할 수 있는 계기 제공</p>
-            </ul>
+            {projectInfo.award && (
+              <div className={styles.awardBadge}>
+                🏆 {projectInfo.award} 수상
+              </div>
+            )}
           </div>
 
-          <div className={styles.subSection}>
-            <h3 className={styles.subTitle}>사용자 친화적 접근</h3>
-            <ul className={styles.list}>
-              <p>맞춤형 정보 제공으로 실질적인 도움</p>
-              <p>사용자 친화적 UI/UX로 정보 접근성을 높임</p>
-            </ul>
+          <div className={styles.techStack}>
+            {projectInfo.tech.map((tech, index) => (
+              <motion.span
+                key={index}
+                className={styles.techTag}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                {tech}
+              </motion.span>
+            ))}
           </div>
-      
-      </div> 
-      </motion.div>
-      
 
-
-        {/* 06. 한계점 및 후속 연구 */}
-        <motion.div
-          className={styles.section}
-          initial={{ x: "100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 50 }}
-        >
-
-        <div className={styles.subSection}>
-          <h2 className={styles.sectionTitle}>06. 한계점 및 후속 연구</h2>
-          <div className={styles.contentContainer}>
-          <div className={styles.subSection}>
-          <h3 className={styles.subTitle}>사용자 친화적 접근</h3>
-          <div className={styles.list}>
-          <ul className={styles.list}>
-              <p>정치성향 분석의 과리 및 세부 데이터 부족</p>
-              <p>사용자 커뮤니티 기능 부족</p>
-            </ul>
-            <h3 className={styles.subTitle}>사용자 친화적 접근</h3>
-            <ul>
-              <p>트래킹 기능 확장: 전국 단위 확대</p>
-              <p>뉴스 필터링 강화</p>
-            </ul>
-          </div>
-          </div>
-          </div>
-          </div>
-        </motion.div>
-     
-      
-          {/* 결과 보고서 */}
-          <div className={styles.reportSection}>
-            <h2 className={styles.sectionTitle}>📄 결과 보고서</h2>
-            <a 
-              href="/files/report.pdf" 
-              download 
-              className={styles.reportLink}
+          <div className={styles.projectActions}>
+            <motion.a
+              href={projectInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.actionButton}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.95 }}
             >
-              결과 보고서 다운로드
-            </a>
+              <FaGithub />
+              <span>View Code</span>
+            </motion.a>
+            <motion.a
+              href={projectInfo.demo}
+              download
+              className={styles.actionButton}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FaDownload />
+              <span>Download Report</span>
+            </motion.a>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Project Content */}
+      <section className={styles.projectContent}>
+        <div className={styles.container}>
+          {/* Overview */}
+          <motion.div
+            className={styles.section}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className={styles.sectionTitle}>Project Overview</h2>
+            <p className={styles.sectionDescription}>
+              Co-Deep Learning Project는 교수와 학생의 공동 프로젝트를 통해 교수-학생 간 소통의 기회를 확대하고, 
+              심도 있는 협동 학습과 자기주도 학습을 지원하는 프로그램입니다. 
+              정치성향테스트 부분 스토리 포함하여 전체 제작 + 구청장 조회하기 페이지 전체 제작 + Chatbot 제작 + 전체 CSS 다듬기를 담당했습니다.
+            </p>
+          </motion.div>
+
+          {/* Features */}
+          <motion.div
+            className={styles.section}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className={styles.sectionTitle}>Key Features</h2>
+            <div className={styles.featuresGrid}>
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className={styles.featureCard}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className={styles.featureIcon}>{feature.icon}</div>
+                  <h3 className={styles.featureTitle}>{feature.title}</h3>
+                  <p className={styles.featureDescription}>{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Problem & Solution */}
+          <div className={styles.problemSolutionSection}>
+            <motion.div
+              className={styles.problemSection}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className={styles.sectionTitle}>Problem Statement</h2>
+              <div className={styles.problemList}>
+                {challenges.map((challenge, index) => (
+                  <motion.div
+                    key={index}
+                    className={styles.problemItem}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <span className={styles.problemIcon}>❌</span>
+                    <span>{challenge}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              className={styles.solutionSection}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className={styles.sectionTitle}>Our Solution</h2>
+              <div className={styles.solutionList}>
+                {solutions.map((solution, index) => (
+                  <motion.div
+                    key={index}
+                    className={styles.solutionItem}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <span className={styles.solutionIcon}>✅</span>
+                    <span>{solution}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
 
-      
-      </div>
-      <section className={styles.githubSection}>
-        <h2 className={styles.sectionTitle}>GitHub Repository</h2>
-        <p className={styles.githubDescription}>
-          프로젝트의 코드는 GitHub에서 확인할 수 있습니다. 아래 링크를 클릭하세요:
-        </p>
-        <a
-          href="https://github.com/Co-Deep-Project/Backend.git" // 여기에 실제 깃허브 주소 입력
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.githubLink}
-        >
-          GitHub Repository 바로가기
-        </a>
+          {/* Results */}
+          <motion.div
+            className={styles.section}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className={styles.sectionTitle}>User Test Results</h2>
+            <div className={styles.resultsGrid}>
+              {results.map((result, index) => (
+                <motion.div
+                  key={index}
+                  className={styles.resultCard}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className={styles.resultMetric}>{result.metric}</div>
+                  <div className={styles.resultLabel}>{result.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Demo Images */}
+          <motion.div
+            className={styles.section}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className={styles.sectionTitle}>Project Screenshots</h2>
+            <div className={styles.imageGrid}>
+              <motion.img
+                src="/images/test1.png"
+                alt="사용자 테스트 결과 1"
+                className={styles.demoImage}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              />
+              <motion.img
+                src="/images/test2.png"
+                alt="사용자 테스트 결과 2"
+                className={styles.demoImage}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              />
+            </div>
+          </motion.div>
+
+          {/* Related Projects */}
+          <motion.div
+            className={styles.section}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className={styles.sectionTitle}>Related Projects</h2>
+            <div className={styles.relatedProjects}>
+              <Link to="/platform-detail" className={styles.relatedProject}>
+                <FaExternalLinkAlt />
+                <span>플랫폼 더 자세히 보러가기</span>
+              </Link>
+              <Link to="/urp" className={styles.relatedProject}>
+                <FaExternalLinkAlt />
+                <span>URP 프로젝트 바로가기</span>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
       </section>
-      </motion.div>
+    </div>
   );
 };
 

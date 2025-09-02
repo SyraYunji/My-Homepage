@@ -1,188 +1,348 @@
-/* 전체 섹션 */
-.activities {
-    padding: 4rem 2rem;
-    background: linear-gradient(145deg, #121212, #1a1a1a);
-    color: #e5e5e5;
-    text-align: center;
-  }
-  
-  /* 제목 스타일 */
-  .title {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
+/* Activities Page */
+.activitiesPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 4rem 2rem;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #667eea;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Activities Section */
+.activitiesSection {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.categorySection {
+  margin-bottom: 6rem;
+}
+
+.categorySection:last-child {
+  margin-bottom: 0;
+}
+
+.categoryHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.categoryTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.categoryDescription {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.activitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.activityCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.activityCard:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.activityHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.activityIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.activityInfo {
+  flex: 1;
+}
+
+.activityTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.activityPeriod {
+  font-size: 0.9rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.activityDescription {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skillTag {
+  background: #f8f9fa;
+  color: #667eea;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.skillTag:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.activityLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.activityLink:hover {
+  color: #764ba2;
+  transform: translateX(5px);
+}
+
+.activityLink svg {
+  transition: transform 0.3s ease;
+}
+
+.activityLink:hover svg {
+  transform: translateX(3px);
+}
+
+/* Call to Action */
+.cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: white;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  color: #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 50vh;
   }
 
-  .sectionDescription {
-    word-break: keep-all;
+  .heroTitle {
+    font-size: 2.5rem;
   }
-  /* 소개 텍스트 */
-  .intro {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #d3d3d3;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
+
+  .heroSubtitle {
+    font-size: 1.1rem;
   }
-  
-  /* 섹션 */
-  .section {
+
+  .stats {
+    gap: 2rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .activitiesSection {
+    padding: 4rem 0;
+  }
+
+  .categorySection {
     margin-bottom: 4rem;
   }
-  
-  /* 중앙 정렬된 섹션 (AIESEC) */
-  .centerAligned .cardContainer {
-    display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    gap: 2rem; /* 카드 간격 */
-    flex-wrap: wrap; /* 2개 이상일 경우 줄바꿈 */
+
+  .categoryTitle {
+    font-size: 2rem;
   }
-  
-  /* 섹션 제목 */
-  .sectionTitle {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #e91e63; /* 부드러운 포인트 색상 */
-  }
-  
-  /* 섹션 설명 */
-  .sectionDescription {
-    font-size: 1.2rem;
-    color: #cccccc;
-    margin-bottom: 2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-  }
-  
-  /* 카드 컨테이너 */
-  .cardContainer {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  .activitiesGrid {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
-    justify-items: center;
   }
-  
-  .cardContainer {
-    display: flex; /* flex로 변경 */
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 (필요 시) */
-    gap: 2rem; /* 카드 간격 */
-    flex-wrap: wrap; /* 여러 줄 카드 정렬 */
-  }
-  /* 카드 스타일 */
-  .card {
-    background: #1a1a1a;
+
+  .activityCard {
     padding: 1.5rem;
-    border-radius: 12px;
-    width: 350px;
-    height: 170px;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+
+  .ctaContent h2 {
+    font-size: 2rem;
   }
-  
-  /* 카드 제목 */
-  .cardTitle {
-    font-size: 1.5rem;
-    color: #61dafb;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* 카드 내용 */
-  .cardContent {
+
+  .ctaContent p {
     font-size: 1rem;
-    color: #cccccc;
-    line-height: 1.6;
   }
-  /* 카드 링크 스타일 */
-.cardLink {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #e91e63; /* 포인트 색상 */
-  cursor: pointer;
-  margin-top: 1rem;
-  text-align: left; /* 왼쪽 정렬 */
-  transition: color 0.3s;
 }
 
-.cardLink:hover {
-  color: #ff4081; /* 호버 시 색상 */
-  text-decoration: underline;
-}
-@media (max-width: 767px) {
-  .activities {
-    padding: 2rem 1rem; /* 패딩 줄이기 */
-    margin-top: 60px;
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
   }
 
-  .title {
-    font-size: 2rem; /* 제목 크기 조정 */
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .intro {
+  .heroSubtitle {
     font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-    word-break: keep-all;
   }
 
-  /* 섹션 스타일 */
-  .section {
-    padding: 1.5rem;
-    text-align: center;
-    padding-bottom: 0rem;
-  }
-
-  .sectionTitle {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-  }
-
-  .sectionDescription {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  /* 카드 컨테이너 (가로 → 세로 정렬) */
-  .cardContainer {
-    display: flex;
-    flex-direction: column; /* 세로 정렬 */
+  .stats {
+    flex-direction: column;
     gap: 1rem;
-    align-items: center;
-    margin-right: 10px;
   }
 
-  /* 카드 크기 및 내부 정렬 */
-  .card {
-    width: 90%; /* 전체 너비 조정 */
-    max-width: 400px;
-    padding: 1.2rem;
-    text-align: center; /* 내용 중앙 정렬 */
+  .categoryTitle {
+    font-size: 1.8rem;
   }
 
-  .cardTitle {
-    font-size: 1.3rem;
+  .activityTitle {
+    font-size: 1.1rem;
   }
 
-  .cardContent {
-    font-size: 1rem;
-    word-break: keep-all;
-  }
-
-  .cardLink {
-    font-size: 1rem;
-    text-align: center; /* 버튼 중앙 정렬 */
-    display: block;
-    margin-top: 0.5rem;
+  .ctaContent h2 {
+    font-size: 1.8rem;
   }
 }

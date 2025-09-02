@@ -1,420 +1,435 @@
-.projectDetail {
-  padding: 3rem 1.5rem; /* 여백 조정 */
-  text-align: center;
-  background: linear-gradient(145deg, #121212, #1a1a1a);
-  color: #e5e5e5;
+/* Project Detail Page */
+.projectDetailPage {
   min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* 제목 스타일 */
-.title {
-  font-size: 3rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #ff4081, #f06292);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1.5rem; /* 제목 아래 간격 추가 */
-  text-align: center;
-}
-
-/* 본문 스타일 */
-.subTitle {
-  font-size: 1.5rem;
-  line-height: 1.8; /* 줄 간격 추가 */
-  color: #b2ebf2;
-  margin-bottom: 1rem; /* 본문 아래 간격 추가 */
-  text-align: center;
-  max-width: 800px; /* 본문의 폭 제한 */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 역할 강조 스타일 */
-.role {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #ff80ab;
-  margin-bottom: 1rem; /* 역할 설명 아래 간격 추가 */
-  text-align: center;
-}
-
-.roleDescription {
-  font-size: 1.2rem;
-  color: #e5e5e5;
-  margin-bottom: 2rem; /* 역할 설명 아래 간격 추가 */
-  text-align: center;
-}
-.flexContainer {
+/* Hero Section */
+.hero {
+  min-height: 60vh;
   display: flex;
-  flex-wrap: wrap; /* 여러 줄로 배치 */
-  justify-content: center; /* 콘텐츠를 중앙으로 */
-  gap: 2rem; /* 카드 간격 */
-  padding: 2rem; /* 전체 여백 */
-  max-width: 1200px; /* 중앙 정렬을 위한 최대 너비 */
-  margin: 0 auto; /* 부모 컨테이너를 화면 가운데 배치 */
-}
-.contentContainer {
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 4rem 2rem;
 }
 
-/* 섹션 컨테이너 */
-.sections {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* 가로 방향 중앙 정렬 */
-  align-items: center; /* 세로 방향 중앙 정렬 */
-  gap: 1.5rem; /* 각 섹션 간 간격 */
+.heroContent {
+  max-width: 1000px;
   width: 100%;
+}
+
+.backButton {
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.backLink:hover {
+  color: #764ba2;
+  transform: translateX(-5px);
+}
+
+.projectHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projectCategory {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.projectTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+.projectSubtitle {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.projectMeta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.metaLabel {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.metaValue {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.awardBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #8b6914;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.techStack {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.techTag {
+  background: #f8f9fa;
+  color: #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.techTag:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.projectActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.actionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  color: white;
+}
+
+/* Project Content */
+.projectContent {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
-/* 개별 섹션 */
+
 .section {
-  flex: 1;
-  min-width: 280px; /* 최소 너비 조정 */
-  max-width: 400px; /* 최대 너비 유지 */
-  padding: 1.5rem; /* 패딩 조정 */
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-  height: 430px;
+  margin-bottom: 5rem;
 }
 
-.section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-}
-
-.subtitle {
-  margin-top: 1.5rem; /* 제목과 간격 추가 */
-  margin-bottom: 1.5rem; /* 버튼과 간격 추가 */
-  font-size: 1.5rem; /* 적당한 본문 글씨 크기 */
-  line-height: 1.8; /* 줄 간격 추가 */
-  color: #e5e5e5; /* 본문 글씨 색상 */
-  text-align: center; /* 중앙 정렬 */
-}
-
-
-
-
-/* 섹션 제목 */
-/* 섹션 제목 */
 .sectionTitle {
-  font-size: 1.7rem; /* 제목 크기 증가 */
-  font-weight: bold;
-  color: #f06292; /* 밝고 눈에 띄는 색상 */
-  margin-bottom: 1.5rem; /* 제목과 본문 간격 조정 */
-  text-align: center; /* 중앙 정렬 */
-}
-
-/* 본문 텍스트 */
-.description {
-  font-size: 1.3rem; /* 본문 크기 증가 */
-  line-height: 1.8; /* 줄 간격 증가 */
-  color: #e5e5e5; /* 본문 색상 유지 */
-  margin-bottom: 2rem; /* 하단 여백 */
-  text-align: center; /* 본문 중앙 정렬 */
-}
-
-/* 리스트 스타일 */
-.list li {
-  font-size: 1.2rem; /* 리스트 글씨 크기 */
-  color: #e5e5e5; /* 밝은 색상으로 강조 */
-}
-
-.list {
-  word-break: keep-all;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
   text-align: center;
-  margin-right: 30px;
 }
 
-/* 버튼 스타일 */
-.link {
-  display: inline-block;
-  margin-top: 1.5rem; /* 여백 조정 */
-  padding: 0.5rem 1.2rem; /* 크기 축소 */
-  background: linear-gradient(90deg, #c2185b, #e91e63);
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.2s;
-}
-.awardSection {
-  margin-top: 2rem; /* 여백 추가 */
-  background: rgba(255, 193, 7, 0.1); /* 금빛 배경 느낌 */
-  padding: 1.0rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+.sectionDescription {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.awardTitle {
-  font-size: 1.8rem;
-  color: #ffc107; /* 금빛 강조 */
-  margin-bottom: 0.8rem;
+/* Features Grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.awardDescription {
+.featureCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.featureDescription {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Problem & Solution Section */
+.problemSolutionSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.problemSection,
+.solutionSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.problemList,
+.solutionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.problemItem,
+.solutionItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.problemItem:hover,
+.solutionItem:hover {
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.problemIcon,
+.solutionIcon {
   font-size: 1.2rem;
-  color: #e5e5e5;
+  flex-shrink: 0;
 }
 
-.link:hover {
-  background: linear-gradient(90deg, #e91e63, #c2185b);
-  transform: translateY(-3px);
+/* Results Grid */
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
 }
 
-.buttonContainer {
-  margin: 2rem auto; /* 상하 간격 추가 */
+.resultCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: all 0.3s ease;
 }
 
-/* 버튼 컨테이너 */
-.buttonContainer {
-  display: flex; /* 가로 정렬 */
-  justify-content: center; /* 버튼 가운데 정렬 */
-  gap: 1.5rem; /* 버튼 간 간격 */
-  margin-top: 2rem;
+.resultCard:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.detailButton {
-  padding: 0.7rem 2.2rem; /* 버튼 크기 약간 증가 */
-  font-size: 1.5rem; /* 텍스트 크기 키우기 */
-  font-weight: bold;
-  background: linear-gradient(90deg, #ff4081, #f06292); /* 기존 그라데이션 유지 */
-  color: white;
-  border: none;
-  border-radius: 50px; /* 버튼의 모서리를 더 둥글게 */
-  text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s; /* 버튼 애니메이션 유지 */
-  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.6); /* 그림자 추가 */
+.resultMetric {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 0.5rem;
 }
 
-.detailButton:hover {
-  transform: translateY(-3px) scale(1.05); /* 약간 더 도드라지게 확대 */
-  background: linear-gradient(90deg, #f06292, #ff80ab);
+.resultLabel {
+  color: #666;
+  font-weight: 500;
 }
 
-
-/* 버튼 스타일 */
-.detailButton {
-  display: inline-block;
-  padding: 1rem 2rem; /* 버튼 크기 증가 */
-  font-size: 1.4rem; /* 버튼 텍스트 크기 증가 */
-  font-weight: bold;
-  background: linear-gradient(90deg, #ff4081, #f06292); /* 눈에 띄는 그라데이션 색상 */
-  color: white;
-  border: none;
-  border-radius: 10px; /* 둥근 모서리 */
-  text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s; /* 애니메이션 */
-  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.6); /* 그림자 */
-}
-
-/* 호버 효과 */
-.detailButton:hover {
-  transform: scale(1.1); /* 버튼 확대 */
-  box-shadow: 0 6px 15px rgba(255, 64, 129, 0.8); /* 더 강한 그림자 */
-  background: linear-gradient(90deg, #f06292, #ff80ab); /* 색상 변화 */
+/* Image Grid */
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .demoImage {
-  width: 250px;
-}
-
-.survey p{
-  word-break: keep-all;
-}
-
-.graph{
-  word-break: keep-all;
-}
-
-.highlight {
-  color: #cfc2e9; /* 원하는 색상으로 변경 */
-  font-weight: bold; /* 필요하면 강조 */
-}
-
-
-.reportLink {
-  display: inline-block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #61dafb;
-  text-decoration: none;
-  padding: 0.7rem 1.5rem;
-  border: 2px solid #61dafb;
-  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  text-align: center;
-  margin-top: 1rem;
-  
 }
 
-.reportLink:hover {
-  background-color: #61dafb;
-  color: #ffffff;
+.demoImage:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
-.githubLink {
-  display: inline-block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #61dafb; /* GitHub의 블루 컬러 */
+
+/* Related Projects */
+.relatedProjects {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.relatedProject {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: white;
+  color: #667eea;
   text-decoration: none;
-  padding: 0.7rem 1.5rem;
-  border: 2px solid #61dafb;
-  border-radius: 8px;
+  border-radius: 12px;
+  font-weight: 600;
   transition: all 0.3s ease;
-  text-align: center;
-  margin-top: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.githubLink:hover {
-  background-color: #61dafb;
-  color: #121212; /* 배경색과 대비되는 텍스트 색상 */
+.relatedProject:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  color: #667eea;
 }
 
-.githubSection {
-  margin-bottom: 40px;
-}
-
-/*URP */
-.urpButton {
-  padding: 0.7rem 2rem; /* 버튼 크기 */
-  font-size: 1.4rem; /* 텍스트 크기 */
-  font-weight: bold;
-  background: linear-gradient(90deg, #80deea, #4dd0e1); /* 시원한 파란색 그라데이션 */
-  color: white;
-  border: none;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 10px rgba(128, 222, 234, 0.5);
-  margin-top: 1rem;
-}
-
-.urpButton:hover {
-  transform: translateY(-3px) scale(1.05);
-  background: linear-gradient(90deg, #4dd0e1, #26c6da);
-  box-shadow: 0 6px 15px rgba(38, 198, 218, 0.8);
-}
-/* 768px 이하 (태블릿 & 모바일) */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .projectDetail {
-    padding: 2rem 1rem; /* 패딩 줄이기 */
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 50vh;
   }
 
-  .contentContainer {
-    margin-right: 0px;
+  .projectTitle {
+    font-size: 2.5rem;
   }
 
-  .title {
-    font-size: 2.2rem; /* 제목 크기 조정 */
-    margin-top: 70px;
+  .projectSubtitle {
+    font-size: 1.1rem;
   }
 
-  .introText {
-    font-size: 1rem; /* 본문 폰트 크기 줄이기 */
-    line-height: 1.6;
-  }
-
-  .list {
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 0;
-  }
-  .list br {
-    display: none;
-  }
-  .role {
-    font-size: 1.5rem;
-  }
-
-  .roleDescription {
-    font-size: 1rem;
-  }
-
-  .awardTitle {
-    font-size: 1.5rem;
-  }
-
-  .awardDescription {
-    font-size: 1rem;
-  }
-
-  .buttonContainer {
-    flex-direction: column; /* 버튼을 세로로 정렬 */
+  .projectMeta {
     gap: 1rem;
   }
 
-  .detailButton {
-    font-size: 1.2rem; /* 버튼 텍스트 크기 줄이기 */
-    padding: 0.7rem 1.5rem;
+  .problemSolutionSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .flexContainer {
-    flex-direction: column; /* 모바일에서는 섹션을 세로로 정렬 */
-    gap: 1rem;
-    margin-right: 32px;
+  .featuresGrid {
+    grid-template-columns: 1fr;
   }
 
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
 
-  .section {
-    min-width: 100%; /* 모바일에서는 전체 너비 사용 */
-    max-width: 100%;
-    padding: 1.2rem;
-    height: auto; /* 높이 자동 조정 */
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .relatedProjects {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectTitle {
+    font-size: 2rem;
   }
 
   .sectionTitle {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
 
-  .subTitle {
-    font-size: 1.2rem;
+  .featureCard,
+  .problemSection,
+  .solutionSection,
+  .resultCard {
+    padding: 1.5rem;
   }
 
-  .list p {
-    font-size: 0.73rem; /* 리스트 항목 크기 조정 */
-  }
-
-  .imageContainer {
-    display: flex;
-    flex-direction: column; /* 이미지를 세로로 정렬 */
+  .projectActions {
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
   }
 
-  .demoImage {
-    width: 90%; /* 이미지 크기 줄이기 */
-  }
-
-  .survey p {
-    font-size: 1rem;
-  }
-
-  .reportSection {
-    padding: 1rem;
-  }
-
-  .reportLink {
-    font-size: 1rem;
-    padding: 0.5rem 0.8rem;
-  }
-
-  .githubSection {
-    padding: 1rem;
-  }
-
-  .githubDescription {
-    font-size: 1rem;
-  }
-
-  .githubLink {
-    font-size: 1rem;
+  .actionButton {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
   }
 }
 

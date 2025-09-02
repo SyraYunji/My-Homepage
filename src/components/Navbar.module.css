@@ -1,81 +1,241 @@
-/* 네비게이션 바 스타일 */
+/* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: linear-gradient(145deg, #121212, #1a1a1a);
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
 }
 
-/* 로고 */
-.logo a {
-  color: #c2185b; /* 톤다운 핑크 */
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
 }
 
-/* 네비게이션 링크 */
-.navLinks {
-  list-style: none;
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
-  gap: 2rem;
-  margin-right: auto;
-  overflow-x: auto; /* 작은 화면에서 스크롤 가능 */
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navLinks a {
-  color: white;
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.navLinks a:hover {
-  color: #c2185b; /* 핑크 호버 효과 */
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* 외부 링크 */
-.externalLinks {
+.logoSubtext {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Desktop Navigation */
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.navLink:hover {
+  color: #667eea;
+}
+
+.navLink.active {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 1px;
+}
+
+/* Social Links */
+.socialLinks {
   display: flex;
   gap: 1rem;
 }
 
-.externalLinks a {
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  color: #667eea;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.socialLink:hover {
+  background: #667eea;
   color: white;
-  font-size: 1.5rem; /* 아이콘 크기 키움 */
-  transition: color 0.3s;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
-.externalLinks a:hover {
-  color: #e91e63; /* 밝은 핑크 */
+/* Mobile Menu Button */
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-/* 반응형 디자인 */
+.mobileMenuButton:hover {
+  background: #f8f9fa;
+  color: #667eea;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  display: none;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.mobileNavLinks {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileNavLink {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  background: #f8f9fa;
+  color: #667eea;
+}
+
+.mobileNavLink.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.mobileSocialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.mobileSocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  color: #667eea;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.mobileSocialLink:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .navLinks {
-    flex-wrap: nowrap; /* 링크를 한 줄에 배치 */
-    gap: 1rem; /* 간격 줄이기 */
-    justify-content: center; /* 중앙 정렬 */
-    margin-top: 10px;
-}
-
-
-  .navbar {
-    flex-direction: column; /* 로고와 네비게이션을 수직 정렬 */
-    padding: 0.5rem 1rem; /* 세로 패딩 축소 */
-    height: 80px;
-}
-  .externalLinks{
+  .navLinks,
+  .socialLinks {
     display: none;
   }
-  .logo a{
-    align-items: center;
-    margin-right: 30px;
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .navContainer {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoSubtext {
+    display: none;
+  }
+
+  .mobileNavLinks {
+    padding: 1rem;
+  }
+
+  .mobileSocialLinks {
+    padding: 1rem;
   }
 }

@@ -14,6 +14,9 @@ import URPDetail from "./project/co-deep/URP Detail";
 import Contact from "./contact/contact";
 import ComingSoon from "./coming soon/ComingSoon";
 import Hanium from "./project/hanium/hanium";
+import KurtainCall from "./project/kurtaincall/kurtaincall";
+import ReLocal from "./project/relocal/relocal";
+import Lachu from "./project/lachu/lachu";
 
 
 function App() {
@@ -26,16 +29,29 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/project" element={<Projects />} />
-          <Route path="/activities" element={<Activities />} /> {/* 경로 수정 */}
-          <Route path="/activities/aiesec" element={<AIESEC1 />} />
-          <Route path="/co-deep" element={<CoDeepDetail />} />
-          <Route path="/timi" element={<Timi />} />
-          <Route path = "/platform-detail" element = {<PlatformDetail />} />
-          <Route path = "/activities/aiesec2" element = {<AIESEC2 />} />
-          <Route path = "/urp" element = {<URPDetail />} />
-          <Route path = "/contact" element = {<Contact />}/>
-          <Route path = "/coming-soon" element = {<ComingSoon />}/>
-          <Route path = "/hanium" element = {<Hanium />}/>
+          <Route path="/activities" element={<Activities />} />
+
+          {/* AIESEC 프로젝트들 (기획) */}
+          <Route path="/activities/aiesec1" element={<AIESEC1 />} />
+          <Route path="/activities/aiesec2" element={<AIESEC2 />} />
+
+          {/* 프론트엔드 프로젝트들 */}
+          <Route path="/project/timi" element={<Timi />} />
+          <Route path="/project/co-deep" element={<CoDeepDetail />} />
+          <Route path="/project/hanium" element={<Hanium />} />
+
+          {/* 풀스택 프로젝트들 */}
+          <Route path="/project/re-local" element={<ReLocal />} />
+          <Route path="/project/lachu" element={<Lachu />} />
+
+          {/* 하드웨어 프로젝트 */}
+          <Route path="/project/kurtaincall" element={<KurtainCall />} />
+
+          {/* 기타 라우트들 */}
+          <Route path="/platform-detail" element={<PlatformDetail />} />
+          <Route path="/urp" element={<URPDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </div>
     </Router>
