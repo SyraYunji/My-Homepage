@@ -17,6 +17,8 @@ import Hanium from "./project/hanium/hanium";
 import KurtainCall from "./project/kurtaincall/kurtaincall";
 import ReLocal from "./project/relocal/relocal";
 import Lachu from "./project/lachu/lachu";
+import Story from "./story/Story";
+import SchoolWork from "./schoolwork/SchoolWork";
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/story" element={<Story />} />
+          <Route path="/schoolwork" element={<SchoolWork />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/activities" element={<Activities />} />
 

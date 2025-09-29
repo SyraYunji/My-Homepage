@@ -13,7 +13,7 @@ const KurtainCall = () => {
     tech: ["Arduino", "ESP32", "IoT", "Bluetooth", "Servo Motor", "C++"],
     role: "Hardware Developer",
     team: "개인 프로젝트",
-    github: "https://github.com/kurtaincall-project"
+    github: "https://github.com/Re-Local"
   };
 
   const features = [

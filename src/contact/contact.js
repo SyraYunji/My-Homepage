@@ -1,30 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhone, FaGithub, FaYoutube, FaBlog, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
 import styles from "./contact.module.css";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // 여기에 폼 제출 로직 추가
-    console.log("Form submitted:", formData);
-    alert("메시지가 전송되었습니다! 곧 연락드리겠습니다.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
 
   const contactInfo = [
     {
@@ -97,74 +76,12 @@ const Contact = () => {
         <div className={styles.container}>
           <div className={styles.contactGrid}>
             {/* Contact Form */}
-            <motion.div
-              className={styles.contactForm}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className={styles.formTitle}>Send Message</h2>
-              <form onSubmit={handleSubmit}>
-                <div className={styles.formGroup}>
-                  <label htmlFor="name">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your name"
-                  />
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="subject">Subject</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    placeholder="What's this about?"
-                  />
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="message">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Tell me about your project or inquiry..."
-                    rows="5"
-                  />
-                </div>
-                <button type="submit" className={styles.submitButton}>
-                  Send Message
-                </button>
-              </form>
-            </motion.div>
 
             {/* Contact Info */}
             <motion.div
               className={styles.contactInfo}
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

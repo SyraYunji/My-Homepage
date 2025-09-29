@@ -33,7 +33,7 @@ const Activities = () => {
       id: 3,
       category: "멋쟁이 사자처럼",
       title: "학회원",
-      period: "2023",
+      period: "2024",
       description: "React와 Next.js를 학습하며 다양한 팀 프로젝트를 진행했습니다.",
       skills: ["React.js", "Next.js", "JavaScript", "팀 프로젝트"],
       icon: "🦁",
@@ -44,7 +44,7 @@ const Activities = () => {
       id: 4,
       category: "멋쟁이 사자처럼",
       title: "운영진",
-      period: "2023",
+      period: "2025",
       description: "교육운영부 임원으로 활동하며 스터디와 세션자료를 제작하고 총무 역할을 수행했습니다.",
       skills: ["교육 운영", "자료 제작", "행정 관리", "멘토링"],
       icon: "👨‍💼",
@@ -73,20 +73,7 @@ const Activities = () => {
             <br />
             각 활동을 클릭하면 자세한 내용을 확인할 수 있습니다.
           </p>
-          <div className={styles.stats}>
-            <div className={styles.stat}>
-              <span className={styles.statNumber}>4</span>
-              <span className={styles.statLabel}>활동</span>
-            </div>
-            <div className={styles.stat}>
-              <span className={styles.statNumber}>2</span>
-              <span className={styles.statLabel}>조직</span>
-            </div>
-            <div className={styles.stat}>
-              <span className={styles.statNumber}>129</span>
-              <span className={styles.statLabel}>참여자</span>
-            </div>
-          </div>
+      
         </motion.div>
       </section>
 

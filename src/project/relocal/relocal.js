@@ -13,7 +13,7 @@ const ReLocal = () => {
     tech: ["Node.js", "Express.js", "MongoDB", "React.js", "STT", "Translation API", "TTS", "WebSocket", "Web Crawling"],
     role: "팀장 & Full-Stack Developer",
     team: "4명 팀 (프론트엔드 초보자 포함)",
-    github: "https://github.com/relocal-project"
+    github: "https://github.com/Re-Local"
   };
 
   const features = [

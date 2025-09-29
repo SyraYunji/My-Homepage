@@ -7,37 +7,38 @@ import styles from "./hanium.module.css";
 const Hanium = () => {
   const projectInfo = {
     title: "한이음 드림업",
-    subtitle: "AI 기반 개인 맞춤형 수면 유도 사운드 추천 플랫폼",
-    category: "Frontend Development",
-    period: "2024",
-    tech: ["Flutter", "Dart", "Firebase", "WebSocket", "AI/ML"],
-    role: "Frontend Developer",
-    team: "4명 (한이음 드림업 프로젝트)",
-    github: "https://github.com/Ko-o-ala/NewFrontend"
+    subtitle: "AI 기반 수면 로봇 '알라'와 연동되는 모바일 앱",
+    category: "Mobile Development",
+    period: "2025.03 - 2025.10",
+    tech: ["Flutter", "Dart", "AI/ML", "IoT", "하드웨어"],
+    role: "1인 프론트엔드 개발자",
+    team: "Kooala",
+    github: "https://github.com/Ko-o-ala/NewFrontend",
+    status: "베타테스트 배포 완료"
   };
 
   const features = [
     {
-      title: "수면 분석 시스템",
-      description: "일별, 주별, 월별 수면 패턴 분석 및 시각화",
+      title: "AI 수면 분석",
+      description: "LLM 연동으로 개인별 수면 패턴 분석 및 맞춤형 인사이트 제공",
       icon: <FaChartLine />,
       color: "#667eea"
     },
     {
-      title: "AI 코알라 챗봇",
-      description: "WebSocket을 활용한 실시간 AI 상담 시스템",
+      title: "알라와의 대화",
+      description: "수면 로봇 '알라'와의 실시간 대화형 인터랙션 시스템",
       icon: <FaComments />,
       color: "#764ba2"
     },
     {
-      title: "자동 사운드 재생",
-      description: "페이지 접속 시 자동 재생되는 맞춤형 수면 사운드",
+      title: "IoT 하드웨어 연동",
+      description: "LED, 스피커, 음성을 제어하는 맞춤형 수면 인터랙션",
       icon: <FaPlay />,
       color: "#f093fb"
     },
     {
-      title: "수면 관리 페이지",
-      description: "사용자 친화적인 수면 데이터 관리 및 시각화",
+      title: "수면 리포트",
+      description: "직관적인 UI로 수면 데이터를 시각화하고 관리",
       icon: <FaMobile />,
       color: "#4facfe"
     }
@@ -46,23 +47,31 @@ const Hanium = () => {
   const screenshots = [
     {
       src: "/sleep_report1.png",
-      alt: "Daily 수면 분석",
-      title: "Daily 수면 분석"
+      alt: "수면 분석 리포트",
+      title: "수면 분석 리포트",
+      className: "sleep_image",
+      description: "일별 수면 패턴과 AI 인사이트"
     },
     {
       src: "/sleep_speech1.png",
-      alt: "AI 코알라 대화",
-      title: "AI 코알라 챗봇"
+      alt: "알라와의 대화",
+      title: "알라와의 대화",
+      className: "sleep_image",
+      description: "수면 로봇과의 실시간 대화"
     },
     {
-      src: "/sleep_sound1.png",
-      alt: "수면 사운드 추천",
-      title: "수면 사운드 추천"
+      src: "/images/sleep_sound1.png",
+      alt: "수면 사운드",
+      title: "수면 사운드",
+      className: "sleep_image",
+      description: "맞춤형 수면 유도 사운드"
     },
     {
-      src: "/month_calender.png",
-      alt: "월간 수면 캘린더",
-      title: "월간 수면 캘린더"
+      src: "/sleep_report2.png",
+      alt: "월간 캘린더",
+      title: "월간 캘린더",
+      className: "sleep_image",
+      description: "월별 수면 패턴 시각화"
     }
   ];
 
@@ -80,7 +89,7 @@ const Hanium = () => {
 
           <div className={styles.projectHeader}>
             <div className={styles.projectCategory}>{projectInfo.category}</div>
-            <div className={styles.betaBadge}>🚀 앱 출시 예정 (베타테스트 배포 상태)</div>
+            <div className={styles.betaBadge}>🚀 {projectInfo.status}</div>
             <h1 className={styles.projectTitle}>{projectInfo.title}</h1>
             <p className={styles.projectSubtitle}>{projectInfo.subtitle}</p>
           </div>
@@ -134,9 +143,11 @@ const Hanium = () => {
             <div className={styles.overviewSection}>
               <h2 className={styles.sectionTitle}>Project Overview</h2>
               <p className={styles.sectionDescription}>
-                한이음 드림업은 AI 기반 개인 맞춤형 수면 유도 사운드 추천 플랫폼입니다. 
-                Flutter를 이용한 앱 프론트엔드와 하드웨어 구현을 통해, 사용자의 수면 데이터를 바탕으로 AI가 수면 유도 사운드를 추천하고, 
-                수면 리포트를 시각적으로 제공하는 서비스를 개발했습니다.
+                한이음 드림업 공모전에서 개발한 혁신적인 수면 솔루션입니다. 
+                Flutter로 개발한 모바일 앱과 수면 로봇 '알라' 인형을 연동하여, 
+                AI가 개인별 수면 패턴을 분석하고 맞춤형 수면 유도 사운드를 제공합니다. 
+                LED, 스피커, 음성을 제어하는 IoT 기술과 LLM을 활용한 대화형 인터페이스로 
+                완전히 새로운 수면 경험을 구현했습니다.
               </p>
             </div>
 
@@ -144,12 +155,13 @@ const Hanium = () => {
               <h2 className={styles.sectionTitle}>My Role</h2>
               <div className={styles.roleContent}>
                 <p className={styles.roleDescription}>
-                  저는 앱 개발의 <strong>프론트엔드</strong>를 Flutter로 구현하고, 
-                  <strong>수면관리 페이지 / 사운드 관리 페이지 / 홈화면</strong>을 담당했습니다.
+                  <strong>1인 프론트엔드 개발자</strong>로서 Flutter 앱 전체를 담당했습니다. 
+                  유튜브 Flutter 강의를 일주일만에 완주하며 빠르게 학습하고, 
+                  <strong>수면 분석, 대화형 인터페이스, IoT 연동</strong> 기능을 모두 구현했습니다.
                 </p>
                 <p className={styles.roleDescription}>
-                  다양한 시각화 컴포넌트와 음성 입력 기능 구현에 집중했으며, 
-                  사용자의 수면 경험을 직관적으로 보여줄 수 있도록 UI/UX를 설계했습니다.
+                  <strong>애플 베타테스트</strong>까지 완료하며, 개발자와 사용자 시선의 차이를 깊이 배웠습니다. 
+                  사용자 중심의 직관적인 UI/UX 설계와 하드웨어 연동의 복잡성을 해결하는 경험을 얻었습니다.
                 </p>
               </div>
             </div>
@@ -199,7 +211,10 @@ const Hanium = () => {
                       alt={screenshot.alt}
                       className={styles.screenshotImage}
                     />
-                    <h3 className={styles.screenshotTitle}>{screenshot.title}</h3>
+                    <div className={styles.screenshotContent}>
+                      <h3 className={styles.screenshotTitle}>{screenshot.title}</h3>
+                      <p className={styles.screenshotDescription}>{screenshot.description}</p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -209,20 +224,20 @@ const Hanium = () => {
               <h2 className={styles.sectionTitle}>Technology Stack</h2>
               <div className={styles.techDetails}>
                 <div className={styles.techCategory}>
-                  <h3>Frontend Development</h3>
-                  <p>Flutter & Dart를 사용하여 크로스 플랫폼 모바일 애플리케이션 개발</p>
+                  <h3>Mobile Development</h3>
+                  <p>Flutter & Dart로 크로스 플랫폼 모바일 앱 개발, 일주일만에 강의 완주하며 빠른 학습</p>
                 </div>
                 <div className={styles.techCategory}>
-                  <h3>Real-time Communication</h3>
-                  <p>WebSocket을 활용한 실시간 AI 코알라 챗봇 시스템</p>
+                  <h3>AI & Machine Learning</h3>
+                  <p>LLM 연동으로 개인별 수면 패턴 분석 및 맞춤형 인사이트 제공</p>
                 </div>
                 <div className={styles.techCategory}>
-                  <h3>Audio Management</h3>
-                  <p>자동 사운드 재생 및 개인 맞춤형 수면 사운드 추천</p>
+                  <h3>IoT & Hardware</h3>
+                  <p>수면 로봇 '알라'와 연동하여 LED, 스피커, 음성 제어하는 하드웨어 통합</p>
                 </div>
                 <div className={styles.techCategory}>
-                  <h3>Data Visualization</h3>
-                  <p>일별, 주별, 월별 수면 패턴 분석 및 차트 시각화</p>
+                  <h3>User Experience</h3>
+                  <p>애플 베타테스트를 통한 사용자 피드백 반영, 직관적인 UI/UX 설계</p>
                 </div>
               </div>
             </div>

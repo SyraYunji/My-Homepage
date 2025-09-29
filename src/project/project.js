@@ -9,61 +9,76 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "PoliTracker",
-      subtitle: "정치 트래킹 플랫폼",
-      description: "React.js를 이용하여 맞춤형 정치 정보를 제공하는 정치 트래킹 플랫폼 개발",
+      title: "Co-Deep Project",
+      subtitle: "AI 기반 정치 성향 분석 플랫폼",
+      description: "React.js와 데이터 분석을 활용한 맞춤형 정치 정보 제공 플랫폼. 사용자 맞춤 정치 트래킹 서비스를 구현했습니다.",
       tech: ["React.js", "Next.js", "데이터 분석", "UI/UX"],
-      award: "최우수상 수상",
+      award: "최우수상",
       image: "/images/district-detail.png",
-      link: "/co-deep",
-      category: "Web Development"
+      link: "/project/co-deep",
+      category: "Software Projects",
+      icon: "💻"
     },
     {
       id: 2,
       title: "Timi",
-      subtitle: "시간 조율 서비스",
-      description: "회의 시간이나 약속 시간을 편리하게 정할 수 있도록 시간 조율 서비스 플랫폼 개발",
+      subtitle: "그룹 시간 조율 서비스",
+      description: "회의나 약속 시간을 효율적으로 조율할 수 있는 웹 플랫폼. 사용자 친화적인 인터페이스로 시간 관리의 복잡성을 해결했습니다.",
       tech: ["React.js", "JavaScript", "API", "Responsive Design"],
       image: "/images/main.jpg",
       link: "/project/timi",
-      category: "Web Development"
+      category: "Software Projects",
+      icon: "💻"
     },
     {
       id: 3,
-      title: "코오알라",
-      subtitle: "AI 수면 유도 플랫폼",
-      description: "AI 기반 개인 맞춤형 수면 유도 사운드 추천 플랫폼 및 수면 로봇 개발",
-      tech: ["AI", "Python", "React", "IoT", "하드웨어"],
-      award: "앱 출시 예정 (베타테스트 배포 상태)",
-      image: "/images/sleep_report1.png",
+      title: "한이음 드림업",
+      subtitle: "AI 기반 수면 유도 사운드 추천",
+      description: "Flutter로 개발한 AI 기반 수면 로봇 '알라'와 연동되는 모바일 앱. IoT와 AI를 결합한 혁신적인 수면 솔루션입니다.",
+      tech: ["Flutter", "AI/ML", "IoT", "Python", "하드웨어"],
+      award: "베타테스트 배포",
       images: [
-        "/images/sleep_report3.png",
-        "/images/sleep_report2.png",
-        "/images/sleep_report5.png",
-        "/images/sleep_speech1.png"
+        "/sleep_report3.png",
+        "/sleep_report2.png",
+        "/sleep_report5.png",
+        "/sleep_speech1.png"
       ],
       link: "/project/hanium",
-      category: "Application Development"
+      category: "Software Projects",
+      icon: "💻"
     },
     {
       id: 4,
-      title: "성슐랭",
-      subtitle: "대학생 맛집 추천 웹서비스를 직접 기획하는 창업 서비스 및 동아리",
-      description: "대학생 맛집 추천 웹서비스를 직접 기획하는 창업 서비스 및 동아리 창시에 CTO 1인 풀스택 개발자로 참여",
-      tech: ["기술 스택 미정"],
+      title: "Re-local",
+      subtitle: "혜화 소극장 언어 장벽 해소 플랫폼",
+      description: "STT→번역→TTS 파이프라인을 구축한 다국어 지원 플랫폼. MongoDB와 Node.js를 활용한 풀스택 개발 프로젝트입니다.",
+      tech: ["React.js", "Node.js", "MongoDB", "STT/TTS", "API"],
       image: "/images/coming-soon.png",
-      link: "/project/lachu",
-      category: "Full-Stack Development"
+      link: "/project/re-local",
+      category: "Software Projects",
+      icon: "💻"
     },
     {
       id: 5,
+      title: "성슐랭",
+      subtitle: "대학생 맛집 추천 웹서비스 & 동아리",
+      description: "창업팀 라추의 CTO로서 Next.js와 Firebase를 활용한 커뮤니티 플랫폼 개발. MVP 출시를 준비 중입니다.",
+      tech: ["Next.js", "Firebase", "TypeScript", "UI/UX"],
+      image: "/images/coming-soon.png",
+      link: "/project/lachu",
+      category: "Software Projects",
+      icon: "💻"
+    },
+    {
+      id: 6,
       title: "KurtainCall",
       subtitle: "스마트 커튼 제어 시스템",
-      description: "IoT와 임베디드 시스템을 활용한 스마트 커튼 자동 제어 시스템 개발",
-      tech: ["Arduino", "ESP32", "IoT", "Bluetooth", "C++"],
+      description: "Arduino와 ESP32를 활용한 IoT 기반 스마트 커튼 자동 제어 시스템. 하드웨어와 소프트웨어의 융합 프로젝트입니다.",
+      tech: ["Arduino", "ESP32", "C++", "IoT", "Bluetooth"],
       image: "/images/coming-soon.png",
-      link: "/coming-soon",
-      category: "Hardware Development"
+      link: "/project/kurtaincall",
+      category: "Hardware Projects",
+      icon: "🔧"
     }
   ];
 
@@ -72,31 +87,37 @@ const Projects = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className={styles.heroContent}
         >
-          <h1 className={styles.heroTitle}>
-            My <span className={styles.highlight}>Projects</span>
-          </h1>
-          <p className={styles.heroSubtitle}>
-            기획부터 개발까지, 다양한 기술 스택을 활용하여 만든 프로젝트들을 소개합니다.
-            <br />
-            각 프로젝트를 클릭하면 자세한 내용을 확인할 수 있습니다.
-          </p>
+          <div className={styles.heroHeader}>
+            <h1 className={styles.heroTitle}>
+              My <span className={styles.highlight}>Projects</span>
+            </h1>
+            <p className={styles.heroSubtitle}>
+              문제에서 출발해, 사람으로 완성하는 개발자로서<br />
+              다양한 기술 스택을 활용해 만든 프로젝트들을 소개합니다.
+            </p>
+          </div>
+          
           <div className={styles.stats}>
             <div className={styles.stat}>
-              <span className={styles.statNumber}>5</span>
+              <span className={styles.statNumber}>6</span>
               <span className={styles.statLabel}>프로젝트</span>
             </div>
             <div className={styles.stat}>
-              <span className={styles.statNumber}>4</span>
-              <span className={styles.statLabel}>기술 분야</span>
+              <span className={styles.statNumber}>2</span>
+              <span className={styles.statLabel}>분야</span>
             </div>
             <div className={styles.stat}>
               <span className={styles.statNumber}>1</span>
               <span className={styles.statLabel}>수상</span>
+            </div>
+            <div className={styles.stat}>
+              <span className={styles.statNumber}>1</span>
+              <span className={styles.statLabel}>베타테스트</span>
             </div>
           </div>
         </motion.div>
@@ -105,16 +126,27 @@ const Projects = () => {
       {/* Projects Grid */}
       <section className={styles.projectsSection}>
         <div className={styles.container}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className={styles.sectionHeader}
+          >
+            <h2 className={styles.sectionTitle}>Featured Projects</h2>
+            <p className={styles.sectionSubtitle}>각 프로젝트를 클릭하면 자세한 내용을 확인할 수 있습니다</p>
+          </motion.div>
+
           <div className={styles.projectsGrid}>
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                className={styles.projectCard}
-                initial={{ opacity: 0, y: 50 }}
+                className={`${styles.projectCard} ${styles[project.category.toLowerCase().replace(' ', '')]}`}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -8 }}
               >
                 <div className={styles.projectImage}>
                   {project.images ? (
@@ -132,15 +164,20 @@ const Projects = () => {
                     <img src={project.image} alt={project.title} />
                   )}
                   {project.award && (
-                    <div className={project.title === "코오알라" ? styles.betaBadge : styles.awardBadge}>
-                      {project.title === "코오알라" ? "🚀 " : "🏆 "}{project.award}
+                    <div className={project.title === "한이음 드림업" ? styles.betaBadge : styles.awardBadge}>
+                      {project.title === "한이음 드림업" ? "🚀 " : "🏆 "}{project.award}
                     </div>
                   )}
                 </div>
                 <div className={styles.projectContent}>
-                  <div className={styles.projectCategory}>{project.category}</div>
-                  <h3 className={styles.projectTitle}>{project.title}</h3>
-                  <h4 className={styles.projectSubtitle}>{project.subtitle}</h4>
+                  <div className={styles.projectHeader}>
+                    <div className={styles.projectCategory}>
+                      <span className={styles.categoryIcon}>{project.icon}</span>
+                      {project.category}
+                    </div>
+                    <h3 className={styles.projectTitle}>{project.title}</h3>
+                    <h4 className={styles.projectSubtitle}>{project.subtitle}</h4>
+                  </div>
                   <p className={styles.projectDescription}>{project.description}</p>
                   <div className={styles.techStack}>
                     {project.tech.map((tech, techIndex) => (
@@ -150,7 +187,7 @@ const Projects = () => {
                     ))}
                   </div>
                   <Link to={project.link} className={styles.projectLink}>
-                    자세히 보기
+                    <span>자세히 보기</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
@@ -171,11 +208,22 @@ const Projects = () => {
           viewport={{ once: true }}
           className={styles.ctaContent}
         >
-          <h2>함께 프로젝트를 만들어보시겠습니까?</h2>
-          <p>새로운 아이디어나 협업 기회가 있다면 언제든 연락해주세요.</p>
-          <Link to="/contact" className={styles.ctaButton}>
-            연락하기
-          </Link>
+          <h2>함께 성장할 프로젝트를 찾고 계신가요?</h2>
+          <p>기획부터 개발까지, 모든 과정에서 가치를 창출하는 파트너가 되어드리겠습니다.</p>
+          <div className={styles.ctaButtons}>
+            <Link to="/contact" className={styles.ctaButton}>
+              <span>연락하기</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
+            <Link to="/story" className={styles.ctaButtonAlt}>
+              <span>내 이야기 보기</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
+          </div>
         </motion.div>
       </section>
     </div>

@@ -1,600 +1,463 @@
-/* 전체 페이지 스타일 */
+/* 이력서 스타일 */
 .about {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
+  background: #ffffff;
   color: #333;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
 }
 
-/* Hero Section */
-.hero {
-  padding: 6rem 0 4rem;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+/* 이력서 헤더 */
+.resumeHeader {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-bottom: 3px solid #667eea;
+  margin-top: 80px;
 }
 
-.heroContent {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.headerContent {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
   align-items: center;
 }
 
-.heroTitle {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-  color: #1a1a1a;
-}
-
-.highlight {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.heroSubtitle {
-  font-size: 1.25rem;
-  color: #666;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.heroStats {
+.profileSection {
   display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.stat {
-  text-align: center;
-}
-
-.statNumber {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #667eea;
-  line-height: 1;
-}
-
-.statLabel {
-  font-size: 0.9rem;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Profile Card */
-.profileCard {
-  background: white;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .profileImage {
-  margin-bottom: 1.5rem;
-}
-
-.imagePlaceholder {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 auto;
+  object-fit: cover;
+  border: 4px solid #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
 }
 
-.profileInfo h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.basicInfo h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
   color: #1a1a1a;
 }
 
-.profileInfo p {
+.basicInfo .birth {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 0.5rem 0;
+}
+
+.basicInfo .position {
+  font-size: 1.3rem;
   color: #667eea;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
+  font-weight: 600;
+  margin: 0;
 }
 
-.socialLinks {
+.contactSection {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.socialLink {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: #f8f9fa;
+.contactItem {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.contactItem i {
+  color: #667eea;
+  width: 20px;
+  text-align: center;
+}
+
+.contactItem a {
   color: #667eea;
   text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  transition: color 0.3s ease;
 }
 
-.socialLink:hover {
-  background: #667eea;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+.contactItem a:hover {
+  color: #5a6fd8;
+  text-decoration: underline;
 }
 
-/* Section Styles */
-.aboutSection,
-.skillsSection,
-.experienceSection,
-.educationSection,
-.awardsSection {
-  padding: 5rem 0;
-  background: white;
+/* 섹션 공통 스타일 */
+.section {
+  padding: 2rem;
+  border-bottom: 1px solid #e9ecef;
 }
 
-.aboutSection {
-  background: #f8f9fa;
+.section:last-of-type {
+  border-bottom: none;
 }
 
 .sectionTitle {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 3rem;
   color: #1a1a1a;
-  position: relative;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #667eea;
+  display: inline-block;
 }
 
-.sectionTitle::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border-radius: 2px;
-}
-
-/* About Content */
-.aboutContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.aboutText p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
-}
-
-.aboutHighlights {
+/* 학력 */
+.educationList {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.highlightItem {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+.educationItem {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
 }
 
-.highlightItem:hover {
-  transform: translateY(-2px);
-}
-
-.highlightIcon {
-  font-size: 2rem;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.highlightText h4 {
-  font-size: 1.1rem;
+.educationPeriod {
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  color: #667eea;
+  font-size: 0.95rem;
+}
+
+.educationContent h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
   color: #1a1a1a;
 }
 
-.highlightText p {
+.educationContent p {
   color: #666;
   margin: 0;
+  font-size: 0.95rem;
 }
 
-/* Skills Section */
+/* 어학 & 자격증 */
+.twoColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.languageList,
+.certificationList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.languageItem,
+.certificationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #667eea;
+}
+
+.languageName,
+.certName {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.languageScore {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.languageDate,
+.certDate {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 수상 */
+.awardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.awardItem {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.awardDate {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 0.95rem;
+}
+
+.awardContent h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: #1a1a1a;
+}
+
+.awardContent p {
+  color: #666;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* 대외활동 */
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.activityItem {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.activityPeriod {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 0.95rem;
+}
+
+.activityContent h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #1a1a1a;
+}
+
+.activityContent p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* 보유 기술 */
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
 .skillCategory {
-  background: white;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
 }
 
-.skillCategory:hover {
-  transform: translateY(-5px);
-}
-
-.categoryTitle {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 1.3rem;
+.skillCategory h3 {
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1rem 0;
   color: #1a1a1a;
-}
-
-.categoryTitle i {
-  color: #667eea;
-  font-size: 1.2rem;
 }
 
 .skillItems {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.skillItem {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.skillName {
-  font-weight: 500;
-  color: #333;
-  font-size: 0.95rem;
-}
-
-.skillBar {
-  height: 8px;
-  background: #f0f0f0;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.skillProgress {
-  height: 100%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border-radius: 4px;
-  transition: width 1s ease;
-}
-
-/* Experience Timeline */
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 20px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-}
-
-.timelineItem {
-  position: relative;
-  margin-bottom: 3rem;
-  padding-left: 60px;
-}
-
-.timelineDot {
-  position: absolute;
-  left: 11px;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: white;
-  border: 4px solid #667eea;
-  z-index: 1;
-}
-
-.timelineContent {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.timelineContent:hover {
-  transform: translateX(5px);
-}
-
-.timelineContent h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #1a1a1a;
-}
-
-.timelinePeriod {
-  color: #667eea;
-  font-weight: 500;
-  font-size: 0.9rem;
-  margin-bottom: 0.75rem;
-}
-
-.timelineContent p {
-  color: #666;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.techStack {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.techStack span {
-  background: #f8f9fa;
+.skillItem {
+  background: white;
   color: #667eea;
-  padding: 0.25rem 0.75rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
   border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
 }
 
-/* Education & Certifications */
-.educationGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+.skillItem:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-1px);
 }
 
-.educationCard,
-.certificationCard {
-  background: white;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.cardTitle {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #1a1a1a;
-}
-
-.cardTitle i {
-  color: #667eea;
-}
-
-.educationItem {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.educationItem:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.educationItem h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #1a1a1a;
-}
-
-.educationItem p {
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.period,
-.gpa {
-  display: inline-block;
-  font-size: 0.85rem;
-  color: #667eea;
-  font-weight: 500;
-  margin-right: 1rem;
-}
-
-.certificationGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.certificationItem h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #1a1a1a;
-}
-
-.certificationItem ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.certificationItem li {
-  padding: 0.5rem 0;
-  color: #666;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.certificationItem li:last-child {
-  border-bottom: none;
-}
-
-/* Awards Section */
-.awardsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.awardCard {
-  background: white;
-  border-radius: 16px;
-  padding: 2rem;
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3rem 2rem;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  color: white;
 }
 
-.awardCard:hover {
-  transform: translateY(-5px);
+.ctaContent h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.awardIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.awardCard h3 {
+.ctaContent p {
   font-size: 1.1rem;
+  margin: 0 0 2rem 0;
+  opacity: 0.9;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton,
+.ctaButtonAlt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #1a1a1a;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-.awardCard p {
-  color: #666;
-  font-size: 0.9rem;
+.ctaButton {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
-/* Responsive Design */
+.ctaButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.ctaButtonAlt {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.ctaButtonAlt:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* 반응형 디자인 */
 @media (max-width: 768px) {
-  .heroContent {
+  .about {
+    padding: 0;
+  }
+
+  .headerContent {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     text-align: center;
   }
 
-  .heroTitle {
-    font-size: 2.5rem;
+  .profileSection {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .heroStats {
-    justify-content: center;
+  .basicInfo h1 {
+    font-size: 2rem;
   }
 
-  .aboutContent {
+  .educationItem,
+  .awardItem,
+  .activityItem {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .educationPeriod,
+  .awardDate,
+  .activityPeriod {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .twoColumn {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
   .skillsGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .educationGrid {
-    grid-template-columns: 1fr;
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .certificationGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .awardsGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline::before {
-    left: 15px;
-  }
-
-  .timelineItem {
-    padding-left: 50px;
-  }
-
-  .timelineDot {
-    left: 6px;
-  }
-
-  .container {
-    padding: 0 1rem;
+  .ctaButton,
+  .ctaButtonAlt {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .hero {
-    padding: 4rem 0 2rem;
-  }
-
-  .heroTitle {
-    font-size: 2rem;
-  }
-
-  .sectionTitle {
-    font-size: 2rem;
-  }
-
-  .profileCard {
+  .resumeHeader {
     padding: 1.5rem;
   }
 
-  .imagePlaceholder {
-    width: 100px;
-    height: 100px;
+  .section {
+    padding: 1.5rem;
+  }
+
+  .basicInfo h1 {
+    font-size: 1.8rem;
+  }
+
+  .sectionTitle {
     font-size: 1.5rem;
   }
+
+  .ctaContent h2 {
+    font-size: 1.6rem;
+  }
+
+  .ctaContent p {
+    font-size: 1rem;
+  }
 }
-  

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaYoutube, FaBlog, FaBars, FaTimes } from "react-icons/fa";
+import { FaGithub, FaYoutube, FaBlog, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -21,6 +21,8 @@ const Navbar = () => {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
+    { path: "/story", label: "Story" },
+    { path: "/schoolwork", label: "School Work" },
     { path: "/project", label: "Projects" },
     { path: "/activities", label: "Activities" },
     { path: "/contact", label: "Contact" }
@@ -36,6 +38,11 @@ const Navbar = () => {
       icon: <FaYoutube />,
       href: "https://www.youtube.com/@studyesme9286/videos",
       label: "YouTube"
+    },
+    {
+      icon: <FaLinkedin />,
+      href: "https://www.linkedin.com/in/%EC%9D%B4%EC%9C%A4%EC%A7%80-%EA%B2%BD%EC%98%81%ED%95%99%EA%B3%BC-324760365/",
+      label: "LinkedIn"
     },
     {
       icon: <FaBlog />,

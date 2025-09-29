@@ -5,32 +5,19 @@ import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const scrollToContent = () => {
+    const mainSections = document.querySelector(`.${styles.mainSections}`);
+    if (mainSections) {
+      mainSections.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const sections = [
     {
-      id: "planning",
-      title: "기획 & 전략",
-      subtitle: "비즈니스 통찰력과 전략적 사고",
-      icon: "📋",
-      color: "#667eea",
-      projects: [
-        {
-          name: "국외교류부서(oGX) 부서장",
-          description: "해외 인턴십, 봉사 프로그램과 한국 학생들을 중계해주는 부서",
-          link: "/activities/aiesec1"
-        },
-        {
-          name: "NLDC 컨퍼런스 전체 회장", 
-          description: "129명이 참여하는 컨퍼런스 개최 및 총괄",
-          link: "/activities/aiesec2"
-        }
-      ]
-    },
-    {
-      id: "Frontend",
-      title: "프론트엔드 개발",
-      subtitle: "사용자 경험 중심의 웹/앱 개발",
+      id: "software",
+      title: "Software Projects",
+      subtitle: "웹/앱 개발 및 AI 기반 솔루션",
       icon: "💻",
-      color: "#764ba2",
+      color: "#667eea",
       projects: [
         {
           name: "Timi",
@@ -46,16 +33,7 @@ const Home = () => {
           name: "한이음 드림업",
           description: "AI 기반 수면 유도 사운드 추천",
           link: "/project/hanium"
-        }
-      ]
-    },
-    {
-      id: "Full-Stack",
-      title: "풀스택 개발",
-      subtitle: "백엔드 시스템 및 AI 파이프라인 구축",
-      icon: "⚙️",
-      color: "#4facfe",
-      projects: [
+        },
         {
           name: "Re-local",
           description: "혜화 소극장 언어 장벽 해소 플랫폼",
@@ -69,18 +47,54 @@ const Home = () => {
       ]
     },
     {
-      id: "Hardware",
-      title: "하드웨어 개발",
+      id: "hardware",
+      title: "Hardware Projects",
       subtitle: "IoT와 임베디드 시스템 구현",
       icon: "🔧",
       color: "#f093fb",
       projects: [
         {
           name: "KurtainCall",
-          description: "스마트 커튼 제어 시스템",
+          description: "사용자의 상태에 따라 맞춤형 장소를 추천해주는 웨어러블 장갑 개발",
           link: "/project/kurtaincall"
         }
       ]
+    },
+    {
+      id: "planning",
+      title: "Planning & Strategy",
+      subtitle: "비즈니스 통찰력과 전략적 사고",
+      icon: "📋",
+      color: "#4facfe",
+      projects: [
+        {
+          name: "국외교류부서(oGX) 부서장",
+          description: "해외 인턴십, 봉사 프로그램과 한국 학생들을 중계해주는 부서",
+          link: "/activities/aiesec1"
+        },
+        {
+          name: "NLDC 컨퍼런스 전체 회장", 
+          description: "129명이 참여하는 컨퍼런스 개최 및 총괄",
+          link: "/activities/aiesec2"
+        }
+      ]
+    }
+  ];
+
+  const journeyButtons = [
+    {
+      title: "Go to my story",
+      description: "개발자로 성장한 여정을 확인해보세요",
+      link: "/story",
+      icon: "📖",
+      color: "#667eea"
+    },
+    {
+      title: "Check out my school work",
+      description: "교내 활동과 학업 성과를 살펴보세요",
+      link: "/schoolwork",
+      icon: "🎓",
+      color: "#764ba2"
     }
   ];
 
@@ -89,88 +103,161 @@ const Home = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8 }}
           className={styles.heroContent}
         >
-          <img src="/Profile.jpg" alt="Profile" className={styles.profileImage} />
-          <h1 className={styles.title}>
-            Welcome to{" "}
-            <span className={styles.highlight}>
-              <Typewriter
-                words={["My Portfolio", "My Creative Space"]}
-                loop={Infinity}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
-            </span>
-          </h1>
-          <p className={styles.subtitle}>
-            소프트웨어 기술과 경영학의 전략적 사고를 결합한 <strong>융합형 인재</strong>로,  
-            창의적 문제 해결과 효과적인 커뮤니케이션 능력을 바탕으로  
-            가치를 만들어내는 풀스텍 개발자입니다.
-          </p>
+          <div className={styles.profileSection}>
+            <img src="/Profile.jpg" alt="Profile" className={styles.profileImage} />
+            <div className={styles.profileInfo}>
+                <h1 className={styles.myTitle}>
+                  문과에서 이과까지, 오뚝이처럼 진심과 깊이로<br />쌓아온 도전의 기록
+                </h1>
+              <p className={styles.subtitle}>
+                <Typewriter
+                  words={[
+                    "Full-Stack Developer",
+                    "AI & IoT Developer", 
+                    "Business Strategist",
+                    "Creative Problem Solver"
+                  ]}
+                  loop={Infinity}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={80}
+                  deleteSpeed={50}
+                  delaySpeed={2000}
+                />
+              </p>
+            
+                  <div className={styles.philosophy}>
+                      <p className={styles.philosophyText}>
+                        <span className={styles.philosophyHighlight}><strong>문제에서 출발해 사람으로 완성하는 개발자</strong>, 이윤지입니다</span>
+                      </p>
+                    <p className={styles.philosophySubtext}>
+                      현장에서 고객 불만을 직접 들어본 경험은, 단순한 버그 수정이 아니라 
+                      <strong> '사람을 위한 해결'</strong>을 고민하게 만들었습니다.
+                    </p>
+                  </div>
 
-          <div className={styles.achievementBadge}>
-            🏆 국외교류부서 부서장 - 1000% 수익 달성
+            </div>
           </div>
+          
+          {/* Journey Buttons */}
+          <motion.div 
+            className={styles.journeySection}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <h3 className={styles.journeyTitle}>이 모든 것을 어떻게 이루어냈을까요?</h3>
+            <div className={styles.journeyButtons}>
+              {journeyButtons.map((button, index) => (
+                <motion.div
+                  key={index}
+                  className={styles.journeyButton}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Link to={button.link} className={styles.journeyLink}>
+                    <div className={styles.journeyIcon} style={{ backgroundColor: button.color }}>
+                      {button.icon}
+                    </div>
+                    <div className={styles.journeyContent}>
+                      <h4 className={styles.journeyButtonTitle}>{button.title}</h4>
+                      <p className={styles.journeyButtonDescription}>{button.description}</p>
+                    </div>
+                    <div className={styles.journeyArrow}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
       </section>
 
-      {/* Main Sections - Compact Grid Layout */}
-      <div className={styles.mainSections}>
-        <div className={styles.sectionsGrid}>
-          {sections.map((section, index) => (
-            <motion.section 
-              key={section.id}
-              className={`${styles.section} ${styles[section.id + 'Section']}`}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className={styles.sectionContent}>
-                <div className={styles.sectionHeader}>
-                  <div className={styles.sectionIcon} style={{ color: section.color }}>
+      {/* Fixed Scroll Arrow */}
+      <div className={styles.fixedScrollArrow}>
+        <div className={styles.scrollArrow} onClick={scrollToContent}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M7 13l3 3 3-3M7 6l3 3 3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      {/* Main Sections */}
+      <section className={styles.mainSections}>
+        <div className={styles.container}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className={styles.sectionHeader}
+          >
+            <h2 className={styles.sectionTitle}>My Work</h2>
+            <p className={styles.sectionSubtitle}>다양한 분야에서의 프로젝트와 경험</p>
+          </motion.div>
+
+          <div className={styles.sectionsGrid}>
+            {sections.map((section, index) => (
+              <motion.div 
+                key={section.id}
+                className={`${styles.sectionCard} ${styles[section.id + 'Card']}`}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className={styles.cardHeader}>
+                  <div className={styles.cardIcon} style={{ backgroundColor: section.color }}>
                     {section.icon}
                   </div>
-                  <h2 className={styles.sectionTitle}>{section.title}</h2>
-                  <p className={styles.sectionSubtitle}>{section.subtitle}</p>
+                  <div className={styles.cardInfo}>
+                    <h3 className={styles.cardTitle}>{section.title}</h3>
+                    <p className={styles.cardSubtitle}>{section.subtitle}</p>
+                  </div>
                 </div>
                 
-                <div className={styles.projectsGrid}>
+                <div className={styles.projectsList}>
                   {section.projects.map((project, projectIndex) => (
                     <motion.div
                       key={projectIndex}
-                      className={styles.projectCard}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: projectIndex * 0.1 }}
-                      viewport={{ once: true }}
-                      whileHover={{ y: -5, scale: 1.02 }}
+                      className={styles.projectItem}
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
                     >
                       <Link to={project.link} className={styles.projectLink}>
-                        <h3 className={styles.projectTitle}>{project.name}</h3>
-                        <p className={styles.projectDescription}>{project.description}</p>
-                        <div className={styles.projectArrow}>→</div>
+                        <div className={styles.projectContent}>
+                          <h4 className={styles.projectTitle}>{project.name}</h4>
+                          <p className={styles.projectDescription}>{project.description}</p>
+                        </div>
+                        <div className={styles.projectArrow}>
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
                       </Link>
                     </motion.div>
                   ))}
                 </div>
-              </div>
-            </motion.section>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Call to Action */}
       <motion.section 
         className={styles.cta}
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
@@ -180,10 +267,16 @@ const Home = () => {
           <p>기획부터 개발까지, 모든 과정에서 가치를 창출하는 파트너가 되어드리겠습니다.</p>
           <div className={styles.ctaButtons}>
             <Link to="/contact" className={styles.ctaButton}>
-              연락하기
+              <span>연락하기</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </Link>
-            <Link to="/about" className={styles.ctaButtonAlt}>
-              더 알아보기
+            <Link to="/story" className={styles.ctaButtonAlt}>
+              <span>내 이야기 보기</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </Link>
           </div>
         </div>
