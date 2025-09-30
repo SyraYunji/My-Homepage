@@ -174,6 +174,13 @@ const About = () => {
               <p>AIESEC in Korea</p>
             </div>
           </div>
+          <div className={styles.activityItem}>
+            <div className={styles.activityPeriod}>2023.10 ~ 2024.01</div>
+            <div className={styles.activityContent}>
+              <h3>법무법인 해율 우수 서포터즈 선정</h3>
+              <p> 매주 법률 원고 작성 및 취합</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -199,7 +206,7 @@ const About = () => {
             <div className={styles.activityPeriod}>2025.02 ~ 현재</div>
             <div className={styles.activityContent}>
               <h3>멋쟁이 사자처럼 성균관대 운영진</h3>
-              <p>Re-local 프로젝트 주도 (React/Node/MongoDB, STT→번역→TTS 파이프라인)</p>
+              <p>Re-local 프로젝트 주도 (React/Node/MongoDB, STT→번역→TTS 파이프라인), 교육운영부 활동</p>
             </div>
           </div>
           <div className={styles.activityItem}>
@@ -221,6 +228,13 @@ const About = () => {
             <div className={styles.activityContent}>
               <h3>멋쟁이 사자처럼 성균관대 지부 학회원</h3>
               <p>React.js, Next.js 학습, 해커톤 및 4호선톤 참여</p>
+            </div>
+          </div>
+          <div className={styles.activityItem}>
+            <div className={styles.activityPeriod}>2023.10 ~ 2024.01</div>
+            <div className={styles.activityContent}>
+              <h3>해율 법무법인 서포터즈(우수 서포터즈 선정)</h3>
+              <p>매주 법률 원고 작성, 팀장 활동</p>
             </div>
           </div>
           <div className={styles.activityItem}>

@@ -20,8 +20,8 @@ const Story = () => {
           </div>
           <div className={styles.introText}>
             <p>
-              문과에서 이과까지, 아무리 넘어져도 다시 일어선 나의 이야기입니다. 
-              <strong>호기심을 배움으로 채우는 사람</strong>으로서, 매번 새로운 도전 앞에서 
+              문과에서 이과까지, 아무리 넘어져도 다시 일어선 나의 이야기입니다.  
+              <strong> <br />호기심을 배움으로 채우는 사람</strong>으로서, 매번 새로운 도전 앞에서 
               "할 수 있을까?"라는 의구심보다는 "해보지 않으면 모르지"라는 마음으로 달려왔습니다.
             </p>
             <p>
@@ -122,7 +122,17 @@ const Story = () => {
             <p>129명이 참여하는 National Leaders Development Conference 전체 회장 </p>
           </div>
           <div className={styles.leadershipDetails}>
-            <h4>고객의 니즈를 배우며 PM으로서의 역량 개발</h4>
+            <div className={styles.leadershipHeader}>
+              <h4>고객의 니즈를 배우며 PM으로서의 역량 개발</h4>
+              <a 
+                href="https://blog.naver.com/syralee1004/223338904231" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.reviewButton}
+              >
+                자세한 후기 보러가기
+              </a>
+            </div>
             <div className={styles.leadershipGrid}>
               <div className={styles.leadershipItem}>
                 <h5>고객 중심 사고</h5>
@@ -135,6 +145,25 @@ const Story = () => {
               <div className={styles.leadershipItem}>
                 <h5>데이터 기반 의사결정</h5>
                 <p>MRS 진행 데이터를 분석하여 효과적인 마케팅 전략 수립</p>
+              </div>
+            </div>
+            
+            {/* Conference Photos */}
+            <div className={styles.conferencePhotos}>
+              <h5 className={styles.photosTitle}>컨퍼런스 현장 스케치</h5>
+              <div className={styles.photosGrid}>
+                <div className={styles.photoItem}>
+                  <img src="/images/conference1.png" alt="컨퍼런스 전체 모습" className={styles.conferenceImage} />
+                  <p className={styles.photoCaption}>129명이 참여한 National Leaders Development Conference</p>
+                </div>
+                <div className={styles.photoItem}>
+                  <img src="/images/conference2.png" alt="회장으로서의 역할" className={styles.conferenceImage} />
+                  <p className={styles.photoCaption}>국외교류부서장 실적 1등 달성</p>
+                </div>
+                <div className={styles.photoItem}>
+                  <img src="/images/conference3.png" alt="팀워크와 협업" className={styles.conferenceImage} />
+                  <p className={styles.photoCaption}>전체 회장으로서 컨퍼런스 총괄 관리</p>
+                </div>
               </div>
             </div>
           </div>
@@ -186,7 +215,7 @@ const Story = () => {
           <div className={styles.storyText}>
             <p>
               하지만 공부를 할수록 한 가지 한계를 느끼게 되었습니다. 
-              <strong>기술을 가진 사람이 되어야 한다</strong>는 생각이 들었습니다. 
+              <strong> 기술을 가진 사람이 되어야 한다</strong>는 생각이 들었습니다. 
               단순히 이론만으로는 부족하다는 것을 깨달았습니다.
             </p>
             <p>
@@ -197,7 +226,7 @@ const Story = () => {
             <p>
               그래서 소프트웨어학과 복수전공을 시작하게 되었습니다. 
               경영학의 전략적 사고와 소프트웨어의 기술적 구현을 모두 갖춘 
-              <strong>비즈니스와 기술의 다리 역할</strong>을 할 수 있는 인재가 되기 위해 노력하고 있습니다.
+              <strong> 비즈니스와 기술의 다리 역할</strong>을 할 수 있는 인재가 되기 위해 노력하고 있습니다.
             </p>
           </div>
         </div>
@@ -228,6 +257,12 @@ const Story = () => {
               <div className={styles.projectHighlight}>
                 <strong>모르는 것 있을 때마다 도서관에서 책 다 뒤지고 구글링</strong> - 끝까지 포기하지 않는 노력
               </div>
+              <div className={styles.projectButtonContainer}>
+                <a href="/project/co-deep" className={styles.projectButton}>
+                  <span>Co-Deep 프로젝트 자세히 보기</span>
+                  <i className="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
           <div className={styles.storyText}>
@@ -245,6 +280,12 @@ const Story = () => {
               <p><strong>1인 프론트엔드 개발 + 애플 베타테스트</strong> </p>
               <div className={styles.projectHighlight}>
                 <strong>개발자 시선으로 바라보는 앱과 사용자 입장에서 바라보는 앱(UX)의 차이점에 대해 깨달음</strong> 
+              </div>
+              <div className={styles.projectButtonContainer}>
+                <a href="/project/hanium" className={styles.projectButton}>
+                  <span>수면 앱 프로젝트 자세히 보기</span>
+                  <i className="fas fa-arrow-right"></i>
+                </a>
               </div>
             </div>
           </div>

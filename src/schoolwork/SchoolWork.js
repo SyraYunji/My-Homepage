@@ -22,12 +22,6 @@ const SchoolWork = () => {
     setSelectedImage(null);
   };
 
-  const scrollToContent = () => {
-    const qaSection = document.querySelector(`.${styles.qaSection}`);
-    if (qaSection) {
-      qaSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const qaData = [
     {
@@ -283,6 +277,15 @@ const SchoolWork = () => {
                 <span className={styles.gpaLabel}>GPA:</span>
                 <span className={styles.gpaValue}>{currentSchool.gpa}</span>
               </div>
+            </div>
+            <div className={styles.certificateBadges}>
+              <img src="/images/badge1.png" alt="TOEIC" className={styles.certificateBadge} />
+              <img src="/images/badge2.png" alt="SQLD" className={styles.certificateBadge} />
+              <img src="/images/badge3.png" alt="ADsP" className={styles.certificateBadge} />
+            </div>
+            <div className={styles.scrollHint}>
+              <p className={styles.scrollText}>아래로 내려주세요</p>
+              <div className={styles.scrollArrow}>↓</div>
             </div>
           </div>
 
@@ -614,17 +617,6 @@ const SchoolWork = () => {
         </div>
       </motion.section>
 
-          {/* Fixed Scroll Arrow */}
-          <div className={styles.fixedScrollArrow}>
-            <div className={styles.scrollArrowContainer} onClick={scrollToContent}>
-              <div className={styles.scrollArrow}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M7 13l3 3 3-3M7 6l3 3 3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <span className={styles.scrollText}>아래로 내려주세요</span>
-            </div>
-          </div>
 
           {/* Image Modal */}
           {selectedImage && (

@@ -86,55 +86,48 @@ const KurtainCall = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <div className={styles.backButton}>
-            <Link to="/" className={styles.backLink}>
-              <FaArrowLeft />
-              <span>Back to Home</span>
-            </Link>
-          </div>
-
-          <div className={styles.projectHeader}>
-            <div className={styles.projectCategory}>{projectInfo.category}</div>
-            <h1 className={styles.projectTitle}>{projectInfo.title}</h1>
-            <p className={styles.projectSubtitle}>{projectInfo.subtitle}</p>
-          </div>
-
-          <div className={styles.projectInfo}>
-            <div className={styles.projectMeta}>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Role:</span>
-                <span className={styles.metaValue}>{projectInfo.role}</span>
+          <div className={styles.projectSummary}>
+            <div className={styles.summaryCard}>
+              <div className={styles.summaryHeader}>
+                <div className={styles.projectBadge}>{projectInfo.category}</div>
+                <h1 className={styles.projectTitle}>{projectInfo.title}</h1>
+                <p className={styles.projectSubtitle}>{projectInfo.subtitle}</p>
               </div>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Team:</span>
-                <span className={styles.metaValue}>{projectInfo.team}</span>
+              
+              <div className={styles.summaryContent}>
+                <div className={styles.summaryText}>
+                  <p>
+                    KurtainCall은 IoT 기술을 활용한 스마트 커튼 제어 시스템입니다. 
+                    ESP32와 Arduino를 기반으로 WiFi 및 Bluetooth 연결을 통해 원격으로 커튼을 제어할 수 있으며, 
+                    다양한 센서를 통해 환경에 따른 자동 제어가 가능합니다.
+                  </p>
+                </div>
+                
+                <div className={styles.summaryTech}>
+                  <h3>Tech Stack</h3>
+                  <div className={styles.techList}>
+                    {projectInfo.tech.map((tech, index) => (
+                      <span key={index} className={styles.techItem}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className={styles.summaryActions}>
+                  <motion.a
+                    href={projectInfo.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.githubButton}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaGithub />
+                    <span>View Code</span>
+                  </motion.a>
+                </div>
               </div>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Period:</span>
-                <span className={styles.metaValue}>{projectInfo.period}</span>
-              </div>
-            </div>
-
-            <div className={styles.techStack}>
-              {projectInfo.tech.map((tech, index) => (
-                <span key={index} className={styles.techTag}>
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div className={styles.projectActions}>
-              <motion.a
-                href={projectInfo.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.actionButton}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FaGithub />
-                <span>View Code</span>
-              </motion.a>
             </div>
           </div>
         </div>

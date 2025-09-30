@@ -84,7 +84,7 @@ const Projects = () => {
     {
       id: 6,
       title: "KurtainCall",
-      subtitle: "스마트 커튼 제어 시스템",
+      subtitle: "웨어러블 장갑 및 연동 플랫폼 개발",
       description: "사용자의 상태에 따라 맞춤형 장소를 추천해주는 웨어러블 장갑 개발",
       tech: ["Arduino", "ESP32", "C++", "IoT", "Bluetooth"],
       image: "/images/coming-soon.png",

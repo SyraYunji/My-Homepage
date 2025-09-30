@@ -125,24 +125,9 @@ const Home = () => {
                     </p>
                   </div>
                 <h1 className={styles.myTitle}>
-                  문과에서 이과까지, 오뚝이처럼 진심과 깊이로 쌓아온 도전의 기록
+                  
                 </h1>
-              <p className={styles.subtitle}>
-                <Typewriter
-                  words={[
-                    "Full-Stack Developer",
-                    "AI & IoT Developer", 
-                    "Business Strategist",
-                    "Creative Problem Solver"
-                  ]}
-                  loop={Infinity}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={80}
-                  deleteSpeed={50}
-                  delaySpeed={2000}
-                />
-              </p>
+            
 
             </div>
           </div>
@@ -154,7 +139,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <h3 className={styles.journeyTitle}>이 모든 것을 어떻게 이루어냈을까요?</h3>
+            <h3 className={styles.journeyTitle}>문과에서 이과까지, 오뚝이처럼 진심과 깊이로 쌓아온 도전의 기록<br />이 모든 것을 어떻게 이루어냈을까요?</h3>
             <div className={styles.journeyButtons}>
               {journeyButtons.map((button, index) => (
                 <motion.div
