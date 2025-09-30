@@ -43,7 +43,8 @@ const SchoolWork = () => {
             {
               name: "성균튜터링 튜터",
               description: "학습 멘토링 프로그램 참여",
-              projects: []
+              projects: [],
+              link: "/schoolwork/statistics"
             },
             {
               name: "Co-Deep Learning 프로젝트",
@@ -209,7 +210,8 @@ const SchoolWork = () => {
           images: [
             "/images/stat1.jpeg",
             "/images/stat2.jpeg"
-          ]
+          ],
+          link: "/schoolwork/statistics"
         }
       ]
     },
@@ -264,12 +266,7 @@ const SchoolWork = () => {
           transition={{ duration: 0.8 }}
           className={styles.heroContent}
         >
-          <div className={styles.backButton}>
-            <Link to="/" className={styles.backLink}>
-              <FaArrowLeft />
-              <span>Back to Home</span>
-            </Link>
-          </div>
+     
 
           <div className={styles.heroHeader}>
             <h1 className={styles.heroTitle}>
@@ -385,7 +382,18 @@ const SchoolWork = () => {
                         {qa.studySections.map((studySection, sectionIndex) => (
                           <div key={sectionIndex} className={styles.studySectionItem}>
                             {studySection.subject && (
-                              <h5 className={styles.studySectionSubject}>{studySection.subject}</h5>
+                              <h5 className={styles.studySectionSubject}>
+                                {studySection.link ? (
+                                  <Link to={studySection.link} className={styles.subjectLink}>
+                                    {studySection.subject}
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                  </Link>
+                                ) : (
+                                  studySection.subject
+                                )}
+                              </h5>
                             )}
                             {studySection.subjects ? (
                               <div className={styles.multiSubjectContainer}>
@@ -447,6 +455,17 @@ const SchoolWork = () => {
                               >
                                 <h5 className={styles.programTitle}>{program.name}</h5>
                                 <p className={styles.programDescription}>{program.description}</p>
+                                
+                                {program.link && (
+                                  <div className={styles.detailButtonContainer}>
+                                    <Link to={program.link} className={styles.detailButton}>
+                                      <span>자세히 보기</span>
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </Link>
+                                  </div>
+                                )}
                                 
                                 {program.reviewLink && (
                                   <div className={styles.reviewButtonContainer}>

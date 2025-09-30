@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaGithub, FaArrowLeft, FaServer, FaDatabase, FaMicrophone, FaSpider, FaUsers, FaLightbulb } from "react-icons/fa";
+import { FaGithub, FaServer, FaDatabase, FaMicrophone, FaSpider, FaUsers, FaLightbulb } from "react-icons/fa";
 import styles from "./relocal.module.css";
 
 const ReLocal = () => {
@@ -12,81 +12,86 @@ const ReLocal = () => {
     period: "2024",
     tech: ["Node.js", "Express.js", "MongoDB", "React.js", "STT", "Translation API", "TTS", "WebSocket", "Web Crawling"],
     role: "팀장 & Full-Stack Developer",
-    team: "4명 팀 (프론트엔드 초보자 포함)",
+    team: "3명",
     github: "https://github.com/Re-Local"
   };
 
   const features = [
     {
       title: "팀 리더십",
-      description: "프로젝트 전체를 주도하고 팀원들의 성장을 지원",
+      description: "프로젝트 기획 및 팀원 교육",
       icon: <FaUsers />,
       color: "#667eea",
       details: [
         "프로젝트 기획 및 방향성 설정",
         "팀원 역할 분담 및 일정 관리",
-        "프론트엔드 초보자를 위한 교육 진행"
+        "프론트엔드 초보자 교육"
       ]
     },
     {
-      title: "백엔드 시스템",
-      description: "Express.js와 Node.js 기반의 안정적인 서버 구축",
+      title: "백엔드 개발",
+      description: "Express.js + MongoDB 서버 구축",
       icon: <FaServer />,
       color: "#764ba2",
       details: [
-        "Express.js를 활용한 RESTful API 구현",
-        "MongoDB 데이터베이스 스키마 설계",
-        "WebSocket을 통한 실시간 통신"
+        "RESTful API 구현",
+        "MongoDB 스키마 설계",
+        "WebSocket 실시간 통신"
       ]
     },
     {
-      title: "웹 크롤링 시스템",
-      description: "crawl.js를 활용한 연극 정보 자동 수집 시스템",
+      title: "웹 크롤링",
+      description: "연극 정보 자동 수집 시스템",
       icon: <FaSpider />,
       color: "#f093fb",
       details: [
-        "웹페이지에서 연극 정보 자동 크롤링",
-        "실시간 공연 일정 및 정보 업데이트",
-        "데이터 정제 및 MongoDB 저장"
+        "crawl.js 활용한 자동 크롤링",
+        "실시간 공연 정보 업데이트",
+        "데이터 정제 및 저장"
       ]
     },
     {
       title: "AI 음성 파이프라인",
-      description: "STT→번역→TTS를 연결한 실시간 언어 변환 시스템",
+      description: "STT→번역→TTS 실시간 변환",
       icon: <FaMicrophone />,
       color: "#4facfe",
       details: [
-        "Speech-to-Text (STT) 연동",
+        "Speech-to-Text 연동",
         "다국어 번역 API 통합",
-        "Text-to-Speech (TTS) 구현"
+        "Text-to-Speech 구현"
       ]
     },
     {
       title: "프론트엔드 개발",
-      description: "React.js로 현장용 사용자 친화적 인터페이스 제작",
+      description: "React.js 사용자 인터페이스",
       icon: <FaLightbulb />,
       color: "#667eea",
       details: [
-        "React.js 기반 사용자 페이지",
-        "현장 환경에 최적화된 UI/UX",
-        "팀원 프론트엔드 교육 및 멘토링"
+        "React.js 기반 페이지",
+        "현장 최적화 UI/UX",
+        "팀원 프론트엔드 멘토링"
       ]
     }
   ];
 
   const screenshots = [
     {
-      src: "/images/relocal1.jpg",
+      src: "/relocal1.png",
       alt: "혜화 소극장 외국인 관객",
       title: "외국인 관객 유입"
     },
     {
-      src: "/images/relocal2.jpg",
+      src: "/relocal2.png",
       alt: "웹 크롤링 시스템",
       title: "연극 정보 크롤링"
     },
     {
-      src: "/images/relocal3.jpg",
+      src: "/relocal3.png",
+      alt: "STT-TTS 파이프라인",
+      title: "AI 음성 파이프라인"
+    },
+    {
+      src: "/relocal4.png",
       alt: "STT-TTS 파이프라인",
       title: "AI 음성 파이프라인"
     }
@@ -97,12 +102,6 @@ const ReLocal = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <div className={styles.backButton}>
-            <Link to="/" className={styles.backLink}>
-              <FaArrowLeft />
-              <span>Back to Home</span>
-            </Link>
-          </div>
 
           <div className={styles.projectHeader}>
             <div className={styles.projectCategory}>{projectInfo.category}</div>
@@ -110,42 +109,43 @@ const ReLocal = () => {
             <p className={styles.projectSubtitle}>{projectInfo.subtitle}</p>
           </div>
 
-          <div className={styles.projectInfo}>
-            <div className={styles.projectMeta}>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Role:</span>
-                <span className={styles.metaValue}>{projectInfo.role}</span>
+          <div className={styles.projectSummary}>
+            <div className={styles.summaryCard}>
+              <div className={styles.summaryHeader}>
+                <h3>About my Project</h3>
+                <div className={styles.projectBadge}>{projectInfo.category}</div>
               </div>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Team:</span>
-                <span className={styles.metaValue}>{projectInfo.team}</span>
+              
+              <div className={styles.summaryContent}>
+                <div className={styles.summaryText}>
+                  <p><strong>역할:</strong> {projectInfo.role}</p>
+                  <p><strong>팀:</strong> {projectInfo.team}</p>
+                  <p><strong>기간:</strong> {projectInfo.period}</p>
+                </div>
+                
+                <div className={styles.summaryTech}>
+                  <h4>사용 기술</h4>
+                  <div className={styles.techList}>
+                    {projectInfo.tech.map((tech, index) => (
+                      <span key={index} className={styles.techItem}>{tech}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Period:</span>
-                <span className={styles.metaValue}>{projectInfo.period}</span>
+              
+              <div className={styles.summaryActions}>
+                <motion.a
+                  href={projectInfo.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.githubButton}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaGithub />
+                  <span>GitHub에서 보기</span>
+                </motion.a>
               </div>
-            </div>
-
-            <div className={styles.techStack}>
-              {projectInfo.tech.map((tech, index) => (
-                <span key={index} className={styles.techTag}>
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div className={styles.projectActions}>
-              <motion.a
-                href={projectInfo.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.actionButton}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FaGithub />
-                <span>View Code</span>
-              </motion.a>
             </div>
           </div>
         </div>
@@ -159,34 +159,37 @@ const ReLocal = () => {
             <div className={styles.overviewSection}>
               <h2 className={styles.sectionTitle}>Project Overview</h2>
               <p className={styles.sectionDescription}>
-                <strong>Re-local</strong>은 혜화 소극장의 외국인 관객 유입을 돕는 혁신적인 언어 장벽 해소 플랫폼입니다.
-                문화 예술 공연에 대한 접근성을 높이고, 언어의 차이로 인한 소통의 한계를 극복하기 위해 개발되었습니다.
-                Express.js와 Node.js 기반의 서버와 STT→번역→TTS 파이프라인을 구축하여, 
-                실시간으로 외국어를 한국어로 변환하고 한국어를 외국어로 변환하는 서비스를 제공합니다.
-                또한 <strong>crawl.js</strong>를 활용하여 웹페이지에서 연극 정보를 자동으로 크롤링하고 
-                MongoDB에 저장하는 시스템까지 구현했습니다.
+                <strong>Re-local</strong>은 혜화 소극장의 외국인 관객을 위한 언어 장벽 해소 플랫폼입니다.
               </p>
+              <div className={styles.highlightBox}>
+                <h4>핵심 기능</h4>
+                <ul>
+                  <li>실시간 음성 번역 (STT → 번역 → TTS)</li>
+                  <li>웹 크롤링을 통한 연극 정보 자동 수집</li>
+                  <li>Express.js + MongoDB 기반 백엔드 시스템</li>
+                </ul>
+              </div>
             </div>
 
             <div className={styles.roleSection}>
               <h2 className={styles.sectionTitle}>My Role</h2>
               <div className={styles.roleContent}>
-                <p className={styles.roleDescription}>
-                  <strong>팀장 역할</strong>: 프로젝트 전체를 주도하고 팀원들의 성장을 지원하며, 
-                  프로젝트의 방향성과 일정을 관리했습니다.
-                </p>
-                <p className={styles.roleDescription}>
-                  <strong>백엔드 개발</strong>: Express.js와 Node.js를 활용한 RESTful API 구현, 
-                  MongoDB 스키마 설계, STT→번역→TTS 파이프라인 구현, WebSocket을 통한 실시간 통신 시스템을 담당했습니다.
-                </p>
-                <p className={styles.roleDescription}>
-                  <strong>웹 크롤링 시스템</strong>: crawl.js를 활용하여 웹페이지에서 연극 정보를 자동으로 크롤링하고, 
-                  데이터를 정제하여 MongoDB에 저장하는 시스템을 구현했습니다.
-                </p>
-                <p className={styles.roleDescription}>
-                  <strong>프론트엔드 개발</strong>: React.js로 현장용 사용자 페이지를 제작하고, 
-                  프론트엔드가 처음인 팀원을 위한 교육과 멘토링을 진행했습니다.
-                </p>
+                <div className={styles.roleCard}>
+                  <h4>팀장 역할</h4>
+                  <p>프로젝트 전체 기획 및 팀원 성장 지원</p>
+                </div>
+                <div className={styles.roleCard}>
+                  <h4>백엔드 개발</h4>
+                  <p>Express.js API, MongoDB 설계, AI 파이프라인 구현</p>
+                </div>
+                <div className={styles.roleCard}>
+                  <h4>웹 크롤링</h4>
+                  <p>crawl.js를 활용한 연극 정보 자동 수집 시스템</p>
+                </div>
+                <div className={styles.roleCard}>
+                  <h4>프론트엔드 교육</h4>
+                  <p>React.js 개발 및 팀원 멘토링</p>
+                </div>
               </div>
             </div>
           </div>

@@ -7,13 +7,7 @@ import styles from "./ComingSoon.module.css";
 const ComingSoon = () => {
   return (
     <div className={styles.comingSoonPage}>
-      {/* Header */}
-      <header className={styles.header}>
-        <Link to="/" className={styles.backButton}>
-          <FaArrowLeft />
-          <span>Back to Home</span>
-        </Link>
-      </header>
+
 
       {/* Main Content */}
       <main className={styles.mainContent}>

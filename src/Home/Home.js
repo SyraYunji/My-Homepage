@@ -109,10 +109,23 @@ const Home = () => {
           className={styles.heroContent}
         >
           <div className={styles.profileSection}>
-            <img src="/Profile.jpg" alt="Profile" className={styles.profileImage} />
+            <img src="/Profile.png" alt="Profile" className={styles.profileImage} />
             <div className={styles.profileInfo}>
+                  <div className={styles.philosophy}>
+                      <div className={styles.munsainseong}>
+                        <h2 className={styles.munsainseongTitle}>문사인성 (問思人成)</h2>
+                        <p className={styles.munsainseongSubtitle}>질문으로부터 사고하고, 사람으로 완성된다</p>
+                      </div>
+                      <p className={styles.philosophyText}>
+                        <span className={styles.philosophyHighlight}><strong>문제에서 출발해 사람으로 완성하는 개발자</strong>, 이윤지입니다</span>
+                      </p>
+                    <p className={styles.philosophySubtext}>
+                      현장에서 고객 불만을 직접 들어본 경험은, 단순한 버그 수정이 아니라 
+                      <strong> '사람을 위한 해결'</strong>을 고민하게 만들었습니다.
+                    </p>
+                  </div>
                 <h1 className={styles.myTitle}>
-                  문과에서 이과까지, 오뚝이처럼 진심과 깊이로<br />쌓아온 도전의 기록
+                  문과에서 이과까지, 오뚝이처럼 진심과 깊이로 쌓아온 도전의 기록
                 </h1>
               <p className={styles.subtitle}>
                 <Typewriter
@@ -130,16 +143,6 @@ const Home = () => {
                   delaySpeed={2000}
                 />
               </p>
-            
-                  <div className={styles.philosophy}>
-                      <p className={styles.philosophyText}>
-                        <span className={styles.philosophyHighlight}><strong>문제에서 출발해 사람으로 완성하는 개발자</strong>, 이윤지입니다</span>
-                      </p>
-                    <p className={styles.philosophySubtext}>
-                      현장에서 고객 불만을 직접 들어본 경험은, 단순한 버그 수정이 아니라 
-                      <strong> '사람을 위한 해결'</strong>을 고민하게 만들었습니다.
-                    </p>
-                  </div>
 
             </div>
           </div>
@@ -263,22 +266,11 @@ const Home = () => {
         viewport={{ once: true }}
       >
         <div className={styles.ctaContent}>
-          <h2>함께 성장할 프로젝트를 찾고 계신가요?</h2>
-          <p>기획부터 개발까지, 모든 과정에서 가치를 창출하는 파트너가 되어드리겠습니다.</p>
-          <div className={styles.ctaButtons}>
-            <Link to="/contact" className={styles.ctaButton}>
-              <span>연락하기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-            <Link to="/story" className={styles.ctaButtonAlt}>
-              <span>내 이야기 보기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </div>
+          <h2>함께 멋진 프로젝트를 만들어보시겠습니까?</h2>
+          <p>새로운 아이디어나 협업 기회가 있다면 언제든 연락해주세요.</p>
+          <a href="mailto:syralee1004@naver.com" className={styles.ctaButton}>
+            바로 연락하기
+          </a>
         </div>
       </motion.section>
     </div>

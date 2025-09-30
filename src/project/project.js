@@ -53,10 +53,16 @@ const Projects = () => {
       subtitle: "혜화 소극장 언어 장벽 해소 플랫폼",
       description: "STT→번역→TTS 파이프라인을 구축한 다국어 지원 플랫폼. MongoDB와 Node.js를 활용한 풀스택 개발 프로젝트입니다.",
       tech: ["React.js", "Node.js", "MongoDB", "STT/TTS", "API"],
-      image: "/images/coming-soon.png",
+      images: [
+        "/relocal1.png",
+        "/relocal2.png",
+        "/relocal3.png",
+        "/relocal4.png"
+      ],
       link: "/project/re-local",
       category: "Software Projects",
-      icon: "💻"
+      icon: "💻",
+      isWideImage: true
     },
     {
       id: 5,
@@ -64,16 +70,22 @@ const Projects = () => {
       subtitle: "대학생 맛집 추천 웹서비스 & 동아리",
       description: "창업팀 라추의 CTO로서 Next.js와 Firebase를 활용한 커뮤니티 플랫폼 개발. MVP 출시를 준비 중입니다.",
       tech: ["Next.js", "Firebase", "TypeScript", "UI/UX"],
-      image: "/images/coming-soon.png",
+      images: [
+        "/lachu1.png",
+        "/lachu2.png",
+        "/lachu3.png",
+        "/lachu4.png"
+      ],
       link: "/project/lachu",
       category: "Software Projects",
-      icon: "💻"
+      icon: "💻",
+      isWideImage: true
     },
     {
       id: 6,
       title: "KurtainCall",
       subtitle: "스마트 커튼 제어 시스템",
-      description: "Arduino와 ESP32를 활용한 IoT 기반 스마트 커튼 자동 제어 시스템. 하드웨어와 소프트웨어의 융합 프로젝트입니다.",
+      description: "사용자의 상태에 따라 맞춤형 장소를 추천해주는 웨어러블 장갑 개발",
       tech: ["Arduino", "ESP32", "C++", "IoT", "Bluetooth"],
       image: "/images/coming-soon.png",
       link: "/project/kurtaincall",
@@ -85,43 +97,7 @@ const Projects = () => {
   return (
     <div className={styles.projectsPage}>
       {/* Hero Section */}
-      <section className={styles.hero}>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className={styles.heroContent}
-        >
-          <div className={styles.heroHeader}>
-            <h1 className={styles.heroTitle}>
-              My <span className={styles.highlight}>Projects</span>
-            </h1>
-            <p className={styles.heroSubtitle}>
-              문제에서 출발해, 사람으로 완성하는 개발자로서<br />
-              다양한 기술 스택을 활용해 만든 프로젝트들을 소개합니다.
-            </p>
-          </div>
-          
-          <div className={styles.stats}>
-            <div className={styles.stat}>
-              <span className={styles.statNumber}>6</span>
-              <span className={styles.statLabel}>프로젝트</span>
-            </div>
-            <div className={styles.stat}>
-              <span className={styles.statNumber}>2</span>
-              <span className={styles.statLabel}>분야</span>
-            </div>
-            <div className={styles.stat}>
-              <span className={styles.statNumber}>1</span>
-              <span className={styles.statLabel}>수상</span>
-            </div>
-            <div className={styles.stat}>
-              <span className={styles.statNumber}>1</span>
-              <span className={styles.statLabel}>베타테스트</span>
-            </div>
-          </div>
-        </motion.div>
-      </section>
+  
 
       {/* Projects Grid */}
       <section className={styles.projectsSection}>
@@ -150,13 +126,13 @@ const Projects = () => {
               >
                 <div className={styles.projectImage}>
                   {project.images ? (
-                    <div className={styles.imageGallery}>
+                    <div className={project.isWideImage ? styles.wideImageGallery : styles.imageGallery}>
                       {project.images.map((img, imgIndex) => (
                         <img
                           key={imgIndex}
                           src={img}
                           alt={`${project.title} ${imgIndex + 1}`}
-                          className={styles.galleryImage}
+                          className={project.isWideImage ? styles.wideGalleryImage : styles.galleryImage}
                         />
                       ))}
                     </div>

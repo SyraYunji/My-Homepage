@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaGithub, FaDownload, FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaDownload, FaExternalLinkAlt } from "react-icons/fa";
 import styles from "./CoDeepDetail.module.css";
 
 const CoDeepDetail = () => {
@@ -64,77 +64,65 @@ const CoDeepDetail = () => {
           transition={{ duration: 0.8 }}
           className={styles.heroContent}
         >
-          <div className={styles.backButton}>
-            <Link to="/project" className={styles.backLink}>
-              <FaArrowLeft />
-              <span>Back to Projects</span>
-            </Link>
-          </div>
 
           <div className={styles.projectHeader}>
             <div className={styles.projectCategory}>{projectInfo.category}</div>
             <div className={styles.awardBadge}>🏆 최우수상 수상</div>
             <h1 className={styles.projectTitle}>{projectInfo.title}</h1>
             <p className={styles.projectSubtitle}>{projectInfo.subtitle}</p>
-            
-            <div className={styles.projectMeta}>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Role:</span>
-                <span className={styles.metaValue}>{projectInfo.role}</span>
+          </div>
+
+          <div className={styles.projectSummary}>
+            <div className={styles.summaryCard}>
+              <div className={styles.summaryHeader}>
+                <h3>About my Project</h3>
+                <div className={styles.projectBadge}>{projectInfo.category}</div>
               </div>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Team:</span>
-                <span className={styles.metaValue}>{projectInfo.team}</span>
+              
+              <div className={styles.summaryContent}>
+                <div className={styles.summaryText}>
+                  <p><strong>역할:</strong> {projectInfo.role}</p>
+                  <p><strong>팀:</strong> {projectInfo.team}</p>
+                  <p><strong>기간:</strong> {projectInfo.period}</p>
+                  {projectInfo.award && (
+                    <p><strong>수상:</strong> 🏆 {projectInfo.award}</p>
+                  )}
+                </div>
+                
+                <div className={styles.summaryTech}>
+                  <h4>사용 기술</h4>
+                  <div className={styles.techList}>
+                    {projectInfo.tech.map((tech, index) => (
+                      <span key={index} className={styles.techItem}>{tech}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Period:</span>
-                <span className={styles.metaValue}>{projectInfo.period}</span>
+              
+              <div className={styles.summaryActions}>
+                <motion.a
+                  href={projectInfo.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.githubButton}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaGithub />
+                  <span>GitHub에서 보기</span>
+                </motion.a>
+                <motion.a
+                  href={projectInfo.demo}
+                  download
+                  className={styles.githubButton}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaDownload />
+                  <span>보고서 다운로드</span>
+                </motion.a>
               </div>
             </div>
-
-            {projectInfo.award && (
-              <div className={styles.awardBadge}>
-                🏆 {projectInfo.award} 수상
-              </div>
-            )}
-          </div>
-
-          <div className={styles.techStack}>
-            {projectInfo.tech.map((tech, index) => (
-              <motion.span
-                key={index}
-                className={styles.techTag}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
-
-          <div className={styles.projectActions}>
-            <motion.a
-              href={projectInfo.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.actionButton}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaGithub />
-              <span>View Code</span>
-            </motion.a>
-            <motion.a
-              href={projectInfo.demo}
-              download
-              className={styles.actionButton}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaDownload />
-              <span>Download Report</span>
-            </motion.a>
           </div>
         </motion.div>
       </section>
@@ -307,7 +295,7 @@ const CoDeepDetail = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className={styles.sectionTitle}>Related Projects</h2>
+            <h2 className={styles.sectionTitle}>Learn more about this poject</h2>
             <div className={styles.relatedProjects}>
               <Link to="/platform-detail" className={styles.relatedProject}>
                 <FaExternalLinkAlt />

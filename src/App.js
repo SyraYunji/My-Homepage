@@ -19,6 +19,7 @@ import ReLocal from "./project/relocal/relocal";
 import Lachu from "./project/lachu/lachu";
 import Story from "./story/Story";
 import SchoolWork from "./schoolwork/SchoolWork";
+import StatisticsDetail from "./schoolwork/StatisticsDetail";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/story" element={<Story />} />
           <Route path="/schoolwork" element={<SchoolWork />} />
+          <Route path="/schoolwork/statistics" element={<StatisticsDetail />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/activities" element={<Activities />} />
 

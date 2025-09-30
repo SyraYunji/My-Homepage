@@ -80,12 +80,7 @@ const Hanium = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <div className={styles.backButton}>
-            <Link to="/project" className={styles.backLink}>
-              <FaArrowLeft />
-              <span>Back to Projects</span>
-            </Link>
-          </div>
+    
 
           <div className={styles.projectHeader}>
             <div className={styles.projectCategory}>{projectInfo.category}</div>

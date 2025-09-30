@@ -58,24 +58,7 @@ const Activities = () => {
   return (
     <div className={styles.activitiesPage}>
       {/* Hero Section */}
-      <section className={styles.hero}>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className={styles.heroContent}
-        >
-          <h1 className={styles.heroTitle}>
-            My <span className={styles.highlight}>Activities</span>
-          </h1>
-          <p className={styles.heroSubtitle}>
-            다양한 조직과 활동을 통해 얻은 경험과 성장 과정을 소개합니다.
-            <br />
-            각 활동을 클릭하면 자세한 내용을 확인할 수 있습니다.
-          </p>
-      
-        </motion.div>
-      </section>
+  
 
       {/* Activities Section */}
       <section className={styles.activitiesSection}>

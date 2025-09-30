@@ -201,6 +201,28 @@
   transform: scale(1.02);
 }
 
+.wideGalleryImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.wideGalleryImage:hover {
+  transform: scale(1.02);
+}
+
+/* Wide image gallery grid for 2x2 layout */
+.wideImageGallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  height: 250px;
+}
+
 
 .awardBadge {
   position: absolute;

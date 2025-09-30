@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaGithub, FaArrowLeft, FaUsers, FaServer, FaDatabase, FaShieldAlt, FaLightbulb, FaRocket, FaUtensils, FaBook } from "react-icons/fa";
+import { FaGithub, FaUsers, FaServer, FaDatabase, FaShieldAlt, FaLightbulb, FaRocket, FaUtensils, FaBook } from "react-icons/fa";
 import styles from "./lachu.module.css";
 
 const Lachu = () => {
@@ -102,12 +102,6 @@ const Lachu = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <div className={styles.backButton}>
-            <Link to="/" className={styles.backLink}>
-              <FaArrowLeft />
-              <span>Back to Home</span>
-            </Link>
-          </div>
 
           <div className={styles.projectHeader}>
             <div className={styles.projectCategory}>{projectInfo.category}</div>
@@ -115,42 +109,45 @@ const Lachu = () => {
             <p className={styles.projectSubtitle}>{projectInfo.subtitle}</p>
           </div>
 
-          <div className={styles.projectInfo}>
-            <div className={styles.projectMeta}>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Role:</span>
-                <span className={styles.metaValue}>{projectInfo.role}</span>
+          <div className={styles.projectSummary}>
+            <div className={styles.summaryCard}>
+              <div className={styles.summaryHeader}>
+                <h3>About my Project</h3>
+                <div className={styles.projectBadge}>{projectInfo.category}</div>
               </div>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Team:</span>
-                <span className={styles.metaValue}>{projectInfo.team}</span>
+              
+              <div className={styles.summaryContent}>
+                <div className={styles.summaryText}>
+                  <p><strong>역할:</strong> {projectInfo.role}</p>
+                  <p><strong>팀:</strong> {projectInfo.team}</p>
+                  <p><strong>기간:</strong> {projectInfo.period}</p>
+                </div>
+                
+                <div className={styles.summaryTech}>
+                  <h4>사용 기술</h4>
+                  <div className={styles.techList}>
+                    {projectInfo.tech.map((tech, index) => (
+                      <span key={index} className={styles.techItem}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Period:</span>
-                <span className={styles.metaValue}>{projectInfo.period}</span>
+              
+              <div className={styles.summaryActions}>
+                <motion.a
+                  href={projectInfo.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.githubButton}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaGithub />
+                  <span>GitHub에서 보기</span>
+                </motion.a>
               </div>
-            </div>
-
-            <div className={styles.techStack}>
-              {projectInfo.tech.map((tech, index) => (
-                <span key={index} className={styles.techTag}>
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div className={styles.projectActions}>
-              <motion.a
-                href={projectInfo.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.actionButton}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FaGithub />
-                <span>View Code</span>
-              </motion.a>
             </div>
           </div>
         </div>

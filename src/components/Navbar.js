@@ -72,8 +72,8 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Link to="/">
-            <span className={styles.logoText}>YJ</span>
-            <span className={styles.logoSubtext}>Portfolio</span>
+            <span className={styles.logoText}>문사인성</span>
+            <span className={styles.logoSubtext}>문제에서 출발해 사람으로 완성하다</span>
           </Link>
         </motion.div>
 
