@@ -1,0 +1,431 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 5rem 0 4rem;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: var(--text-primary);
+}
+
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.category {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.meta div {
+  min-width: 0;
+}
+
+.meta dt {
+  margin: 0 0 0.2rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.meta dd {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-size: 0.68rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+
+/* Metrics */
+.metricSection {
+  margin-bottom: 2.5rem;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.metricCard {
+  background: var(--bg-primary);
+  padding: 1.1rem 1rem;
+}
+
+.metricValue {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.metricLabel {
+  margin: 0 0 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.metricNote {
+  margin: 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 2.75rem;
+}
+
+.section h2 {
+  margin: 0 0 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.section p {
+  margin: 0 0 0.9rem;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.section li {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 0.45rem;
+}
+
+.subhead {
+  margin: 1.75rem 0 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.section code,
+.classCell code {
+  font-size: 0.82rem;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  padding: 0.1rem 0.3rem;
+  color: var(--text-primary);
+}
+
+.code {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  color: var(--text-primary);
+}
+
+.caption {
+  font-size: 0.8rem !important;
+  color: var(--text-muted) !important;
+}
+
+/* Tables */
+.tableWrap {
+  margin: 0 0 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 0.7rem 0.85rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  line-height: 1.55;
+  vertical-align: top;
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.cellNote {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.classCell {
+  display: table-cell;
+}
+
+.classCell code {
+  display: inline-block;
+  margin: 0 0.25rem 0.25rem 0;
+  font-size: 0.72rem;
+}
+
+/* Score progression */
+.progression {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.progressionRow {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.progressionRow:first-child {
+  border-top: none;
+}
+
+.progressionFinal .progressionZip {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.progressionFinal .barFill {
+  background: var(--text-primary);
+}
+
+.progressionHead {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.progressionZip {
+  font-size: 0.78rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  background: var(--bg-secondary);
+}
+
+.progressionScore {
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin-left: auto;
+}
+
+.deltaUp,
+.deltaDown {
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+  min-width: 68px;
+  text-align: right;
+}
+
+.deltaUp {
+  color: var(--text-primary);
+}
+
+.deltaDown {
+  color: var(--text-muted);
+}
+
+.barTrack {
+  position: relative;
+  height: 4px;
+  margin: 0.5rem 0 0.4rem;
+  background: var(--bg-secondary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.barFill {
+  display: block;
+  height: 100%;
+  background: var(--text-muted);
+  border-radius: 2px;
+}
+
+.progressionChange {
+  margin: 0 !important;
+  font-size: 0.8rem !important;
+  color: var(--text-muted) !important;
+}
+
+/* Callout */
+.callout {
+  margin: 0 0 1rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--text-muted);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+}
+
+.callout p {
+  margin: 0 0 0.75rem;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.calloutResult {
+  color: var(--text-primary) !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Safeguard cards */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 780px) {
+  .metricGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .meta {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .progressionHead {
+    flex-wrap: wrap;
+  }
+
+  .progressionScore {
+    margin-left: 0;
+  }
+}

@@ -14,7 +14,7 @@ const About = () => {
             <div className={styles.basicInfo}>
               <h1 className={styles.name}>이윤지</h1>
               <p className={styles.birth}>2002.04.29</p>
-              <p className={styles.position}>Software Developer</p>
+              <p className={styles.position}>Robotics & Physical AI Researcher</p>
             </div>
           </div>
           <div className={styles.contactSection}>
